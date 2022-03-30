@@ -1,0 +1,70 @@
+---
+title: "**【Music Feature】**"
+author: "Sam Lu"
+output:
+  html_document
+---
+
+****
+<center>
+![Music genre](https://images.squarespace-cdn.com/content/v1/56b8f8efab48debb2efb2ef5/1555587249549-M8UGSQNDSFIQVC2EQUU4/Musical+genres.png?format=1000w){width=90%}
+</center>
+
+****
+#### **SML Data Project**
+* Motivating question
+* Focus problem
+* Data
+* Prelim EDA
+* Prelim models
+* Prelim remarks on focus problem and feasibility
+* Reference
+
+****
+### **Motivating Question**
+Music topic
+
+****
+### **Focus Problem**
+
+* genre classification
+* predict genre
+
+****
+### **Data**
+
+```{r include=FALSE}
+library(magrittr)
+library(tibble)
+library(dplyr)
+library(ggpubr)
+library(plotly)
+library(GGally)
+library(ggplot2)
+library(tidyverse)
+library(highcharter)
+library(knitr)
+library(dplyr)
+library(kableExtra)
+```
+
+```{r echo=FALSE}
+music_feat = read.csv("D:/NDHU_Master/110-2/KML/Project/Data_sets/data.csv")
+#kable(music_feat[1:5,])
+kbl(music_feat,align = "c") %>%
+  kable_paper() %>%
+  kable_classic(full_width = F) %>%
+  scroll_box(width = "100%", height = "400px")
+```
+
+****
+### **Prelim EDA**
+
+****
+### **Prelim Models**
+****
+### **Prelim Remarks on Focus problem and feasibility**
+****
+### **Reference**
+
+
