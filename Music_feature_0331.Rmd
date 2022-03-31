@@ -101,6 +101,30 @@ hchart(data_PCA_h, "scatter", hcaes(x = PC1, y = PC2, group = label))
 
 ****
 ### **Prelim Models**
+
+* Logistic regression
+
+```{r include=FALSE}
+music_feat_data = music_feat[,-1]
+label_num = matrix(data = c(rep(1,100),
+                            rep(2,100),
+                            rep(3,100),
+                            rep(4,100),
+                            rep(5,100),
+                            rep(6,100),
+                            rep(7,100),
+                            rep(8,100),
+                            rep(9,100),
+                            rep(10,100)))
+
+music_feat_data$label = label_num
+music_feat_lm = glm(formula = label ~ ., data = music_feat_data)
+```
+
+```{r}
+summary(music_feat_lm)
+```
+
 ****
 ### **Prelim Remarks on Focus problem and feasibility**
 
