@@ -2,8 +2,8 @@
 title: '**【Music Feature】**'
 author: "Sam Lu"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ****
