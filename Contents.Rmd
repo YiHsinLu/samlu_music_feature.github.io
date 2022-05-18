@@ -1,0 +1,35 @@
+---
+title: "**【Jazz Musicians Data Visualization】**"
+subtitle: " **Multivalue Classification and Discussion of Paper's Contents** "
+author: "*Sam Lu*"
+date: "2022/5/18"
+output: html_document
+---
+
+****
+
+### **【Contents】**
+
+#### *Title: Jazz Musicians Data Visualization*
+
+* Abstract
+* Introduction
+  + motivation
+  + linked jazz
+* Background
+  + jazz musicians
+* Data matrix
+  + collection
+  + text mining
+* Method of visualization
+  + t-SNE and St-SNE
+  + [*fig*: t-SNE, S-t-SNE]
+  + "Y" information
+  + [*fig*: color by instrument]
+  + [*fig*: color by genre]
+  + [*fig*: color by yearsActive]
+* Conclusion and future work
+* Discussion
+* Reference
+
+****
