@@ -1,22 +1,37 @@
 ---
 title: '**【Daily Living Water】**'
 date: '*2022 May*'
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ****
-#### **May 13**, Matthew 4:23~25, [Reading together](https://www.youtube.com/watch?v=X9PdL9EYerU)
+# **May 13**, Matthew 4:23~25
+
+* [Reading together](https://www.youtube.com/watch?v=X9PdL9EYerU)
 
 * 【Teaching and Healing】
+
+![](https://342gd32z31r02g4ik42kjx5r-wpengine.netdna-ssl.com/wp-content/uploads/2014/05/1942833628_jesus_preaching2_op_720x540-68696435110_xlarge.jpg){width=100%}
+
+[image from](https://www.fggam.org/2014/05/ministry-jesus-christ/)
 
 **Walking along the beach of Lake Galilee, Jesus saw two brothers: Simon (later called peter) and Andrew. They were fishing, throwing their nets into the lake, It was their regular work. Jesus said to them, "Come with me, I'll make a new kind of fisherman out of you. I'll show you how to catch men and women instead of perch and bass." They didn't ask questions, but simply dropping their nets and followed.**
 
 **A short distance down the beach they came upon another pair of brothers, James and John, Zebedee's sons. These two were sitting in the boat with their father, Zebedee, mending their fishnets. Jesus made the same offer to them, and they were just as quick to follow, abandoning boat and father.**
 
 ****
-#### **May 14**, Matthew 5:1~12, [Reading together](https://www.youtube.com/watch?v=2OCs6ve-HsU)
+# **May 14**, Matthew 5:1~12
+
+* [Reading together](https://www.youtube.com/watch?v=2OCs6ve-HsU)
 
 * 【You're Blessed】
+
+![](https://miro.medium.com/max/1400/1*BGTbaVG4otB4CV0xg0UnTw.jpeg){width=100%}
+[image from](https://medium.com/josh-bocanegra/i-used-to-say-i-m-blessed-until-i-asked-these-2-questions-d775456dd813)
+
 
 **When Jesus saw his ministry drawing huge crowds, he climbed a hillside. Those who were apprenticed to him, the committed, he sat down and taught his climbing companions. This is what he said:**
 
@@ -33,9 +48,16 @@ output: html_document
 
 ****
 
-#### **May 16**, Matthew 5:13~16, [Reading together](https://www.youtube.com/watch?v=zNDJ6fA5yz4)
+# **May 16**, Matthew 5:13~16
+
+* [Reading together](https://www.youtube.com/watch?v=zNDJ6fA5yz4)
 
 * 【Salt and light】
+
+![](https://www.suoredimariabambina.org/wp-content/uploads/2018/06/light-and-salt-1024x675.jpg){width=100%}
+
+[image from](https://www.suoredimariabambina.org/en/every-day-holiness-is-being-salt-and-light-for-others/)
+
 
 **"Let me tell you why you are here. You're here to be salt-seasoning that brings out the God-flavors of this earth. If you lose your saltiness, how will people taste godliness? You've lost your usefulness and will end up in the garbage.**
 
@@ -43,9 +65,16 @@ output: html_document
 
 ****
 
-#### **May 17**, Matthew 5:17~20, [Reading together](https://www.youtube.com/watch?v=oytROS6xue8&ab_channel=%E5%8F%B0%E4%B8%AD%E5%BF%A0%E5%AD%9D%E8%B7%AF%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83)
+# **May 17**, Matthew 5:17~20
+
+* [Reading together](https://www.youtube.com/watch?v=oytROS6xue8&ab_channel=%E5%8F%B0%E4%B8%AD%E5%BF%A0%E5%AD%9D%E8%B7%AF%E9%95%B7%E8%80%81%E6%95%99%E6%9C%83)
 
 * 【Completing God's Law】
+
+![](https://d10j3mvrs1suex.cloudfront.net/u/190816/4632747b8b12e56778cdc3ee7279cbb45b9a8027/original/img-1900.jpg/!!/b:W10=.jpg){width=100%}
+
+[image from](https://alabastergraceministries.org/alabaster-grace-notes/blog/god-s-law-is-perfect-f33eba12-c28e-44df-99fd-ca86327b149c)
+
 
 **"Don't suppose for a minute that I have come to demolish the Scriptures--either God's Law or Prophets. I'm not here to demolish but to complete. I am going to put it all together, pull it all together in a vast panorama. God's Law is more real and lasting than the stars in the sky and the ground at your feet. Long after the stars burn out and earth wears out, God's Law will be alive and working.**
 
@@ -53,9 +82,15 @@ output: html_document
 
 ****
 
-#### **May 18**, Matthew 5:21~26, [Reading together](https://www.youtube.com/watch?v=f29967qzkCM)
+# **May 18**, Matthew 5:21~26
+
+* [Reading together](https://www.youtube.com/watch?v=f29967qzkCM)
 
 *  【Murder】
+
+![](https://blog.ipleaders.in/wp-content/uploads/2020/04/9912murder16.jpg){width=100%}
+
+[image from](https://blog.ipleaders.in/murder-under-indian-penal-code-all-you-need-to-know-about-it/)
 
 **"You're familiar with the command to the ancients, 'Do not murder.' I'm telling you that anyone who is so much as angry with a brother or sister is guilty of murder. Carelessly call a brother 'idiot!' and you just might find yourself hauled into court. Thoughtlessly yell 'stupid!' at a sister and you are on a brink of hellfire. The simple moral fact is that words kill.**
 
