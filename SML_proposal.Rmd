@@ -13,10 +13,10 @@ output:
 ![Music genre](https://images.squarespace-cdn.com/content/v1/56b8f8efab48debb2efb2ef5/1555587249549-M8UGSQNDSFIQVC2EQUU4/Musical+genres.png?format=1000w){width=90%}
 </center>
 
-****
-# **Contents**
+**Contents**
 * I. Motivating question
 * II. Focus problem
+****
 * III. Data
 * IV. Prelim EDA
 * V. Prelim models
@@ -67,6 +67,7 @@ library(dplyr)
 library(kableExtra)
 library(devtools)
 load("D:/yhlu.io/SML_proposal.RData")
+set.seed(100)
 ```
 
 ```{r echo=FALSE}
