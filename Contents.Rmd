@@ -33,3 +33,36 @@ output: html_document
 * Reference
 
 ****
+
+### **【Contents】**
+
+#### *Title: Visualizing Jazz Musicians*
+
+* Abstract
+* Introduction
+  + motivation
+  + linked jazz
+  + jazz musicians
+* Data matrix
+  + collection
+  + text mining
+* Multi-value Classification
+  + "Y" information
+  + method
+    - PCA
+    - correlation
+* Visualization
+  + method
+    - t-SNE
+    - St-SNE
+    - LDA
+  + visualizing
+    - (fig) color by instrument
+    - (fig) color by genre
+    - (fig) color by yearActive
+* Conclusion and future work
+* Discussion
+* Reference
+* Appendix
+  + python code
+  + R code
