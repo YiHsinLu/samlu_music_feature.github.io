@@ -1,0 +1,22 @@
+---
+title: "**FIVB 2020 Visulization**"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    mathjax: null
+    css: doc.css
+---
+
+****
+
+### **Color by Positions**
+
+The data behind the plot is players' spike, block, error, scores for preliminary round in 2020.
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+load("FIVB2020.RData")
+FIVBplot_DataPosition
+```
