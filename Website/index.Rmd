@@ -54,6 +54,6 @@ icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
 
 </body>
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
 ```
