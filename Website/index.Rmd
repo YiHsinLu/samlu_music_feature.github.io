@@ -6,7 +6,6 @@ output:
 
 <body style="background-color:#FFD9EB;">
 
-
 ```{r include=FALSE}
 library(icons)
 library(fontawesome)
@@ -15,12 +14,13 @@ icon_volley = icon_style(icons::fontawesome$solid$`volleyball-ball`, fill = "#DB
 icon_R = icon_style(icons::fontawesome$brands$`r-project`, fill = "#DB7093")
 icon_latex =icon_style(icons::fontawesome$regular$`file-pdf`, fill = "#DB7093")
 icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
+icon_book = icon_style(icons::fontawesome$solid$`book-open`, fill = "#DB7093")
 ```
 
 ****
 
 
-<img src="figures/Yihsin-champ.jpg" style="float:left;width:250px" class>
+<img src="figures/Yihsin-champ.jpg" style="float:left;width:200px" class>
 
 <p style="text-indent:1cm"><font size="3"> `r icon_style(icons::fontawesome$solid$envelope, fill = "#DB7093")` 610911007@gms.ndhu.edu.tw</font></p>
 <p style="text-indent:1cm"><font size="3"> `r icon_style(icons::fontawesome$brands$github, fill = "#DB7093")` [YiHsinLu (Sam Lu)](https://github.com/YiHsinLu)</font></p>
@@ -34,9 +34,7 @@ icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
 
 ****
 
-<p style="text-indent:1cm"><font size="3"> `r icon_R` <b>R, R Markdown, R Quarto</b></font></p>
-<p style="text-indent:1cm"><font size="3"> `r icon_latex` <b>LaTex</b></font></p>
-<p style="text-indent:1cm"><font size="3"> `r icon_style(icons::fontawesome$solid$database, fill = "#DB7093")` <b>PostgreSQL</b></font></p>
+<p style="text-indent:1cm"><font size="3"> `r icon_R` <b>R/R Markdown/R Quarto &nbsp;&nbsp; `r icon_book` $\mbox{LaTex}$ &nbsp;&nbsp; `r icon_style(icons::fontawesome$solid$database, fill = "#DB7093")` <b>PostgreSQL</b></font></p>
 
 ****
 
@@ -55,5 +53,5 @@ icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
 </body>
 
 ```{r eval=FALSE, include=FALSE}
-icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
+icon_style(icons::fontawesome$solid$`book-open`, fill = "#DB7093")
 ```
