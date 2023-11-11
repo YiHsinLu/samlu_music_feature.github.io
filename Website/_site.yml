@@ -1,0 +1,11 @@
+name: "my-website"
+navbar:
+  title: "Yi-Hsin Lu"
+  type: inverse
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Calculus"
+      href: Calculus.html

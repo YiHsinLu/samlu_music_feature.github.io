@@ -1,0 +1,59 @@
+---
+title: "**Yi-Hsin Lu (呂一昕)**"
+output: 
+  html_document
+---
+
+<body style="background-color:#FFD9EB;">
+
+
+```{r include=FALSE}
+library(icons)
+library(fontawesome)
+icon_grad = icon_style(icons::fontawesome$solid$`graduation-cap`, fill = "#DB7093")
+icon_volley = icon_style(icons::fontawesome$solid$`volleyball-ball`, fill = "#DB7093")
+icon_R = icon_style(icons::fontawesome$brands$`r-project`, fill = "#DB7093")
+icon_latex =icon_style(icons::fontawesome$regular$`file-pdf`, fill = "#DB7093")
+icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
+```
+
+****
+
+
+<img src="figures/Yihsin-champ.jpg" style="float:left;width:250px" class>
+
+<p style="text-indent:1cm"><font size="4"> `r icon_style(icons::fontawesome$solid$envelope, fill = "#DB7093")` 610911007@gms.ndhu.edu.tw</font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_style(icons::fontawesome$brands$github, fill = "#DB7093")` [YiHsinLu (Sam Lu)](https://github.com/YiHsinLu)</font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_style(icons::fontawesome$brands$instagram, fill = "#DB7093")` [yi_hsin.lu](https://www.instagram.com/yi_hsin.lu)</font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_volley` [Yi-Hsin Lu](https://volleybox.net/yi-hsin-lu-p178375)</font></p>
+
+****
+
+<p style="text-indent:1cm"><font size="4"> `r icon_grad` <b>Master</b> in Applied Mathematics, National Dong-Hwa University, Taiwan.</font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_grad` <b>Bachelor</b> in Statistical Science, National Dong-Hwa University, Taiwan.</font></p>
+
+****
+
+<p style="text-indent:1cm"><font size="4"> `r icon_R` <b>R, R Markdown, R Quarto</b></font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_latex` <b>LaTex</b></font></p>
+<p style="text-indent:1cm"><font size="4"> `r icon_style(icons::fontawesome$solid$database, fill = "#DB7093")` <b>PostgreSQL</b></font></p>
+
+****
+
+<font size="3">#Data Scientist &nbsp;&nbsp;&nbsp; #Statistics Researcher &nbsp;&nbsp;&nbsp; #Volleyball Scientist &nbsp;&nbsp;&nbsp; #Volleyball Player &nbsp;&nbsp;&nbsp; #GaoRuan Amatur</font>
+
+****
+
+<font size="5"> `r icon_bar` <b>Data Science</b></font>
+
+<p style="text-indent:0.5cm"><font size="4"><b>[Visual4JazzMusicians](https://yihsinlu.github.io/Jazz.io/OralExam20230613_appendix.html#/title-slide) &nbsp; [FIVB2020](https://github.com/YiHsinLu/2020FIVB_PreliminaryRoundStats) &nbsp;  [MusicFeature](https://github.com/YiHsinLu/Mu_feat) &nbsp; [MovieLens100K](https://yihsinlu.github.io/RecommendSystem.io/ml_100k_report.html)</b></font></p>
+
+****
+
+
+
+</body>
+
+```{r}
+icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
+```

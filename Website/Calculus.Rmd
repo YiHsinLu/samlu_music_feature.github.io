@@ -1,0 +1,19 @@
+---
+title: '**Calculus**'
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+---
+
+
+****
+
+## **Prove that: $\Gamma(\frac{1}{2})=\sqrt\pi$**
+
+$\Large\mbox{Let}$
+
+$$
+\large I = \int^{\infty}_{0}t^{-\frac{1}{2}exp(-t)}dt\qquad\Rightarrow\qquad I^2 = \int^{\infty}_{0}\int^{\infty}_{0}\frac{1}{\sqrt{ts}}exp(-(t+s))dtds
+$$
