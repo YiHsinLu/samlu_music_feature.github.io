@@ -1,11 +1,9 @@
 ---
-title: "About This Website"
+title: "**Volleyball**"
 output: 
   html_document
 ---
 
 <body style="background-color:#FFD9EB;">
-
-More about this website.
 
 </body>

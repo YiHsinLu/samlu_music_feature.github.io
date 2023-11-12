@@ -11,7 +11,7 @@
 
 
 
-<title>Calculus</title>
+<title>Volleyball</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,14 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -227,69 +222,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -297,16 +229,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -347,75 +269,16 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore"><strong>Calculus</strong></h1>
+<h1 class="title toc-ignore"><strong>Volleyball</strong></h1>
 
 </div>
 
 
 <body style="background-color:#FFD9EB;">
-<hr />
-<div id="prove-that-gammafrac12sqrtpi" class="section level3">
-<h3><strong>Prove that: <span
-class="math inline">\(\Gamma(\frac{1}{2})=\sqrt\pi\)</span></strong></h3>
-<hr />
-<p><span class="math inline">\(\mbox{Assume that }\)</span> <span
-class="math inline">\(I=\Gamma(\frac{1}{2})\)</span><br />
-</p>
-<p><span class="math display">\[
-I = \int^{\infty}_{0}t^{-\frac{1}{2}}exp(-t)dt\qquad\Rightarrow\qquad
-I^2 =
-\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}dtds
-\]</span></p>
-<p><span class="math inline">\(\mbox{We utilize integration by
-substitution, and let}\)</span> <span
-class="math inline">\(x=t+s\)</span>, <span
-class="math inline">\(y=t-s\)</span>. <span
-class="math inline">\(\mbox{However, we still be careful for the
-Jacobian and the range of }x\mbox{ and }y\mbox{, so we have
-}x\in(0,\infty)\mbox{ and }y\in(-\infty,\infty)\)</span>.<br />
-</p>
-<p><span class="math display">\[
-\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}=\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}dtds\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\left|J\right|dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\begin{Vmatrix}
-\cfrac{\partial t}{\partial x} &amp; \cfrac{\partial t}{\partial y} \\
-\cfrac{\partial s}{\partial x} &amp; \cfrac{\partial s}{\partial y}
-\end{Vmatrix}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\begin{Vmatrix}
-\cfrac{1}{2} &amp; \cfrac{1}{2} \\
-\cfrac{1}{2} &amp; -\cfrac{1}{2}
-\end{Vmatrix}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{2e^{-x}}{\sqrt{x^2-y^2}}\left|-\cfrac{1}{2}\right|dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{\color{red}{\not{2}}e^{-x}}{\sqrt{x^2-y^2}}\cfrac{1}{\color{red}{\not{2}}}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{\sqrt{x^2-y^2}}dy\;e^{-x}dx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{x\sqrt{1-\left(
-\cfrac{y}{x}\right)^2}}dy\;e^{-x}dx\\
-\]</span></p>
-<p><span class="math inline">\(\mbox{If you are sensetive on this type
-of integral, we can straight use integration by substitution once
-again.}\)</span> <span class="math inline">\(\mbox{Let }
-u=\cfrac{y}{x}\mbox{ and } du=\frac{1}{x}dy. \mbox{ There is a problem
-for the domain of integration of the function, because of }
-\cfrac{y}{x}\in(-1,1).\)</span></p>
-<p><span class="math display">\[
-=\int^{\infty}_{0}\int^{1}_{-1}\cfrac{1}{\sqrt{1-u^2}}du\;e^{-x}dx\\
-=\int^{\infty}_{0}\bigg[\arcsin(u)\bigg]^{1}_{-1}\;e^{-x}dx\\
-=\int^{\infty}_{0}\bigg[\cfrac{\pi}{2}-\left(-\cfrac{\pi}{2}\right)\bigg]\;e^{-x}dx\\
-=\int^{\infty}_{0}\pi e^{-x}dx\\
-=\pi\left(-e^{-x}\right)\bigg|^{\infty}_{0}\\
-\\
-=\pi
-\]</span> <span class="math inline">\(\mbox{Hence we have
-}\bigg(\Gamma(\cfrac{1}{2})\bigg)^2=\pi\mbox{, then }
-\Gamma(\cfrac{1}{2})=\sqrt{\pi}.\)</span></p>
-<hr />
 </body>
-</div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -448,35 +311,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

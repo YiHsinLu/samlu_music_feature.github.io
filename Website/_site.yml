@@ -10,3 +10,5 @@ navbar:
       href: about.html
     - text: "Calculus"
       href: Calculus.html
+    - text: "VolleyBall"
+      href: volley.html
