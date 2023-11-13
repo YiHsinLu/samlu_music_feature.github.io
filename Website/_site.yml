@@ -12,3 +12,7 @@ navbar:
       href: Calculus.html
     - text: "VolleyBall"
       href: volley.html
+    - text: "Music"
+      href: Music.html
+    - text: "Stories"
+      href: Stories.html

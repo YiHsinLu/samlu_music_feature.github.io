@@ -15,6 +15,10 @@ icon_R = icon_style(icons::fontawesome$brands$`r-project`, fill = "#DB7093")
 icon_latex =icon_style(icons::fontawesome$regular$`file-pdf`, fill = "#DB7093")
 icon_bar = icon_style(icons::fontawesome$regular$`chart-bar`, fill = "#DB7093")
 icon_book = icon_style(icons::fontawesome$solid$`book-open`, fill = "#DB7093")
+icon_baseball = icons::fontawesome$solid$`baseball-ball`
+icon_basketball = icons::fontawesome$solid$`basketball-ball`
+icon_volley2 = icons::fontawesome$solid$`volleyball-ball`
+
 ```
 
 ****
@@ -40,16 +44,26 @@ icon_book = icon_style(icons::fontawesome$solid$`book-open`, fill = "#DB7093")
 
 <font size="4"> `r icon_bar` <b>Data Science</b></font>
 
-<p style="text-indent:0.5cm"><font size="4"><b>[Visual4JazzMusicians](https://yihsinlu.github.io/Jazz.io/OralExam20230613_appendix.html#/title-slide) &nbsp; [FIVB2020](https://github.com/YiHsinLu/2020FIVB_PreliminaryRoundStats) &nbsp;  [MusicFeature](https://github.com/YiHsinLu/Mu_feat) &nbsp; [MovieLens100K](https://yihsinlu.github.io/RecommendSystem.io/ml_100k_report.html)</b></font></p>
+<p style="text-indent:0.5cm"><font size="4"><b>[Visual4JazzMusicians](https://yihsinlu.github.io/Jazz.io/JazzVisaul_2023STSC.html) &nbsp; [FIVB2020](https://github.com/YiHsinLu/2020FIVB_PreliminaryRoundStats) &nbsp;  [MusicFeature](https://github.com/YiHsinLu/Mu_feat) &nbsp; [MovieLens100K](https://yihsinlu.github.io/RecommendSystem.io/ml_100k_report.html)</b></font></p>
 
 ****
 
-<font size="2">#Data Scientist &nbsp;&nbsp;&nbsp; #Statistics Researcher &nbsp;&nbsp;&nbsp; #Volleyball Scientist &nbsp;&nbsp;&nbsp; #Volleyball Player &nbsp;&nbsp;&nbsp; #GaoRuan Amatur</font>
+<font size="4"> `r icon_volley` <b>Sports Career</b></font>
+
+<p style="text-indent:0.5cm"><font size="3">`r icon_volley2` <b>Volleyball (2014-present)</b> &nbsp; `r icon_basketball` <b>Basketball (2008-2014)</b> &nbsp; <b>`r icon_baseball` Tennis (2007-2008)</b> &nbsp; `r icon_baseball` <b>Baseball (?)</b></font></p>
+
+<p style="text-indent:1cm"><font size="2">`r icon_volley2` Outside Hitter (2023-present) &nbsp; Setter (2019-2023) &nbsp; Opposite (2014-2018)</font></p>
+
+
+
+****
+
+<font size="2">#Data Scientist &nbsp;&nbsp;&nbsp; #Statistics Researcher &nbsp;&nbsp;&nbsp; #Volleyball Scientist &nbsp;&nbsp;&nbsp; #Volleyball Player &nbsp;&nbsp;&nbsp; #Gao-Ruan Amateur</font>
 
 ****
 
 </body>
 
 ```{r eval=FALSE, include=FALSE}
-icon_style(icons::fontawesome$solid$`book-open`, fill = "#DB7093")
+icon_style(icons::fontawesome$solid$ball, fill = "#DB7093")
 ```

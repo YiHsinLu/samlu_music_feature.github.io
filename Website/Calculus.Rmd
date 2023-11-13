@@ -36,7 +36,7 @@ $$
 \cfrac{1}{2} & -\cfrac{1}{2}
 \end{Vmatrix}dydx\\
 =\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{2e^{-x}}{\sqrt{x^2-y^2}}\left|-\cfrac{1}{2}\right|dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{\color{red}{\not{2}}e^{-x}}{\sqrt{x^2-y^2}}\cfrac{1}{\color{red}{\not{2}}}dydx\\
+=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{\not{2}e^{-x}}{\sqrt{x^2-y^2}}\cfrac{1}{\not{2}}dydx\\
 =\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{\sqrt{x^2-y^2}}dy\;e^{-x}dx\\
 =\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{x\sqrt{1-\left( \cfrac{y}{x}\right)^2}}dy\;e^{-x}dx\\
 $$

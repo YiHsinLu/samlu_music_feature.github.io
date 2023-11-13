@@ -11,7 +11,7 @@
 
 
 
-<title>Calculus</title>
+<title>Stories</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -353,70 +353,13 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore"><strong>Calculus</strong></h1>
+<h1 class="title toc-ignore"><strong>Stories</strong></h1>
 
 </div>
 
 
 <body style="background-color:#FFD9EB;">
-<hr />
-<div id="prove-that-gammafrac12sqrtpi" class="section level3">
-<h3><strong>Prove that: <span
-class="math inline">\(\Gamma(\frac{1}{2})=\sqrt\pi\)</span></strong></h3>
-<hr />
-<p><span class="math inline">\(\mbox{Assume that }\)</span> <span
-class="math inline">\(I=\Gamma(\frac{1}{2})\)</span><br />
-</p>
-<p><span class="math display">\[
-I = \int^{\infty}_{0}t^{-\frac{1}{2}}exp(-t)dt\qquad\Rightarrow\qquad
-I^2 =
-\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}dtds
-\]</span></p>
-<p><span class="math inline">\(\mbox{We utilize integration by
-substitution, and let}\)</span> <span
-class="math inline">\(x=t+s\)</span>, <span
-class="math inline">\(y=t-s\)</span>. <span
-class="math inline">\(\mbox{However, we still be careful for the
-Jacobian and the range of }x\mbox{ and }y\mbox{, so we have
-}x\in(0,\infty)\mbox{ and }y\in(-\infty,\infty)\)</span>.<br />
-</p>
-<p><span class="math display">\[
-\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}=\int^{\infty}_{0}\int^{\infty}_{0}\cfrac{e^{-(t+s)}}{\sqrt{ts}}dtds\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\left|J\right|dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\begin{Vmatrix}
-\cfrac{\partial t}{\partial x} &amp; \cfrac{\partial t}{\partial y} \\
-\cfrac{\partial s}{\partial x} &amp; \cfrac{\partial s}{\partial y}
-\end{Vmatrix}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{e^{-x}}{\sqrt{\cfrac{x^2-y^2}{4}}}\begin{Vmatrix}
-\cfrac{1}{2} &amp; \cfrac{1}{2} \\
-\cfrac{1}{2} &amp; -\cfrac{1}{2}
-\end{Vmatrix}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{2e^{-x}}{\sqrt{x^2-y^2}}\left|-\cfrac{1}{2}\right|dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{\not{2}e^{-x}}{\sqrt{x^2-y^2}}\cfrac{1}{\not{2}}dydx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{\sqrt{x^2-y^2}}dy\;e^{-x}dx\\
-=\int^{\infty}_{0}\int^{\infty}_{-\infty}\cfrac{1}{x\sqrt{1-\left(
-\cfrac{y}{x}\right)^2}}dy\;e^{-x}dx\\
-\]</span></p>
-<p><span class="math inline">\(\mbox{If you are sensetive on this type
-of integral, we can straight use integration by substitution once
-again.}\)</span> <span class="math inline">\(\mbox{Let }
-u=\cfrac{y}{x}\mbox{ and } du=\frac{1}{x}dy. \mbox{ There is a problem
-for the domain of integration of the function, because of }
-\cfrac{y}{x}\in(-1,1).\)</span></p>
-<p><span class="math display">\[
-=\int^{\infty}_{0}\int^{1}_{-1}\cfrac{1}{\sqrt{1-u^2}}du\;e^{-x}dx\\
-=\int^{\infty}_{0}\bigg[\arcsin(u)\bigg]^{1}_{-1}\;e^{-x}dx\\
-=\int^{\infty}_{0}\bigg[\cfrac{\pi}{2}-\left(-\cfrac{\pi}{2}\right)\bigg]\;e^{-x}dx\\
-=\int^{\infty}_{0}\pi e^{-x}dx\\
-=\pi\left(-e^{-x}\right)\bigg|^{\infty}_{0}\\
-\\
-=\pi
-\]</span> <span class="math inline">\(\mbox{Hence we have
-}\bigg(\Gamma(\cfrac{1}{2})\bigg)^2=\pi\mbox{, then }
-\Gamma(\cfrac{1}{2})=\sqrt{\pi}.\)</span></p>
-<hr />
 </body>
-</div>
 
 
 

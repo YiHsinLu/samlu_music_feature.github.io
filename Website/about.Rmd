@@ -9,3 +9,11 @@ output:
 More about this website.
 
 </body>
+
+****
+
+<body style="background-color:#FFD9EB;">
+
+More about this website.
+
+</body>
