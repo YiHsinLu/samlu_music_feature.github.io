@@ -1,11 +1,12 @@
 ---
-title: "**Volleyball**"
 output: 
   html_document
 ---
 
 
 <body style="background-color:#FFD9EB;">
+
+![](figures/wallpaper_long.png){width=100%}
 
 ****
 
