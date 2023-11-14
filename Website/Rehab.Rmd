@@ -1,0 +1,63 @@
+---
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+---
+
+<head>
+<style>
+div.story {
+  border: 0px solid black;
+  border-radius: 12px;
+  background-color: #DB7093;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #DB7093;
+}
+</style>
+</head>
+<body style="background-color:#FFD9EB;">
+
+<h1 align="center"><span style="color: #DB7093;"><b>【Rehabilitation】</b></span></h2>
+<div class="story">
+<p style="color:#FFD9EB;"><font size="4"><b>Last Christmas, I gave you my heart. But the very next day, You broke it away. Exactly, like the lyrics said, I got injury for my left knee. Last Christmas is a month that I have competition every weekend, and I went to the hospital and take the MRI to check the condition of my knee. Few days later, the MRI report said, my left knee ACL is broke and ... Therefore, I took my report to the doctors again and again, then they told me I must accept the ACL rebuild surgery. However, I had whole season for my team, so I decided to do the surgery in this September.</b></font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>------ Yi-Hsin Lu, Nov. 14th, 2023.</b></font></span></p>
+</div>
+
+****
+
+<h2 align="center"><span style="color: #DB7093;"><b>手術復健日記</b></span></h2>
+<p align="right"><span style="color: #DB7093;"><b>文 / 呂一昕</b></span></p>
+
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>手術住院時期</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">終於出院了，準備過床上生活。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 21th, 2023</b></font></span></p>
+****
+<p style="color:#FFD9EB;"><font size="3">手術隔天，學習穿戴護膝支架、拐杖走路和復健運動。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 20th, 2023</b></font></span></p>
+****
+<p style="color:#FFD9EB;"><font size="3">手術當天，一大清早就被接到手術準備的地方。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 19th, 2023</b></font></span></p>
+****
+<p style="color:#FFD9EB;"><font size="3">早上剛做完術前檢查，下午就接到住院的電話。收拾好行李，在醫院渡過最後一個爛膝蓋的夜晚。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 18th, 2023</b></font></span></p>
+</div>
+<br>
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>手術前</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">沒什麼特別的感覺，只是覺得好像有一件大事要發生了。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 17th, 2023</b></font></span></p>
+</div>
+
+****
+
+</body>

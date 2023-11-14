@@ -16,3 +16,5 @@ navbar:
       href: Music.html
     - text: "Stories"
       href: Stories.html
+    - text: "Rehab"
+      href: Rehab.html

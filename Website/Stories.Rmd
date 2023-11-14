@@ -12,10 +12,10 @@ div.story {
   border: 0px solid black;
   border-radius: 8px;
   background-color: #DB7093;
-  padding-top: 20px;
-  padding-right: 50px;
-  padding-bottom: 20px;
-  padding-left: 50px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     background-color: #DB7093;
@@ -23,6 +23,14 @@ div.story {
 </style>
 </head>
 <body style="background-color:#FFD9EB;">
+
+<h1 align="center"><span style="color: #DB7093;"><b>【Stories】</b></span></h2>
+<div class="story">
+<p style="color:#FFD9EB;"><font size="4"><b>This page includes all of my writing article, my stories, and my lovely memories. Words are the most powerful strength for helping people, I believe the stories will encourage and inspire someone who are confuse in their life.</b></font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>------ Yi-Hsin Lu, Nov. 14th, 2023.</b></font></span></p>
+</div>
+
+****
 
 <h2 align="center"><span style="color: #DB7093;"><b>「成長·改變·突破」</b></span></h2>
 <p align="center"><span style="color: #DB7093;"><font size="4"><b>自傳 · 呂一昕</b></font></span></p>
@@ -95,4 +103,16 @@ div.story {
 <p style="color:#FFD9EB;"><font size="3">   推廣統計科學是我最終極的目標，無論當中遇到什麼困難，必須勇於面對挑戰。其中為身為排球運動員，現階段只看到在棒球上有利用依些數據和統計的方法去提升個人實力，前MLB賽揚獎投手鮑爾(Trevor Bauer)就成功將科學帶入自己的訓練中，用自己投球的角度、轉速和球速等數據進行分析，在其中探討如何提高投球技巧，事實證明科學的方法更好的提升他的運動表現，他也被稱為「被棒球耽誤的科學家」，他的出現，讓我看向自己身處的排球中，在棒球上有很多統計的資料和運算的數據可以說明球員的狀態，但排球上就只有簡單的數據(例如：攻擊的得分率等)，這並無法說明太多的資訊，所以我想透過短期規劃中提升更多的知識，到長期的實踐，更好的將統計科學應用在運動上，以排球科學實驗室為出發點，將統計就這項能力做推廣。</font></p>
 </div>
 
+****
+
+<h2 align="center"><span style="color: #DB7093;"><b>回憶</b></span></h2>
+<p align="center"><span style="color: #DB7093;"><font size="4"><b>那些令人難忘的時刻</b></font></span></p>
+<p align="right"><span style="color: #DB7093;"><b>文 / 呂一昕</b></span></p>
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>回憶</b></p></h3>
+<p style="text-indent:1cm;color:#FFD9EB;"><font size="4"><b>那些令人難忘的時刻</b></font></p>
+
+<p style="color:#FFD9EB;"><font size="3">其實人生中有很多我們印象深刻也不想丟棄的回憶，但是這些時刻會因為時間的變化，再也無法出現在我的眼前。</font></p>
+
+</div>
 </body>
