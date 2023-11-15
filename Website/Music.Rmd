@@ -28,7 +28,7 @@ div.element {
 }
 
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    background-color: #DB7093;
+    background-color: #222;
 }
 
 </style>

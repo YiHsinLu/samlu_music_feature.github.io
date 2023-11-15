@@ -18,7 +18,7 @@ div.story {
   padding-left: 20px;
 }
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    background-color: #DB7093;
+    background-color: #222;
 }
 </style>
 </head>
@@ -26,7 +26,8 @@ div.story {
 
 <h1 align="center"><span style="color: #DB7093;"><b>【Rehabilitation】</b></span></h2>
 <div class="story">
-<p style="color:#FFD9EB;"><font size="4"><b>Last Christmas, I gave you my heart. But the very next day, You broke it away. Exactly, like the lyrics said, I got injury for my left knee. Last Christmas is a month that I have competition every weekend, and I went to the hospital and take the MRI to check the condition of my knee. Few days later, the MRI report said, my left knee ACL is broke and ... Therefore, I took my report to the doctors again and again, then they told me I must accept the ACL rebuild surgery. However, I had whole season for my team, so I decided to do the surgery in this September.</b></font></p>
+<p style="color:#FFD9EB;"><font size="4"><b>Last Christmas, I gave you my heart, but the very next day, you gave it away. As the lyrics suggest, my left knee left me. December, the month of Last Christmas, was filled with competitions every weekend. After all the events, I ended up in the hospital, where I underwent an MRI to assess my injury.</b></font></p>
+<p style="color:#FFD9EB;"><font size="4"><b>A few days later, the MRI report confirmed that my left knee's ACL was broken. Consequently, I consulted with multiple doctors, all of whom advised me to prepare for an ACL reconstruction surgery. Despite having the entire season ahead for my team, I made the decision to undergo surgery this September.</b></font></p>
 <p align="right"><span style="color: #FFD9EB;"><font size="4"><b>------ Yi-Hsin Lu, Nov. 14th, 2023.</b></font></span></p>
 </div>
 
@@ -36,26 +37,62 @@ div.story {
 <p align="right"><span style="color: #DB7093;"><b>文 / 呂一昕</b></span></p>
 
 <div class="story">
+<h3><p style="color:#FFD9EB;"><b>復健開始</b></p></h3>
+****
+<img src="Figures/rehab/img_rehab_ex.jpg" style="width:100%" class>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖4: 可愛的物理治療師幫我訓練</b></font></span></p>
+<p></p>
+<img src="Figures/rehab/img_look3.jpg" style="width:25%" class><img src="Figures/rehab/img_look1.jpg" style="width:25%" class><img src="Figures/rehab/img_look4.jpg" style="width:25%" class><img src="Figures/rehab/img_look2.jpg" style="width:25%" class>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖3: 復健配色穿搭</b></font></span></p>
+</div>
+<br>
+<div class="story">
 <h3><p style="color:#FFD9EB;"><b>手術住院時期</b></p></h3>
 ****
-<p style="color:#FFD9EB;"><font size="3">終於出院了，準備過床上生活。</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 21th, 2023</b></font></span></p>
-****
-<p style="color:#FFD9EB;"><font size="3">手術隔天，學習穿戴護膝支架、拐杖走路和復健運動。</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 20th, 2023</b></font></span></p>
-****
-<p style="color:#FFD9EB;"><font size="3">手術當天，一大清早就被接到手術準備的地方。</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 19th, 2023</b></font></span></p>
-****
-<p style="color:#FFD9EB;"><font size="3">早上剛做完術前檢查，下午就接到住院的電話。收拾好行李，在醫院渡過最後一個爛膝蓋的夜晚。</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 18th, 2023</b></font></span></p>
+<p style="color:#FFD9EB;"><font size="3">18日，早上剛做完術前檢查，下午就接到住院的電話。</font></p>
+<img src="Figures/rehab/img_surg.jpg" style="width:100%" class>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖2: 準備進手術室</b></font></span></p>
+<p></p>
+<p style="color:#FFD9EB;"><font size="3">19日，手術當天，一大清早就被接到手術準備的地方。</font></p>
+<p style="color:#FFD9EB;"><font size="3">20日，學習穿戴護膝支架、拐杖走路和復健運動。</font></p>
+
+<img src="Figures/rehab/img_walk2.jpg" style="width:33%" class><img src="Figures/rehab/img_walk3.jpg" style="width:33%" class><img src="Figures/rehab/img_bed.jpg" style="width:33%" class>
+<p></p>
+<video width="30%" controls>
+  <source src="Figures/rehab/vid_walk1.mp4" type="video/mp4">
+</video>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖1: 練習走路</b></font></span></p>
+<p style="color:#FFD9EB;"><font size="3">21日，收拾好行李，在醫院渡過最後一個爛膝蓋的夜晚。終於出院了，準備過床上生活。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-09-18~2023-09-21</b></font></span></p>
 </div>
 <br>
 <div class="story">
 <h3><p style="color:#FFD9EB;"><b>手術前</b></p></h3>
 ****
-<p style="color:#FFD9EB;"><font size="3">沒什麼特別的感覺，只是覺得好像有一件大事要發生了。</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>Sep. 17th, 2023</b></font></span></p>
+<p style="color:#FFD9EB;"><font size="3">這天剛打完手術前的最後一場球，沒什麼特別的感覺，只是覺得好像有一件大事要發生了。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-09-17</b></font></span></p>
+</div>
+<br>
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>前十字韌帶斷裂半月板合併傷害</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">西元2022年12月，從第一週的幸福城市盃、老馬盃、東部系際盃到最後平安夜、聖誕節的統研盃，統研盃前膝蓋都還承受得住，開始用肌貼保護膝蓋並下場直接冰敷降溫，但最後一場比賽我拚盡全力希望能拿下冠軍，再加上寒流過境，我的膝蓋終究承受不了的開始隱隱作痛。</font></p>
+<p style="color:#FFD9EB;"><font size="3">隔年1月，再次求助門諾醫師，這次排了核磁共振的檢查，最終的結果是「前十字韌帶斷裂、半月板受損、後十字韌帶輕微撕裂」。接著，我開始到處諮詢骨科、復健科醫師，所有的答案都是：「手術吧！」</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023</b></font></span></p>
+</div>
+<br>
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>我與我的玻璃膝蓋</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">我是運動員，大學新鮮人時期同學呼朋引伴之下進入系排，九年的籃球之路也厭倦肢體碰撞，因而轉戰排球。扣球作為排球中最吸引人的一項技術，讓我深深地對這個相較籃球和棒球之下冷門的球類運動吸引，我開始一直跳、不停跳、拚了命的跳，終於，大一下的暑假在排球聖地中興大學，一次的扣球，單腳落地扭傷了膝蓋。</font></p>
+<p style="color:#FFD9EB;"><font size="3">大二養傷復健，但當時仗著自己年輕、恢復快、討厭復健，草草完成復健回到場上。結果，大三的大數盃回到了那個熟悉的中興大學，第一場比賽前的自由攻擊，狀態非常好、又非常的興奮，打第二顆我全力起跳，擺臂、煞車急停、大力蹬地，完全接收木地板給我的反作用力起跳，停在空中時彷彿時間暫停並能清晰看見白帶後的地板，「磅」的一聲將球重重擊穿地板。但，落地時，我的膝蓋一陣無力，「咖」，瞬間我直接倒在地上站不起來，回到花蓮之後又再次開始我最討厭的復健之路，但是比賽多加上沒什麼時間，我不痛之後就回到場上繼續比賽，後來也順順利利的打了好幾場，也平安無事。</font></p>
+<p style="color:#FFD9EB;"><font size="3">直到大四，我記得是大家畢業前的最後一場北數盃，那年我們終於拿到了感動無數人的冠軍了，但是這段故事在排球的篇章再提，我在冠軍之路的四強戰，第一局火力全開成功以一記Touch-out拿下這場的第一個攻擊得分，因為當時我作為副攻手主要的重心放在攔網和接球上。第一局末段，面對對手大砲的強力攻擊，籃網沒注意從我手吞了下來，反應迅速的我馬上單手將球勾起，由爛中的的博班學長林逸軒修正給我，我很聰明的刀球到對方二號位的邊角成功得分。越戰越勇的我們也讓我越打越有信心，第二局占盡優勢的我們屢屢強攻得分，但，這次我在一次多波的來回球，持續的攻擊、攔網、接球、攻擊，就當我再次強攻時，沒踩好不慎讓膝蓋再次毀掉。</font></p>
+<p style="color:#FFD9EB;"><font size="3">再次回到門諾做復健，之間經過大五、中研院工作、當兵回到台中。</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2014~2022</b></font></span></p>
 </div>
 
 ****
