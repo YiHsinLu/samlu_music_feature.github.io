@@ -360,6 +360,8 @@ div.tocify {
 </div>
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 <style>
 div.story {
@@ -374,6 +376,26 @@ div.story {
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
     background-color: #222;
 }
+progress {
+  height: 28px;
+  border-radius: 12px;
+  width: 0;
+  min-width: 100%;
+}
+progress::before {
+  content: "Loading: " attr(value) "/365";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #DB7093;
+}
+progress::-webkit-progress-bar {
+         background-color: white;
+      }
+      progress::-webkit-progress-value {
+         background-color: #FFD9EB;
+      }
 </style>
 </head>
 <body style="background-color:#FFD9EB;">
@@ -400,6 +422,49 @@ decision to undergo surgery this September.</b></font>
 Nov. 14th, 2023.</b></font></span>
 </p>
 </div>
+<hr />
+<h2 align="center">
+<span style="color: #DB7093;"><b>復健進度</b></span>
+</h2>
+<body style="background-color:#FFD9EB;">
+<div class="story">
+<p>
+</p>
+<div class="w3-container">
+<div class="w3-light-grey">
+<div id="myBar" class="w3-container w3-gray"
+style="height:24px;width:0%">
+
+</div>
+</div>
+<p id="myP" style="color:#FFD9EB;">
+Finished: <span id="demo">0</span>%
+</p>
+<button class="w3-button w3-light-grey" onclick="move();this.disabled=&#39;true&#39;">
+Check
+</button>
+</div>
+</div>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 60);
+  function frame() {
+    if (width >= 15) {
+      clearInterval(id);
+      document.getElementById("myP").className = "w3-text-white w3-animate-opacity";
+      document.getElementById("myP").innerHTML = "Successfully finished for 58 days!";
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      var num = width * 1;
+      num = num.toFixed(0)
+      document.getElementById("demo").innerHTML = num;
+    }
+  }
+}
+</script>
 <hr />
 <h2 align="center">
 <span style="color: #DB7093;"><b>手術復健日記</b></span>
