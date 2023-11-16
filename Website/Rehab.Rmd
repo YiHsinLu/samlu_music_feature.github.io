@@ -6,6 +6,7 @@ output:
     df_print: paged
 ---
 
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
@@ -56,6 +57,7 @@ progress::-webkit-progress-bar {
 
 ****
 <h2 align="center"><span style="color: #DB7093;"><b>復健進度</b></span></h2>
+
 <body style="background-color:#FFD9EB;">
 <div class="story">
 <p></p>

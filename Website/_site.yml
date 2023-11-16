@@ -18,3 +18,5 @@ navbar:
       href: Stories.html
     - text: "Rehab"
       href: Rehab.html
+    - text: "Movie"
+      href: Movie.html

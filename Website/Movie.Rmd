@@ -1,0 +1,69 @@
+---
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: paged
+---
+
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<style>
+div.story {
+  border: 0px solid black;
+  border-radius: 12px;
+  background-color: #DB7093;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #222;
+}
+progress {
+  height: 28px;
+  border-radius: 12px;
+  width: 0;
+  min-width: 100%;
+}
+progress::before {
+  content: "Loading: " attr(value) "/365";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #DB7093;
+}
+progress::-webkit-progress-bar {
+         background-color: white;
+      }
+      progress::-webkit-progress-value {
+         background-color: #FFD9EB;
+      }
+</style>
+</head>
+
+<body style="background-color:#FFD9EB;">
+
+<div class="story">
+<h2><p align="center"><span style="color: #FFD9EB;"><b>心靈投手</b></span></p></h3>
+<img src="https://www.themoviedb.org/t/p/original/ebkGhKiOFK1aooKlaW1DK29Qthl.jpg" style="width:100%" class>
+<p></p>
+<p style="color:#FFD9EB;"><font size="3">(英語： The Rookie)</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-14</b></font></span></p>
+</div>
+<br>
+<div class="story">
+<h2><p align="center"><span style="color: #FFD9EB;"><b>捍衛戰士：獨行俠</b></span></p></h3>
+<img src="https://images4.alphacoders.com/130/1300727.jpg" style="width:100%" class>
+<p></p>
+<p style="color:#FFD9EB;"><font size="3">(英語： Top Gun: Maverick)</font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-02</b></font></span></p>
+</div>
+
+****
+
+</body>

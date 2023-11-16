@@ -11,7 +11,7 @@
 
 
 
-<title>About This Website</title>
+<title>Movie.knit</title>
 
 <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,9 +29,14 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -222,6 +227,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -229,6 +297,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -281,7 +359,6 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About This Website</h1>
 
 </div>
 
@@ -291,16 +368,85 @@ W3.CSS
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<style>
+div.story {
+  border: 0px solid black;
+  border-radius: 12px;
+  background-color: #DB7093;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #222;
+}
+progress {
+  height: 28px;
+  border-radius: 12px;
+  width: 0;
+  min-width: 100%;
+}
+progress::before {
+  content: "Loading: " attr(value) "/365";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #DB7093;
+}
+progress::-webkit-progress-bar {
+         background-color: white;
+      }
+      progress::-webkit-progress-value {
+         background-color: #FFD9EB;
+      }
+</style>
+</head>
 <body style="background-color:#FFD9EB;">
-<p>More about this website.</p>
-</body>
+<div class="story">
+<h2>
+<p align="center">
+<span style="color: #FFD9EB;"><b>心靈投手</b></span>
+</p>
+</h3>
+<img src="https://www.themoviedb.org/t/p/original/ebkGhKiOFK1aooKlaW1DK29Qthl.jpg" style="width:100%" class>
+<p>
+</p>
+<p style="color:#FFD9EB;">
+<font size="3">(英語： The Rookie)</font>
+</p>
+<p align="right">
+<span
+style="color: #FFD9EB;"><font size="4"><b>2023-11-14</b></font></span>
+</p>
+</div>
+<br>
+<div class="story">
+<h2>
+<p align="center">
+<span style="color: #FFD9EB;"><b>捍衛戰士：獨行俠</b></span>
+</p>
+</h3>
+<img src="https://images4.alphacoders.com/130/1300727.jpg" style="width:100%" class>
+<p>
+</p>
+<p style="color:#FFD9EB;">
+<font size="3">(英語： Top Gun: Maverick)</font>
+</p>
+<p align="right">
+<span
+style="color: #FFD9EB;"><font size="4"><b>2023-11-02</b></font></span>
+</p>
+</div>
 <hr />
-<body style="background-color:#FFD9EB;">
-<p>More about this website.</p>
 </body>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -333,6 +479,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
