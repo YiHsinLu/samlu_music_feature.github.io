@@ -8,6 +8,7 @@ output:
 
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="Figures/Master_yihsin.jpg" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <head>
 <style>
@@ -49,19 +50,23 @@ progress::-webkit-progress-bar {
 <body style="background-color:#FFD9EB;">
 
 <div class="story">
-<h2><p align="center"><span style="color: #FFD9EB;"><b>心靈投手</b></span></p></h3>
+<h2><p align="center"><span style="color: #FFD9EB;"><b>心靈投手 | The Rookie</b></span></p></h3>
 <img src="https://www.themoviedb.org/t/p/original/ebkGhKiOFK1aooKlaW1DK29Qthl.jpg" style="width:100%" class>
 <p></p>
-<p style="color:#FFD9EB;"><font size="3">(英語： The Rookie)</font></p>
+<p style="color:#FFD9EB;"><font size="3">電影的驚人之處就在於講完一段傳奇故事之後，跟你說：「這部電影改編真人真事。」心靈投手講述的是一位真正存在大聯盟的投手 Jim Morris ，身穿63號球衣的左投手。再看電影的當下我幾度熱淚盈眶，對於追逐夢想並且不放棄這件事是運動員最令人敬佩的一點，如果你跟我一樣喜歡看感人溫馨的運動員故事，那這部絕對是最不能錯過的。</font></p>
+<img src="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w2208/mlb/penizibvi7dzswxwlukv.png" style="width:100%" class>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖: Jim Morris (左)、Jim Morris的飾演者 Dennis Quaid (右)</b></font></span></p>
+<p style="color:#222;"><font size="3"><b> [Jim Morris 生涯的精采時刻](https://www.youtube.com/watch?v=pfEms4PSehg&t=2s) </b></font></p>
 <p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-14</b></font></span></p>
 </div>
 <br>
 <div class="story">
-<h2><p align="center"><span style="color: #FFD9EB;"><b>捍衛戰士：獨行俠</b></span></p></h3>
+<h2><p align="center"><span style="color: #FFD9EB;"><b>捍衛戰士：獨行俠 | Top Gun: Maverick</b></span></p></h3>
 <img src="https://images4.alphacoders.com/130/1300727.jpg" style="width:100%" class>
 <p></p>
-<p style="color:#FFD9EB;"><font size="3">(英語： Top Gun: Maverick)</font></p>
-<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-02</b></font></span></p>
+<p style="color:#FFD9EB;"><font size="3"></font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-02 </b></font></span></p>
 </div>
 
 ****
