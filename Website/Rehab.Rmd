@@ -80,7 +80,7 @@ function move() {
     if (width >= 17) {
       clearInterval(id);
       document.getElementById("myP").className = "w3-text-white w3-animate-opacity";
-      document.getElementById("myP").innerHTML = "Successfully finished for 61 days!";
+      document.getElementById("myP").innerHTML = "Successfully finished for 62 days!";
     } else {
       width++; 
       elem.style.width = width + '%'; 
@@ -96,6 +96,23 @@ function move() {
 
 <h2 align="center"><span style="color: #DB7093;"><b>手術復健日記</b></span></h2>
 <p align="right"><span style="color: #DB7093;"><b>文 / 呂一昕</b></span></p>
+
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>術後62天 (兩個月整、第八週)</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">兩個月過去了，懷念起那些自由自在的日子，盡情在球場活蹦亂。大學、工作、研究所時期，就算再忙也會生醫些時間來運動、打球，排球好像漸漸成為我抒發的最佳手段。如今，我的肌力、核心控制、神經傳導都還屬於重生階段，我深知這些能力沒有重建完成，我是不可能再次回到場上的，我可能也不願意回去。上禮拜五，有位學長來台中找我，其中就有說到明年大約四月的東華校友盃，就算我應付不了高強度比賽，但是也是可以上去發球和舉球。然而我的想法卻與其背道而馳，我會上場，但是那時還不是時候，術後出現在中人面前的我是一個全新的我、一個達到目標高度的我、真正有得分和防守能力的我。一想到這些，我才有辦法放下心中的那份急躁和很久沒打球的悶熱感，將精力投入在訓練課程上，無論是在家的自我訓練還是在姊姊協助下的訓練課程，我都會全力以赴去完成。</font></p>
+<p style="color:#FFD9EB;"><font size="3">聽完我的心境分享之後，該談談今天的訓練了。身體離隨心所欲的控制還有很長的一段路要走，訓練動作中肌群間的神經傳導和連接有些許的提升，雖然有時還是會因為傳導上的錯亂導致控制得不好，比如說，當正躺讓雙腳懸掛在TRX繩上面、臀部懸空，單就這個動作需要核心、骨盆底肌收緊並且臀肌出力，再來要做交錯的屈膝收腿，當要收右腳時，就必須專注的控制左側臀部保持出力、右側腿後收縮，交錯時則反過來，但困難的點就在於如何將臀肌和腿後的力量連接。</font></p>
+<p style="color:#FFD9EB;"><font size="3">除此之外，器械的勾腿動作是我今天的熱身和收操，在熱身階段漸漸感受到左側腿後的肌力有明顯的提升，雖然還是需要靠下壓或右腳的力量去帶，但在收操階段，已經能單靠腿後的收縮完整作出下勾的動作。</font></p>
+<p style="color:#FFD9EB;"><font size="3">訓練完之後，我因好奇測了一下INBODY (<b>圖6</b>)，驚人的發現體之竟然高達25.5%，在我的印象中從來沒有出現過這個數字，曾經一度在調整時期達到生涯最低的16.3%，沒想到在一個月床上的術後生活下出現的可怕的變化，雖然體重沒有變化，但是住院到復原期間真的吃得太「營養」了，最驚人的還是左右側的肌力是平衡的，意味著轉去當左手球員還是有機會的。</font></p>
+<p style="text-indent:1cm;color:#FFD9EB;"><font size="3"></font></p>
+<p></p>
+<img src="Figures/Training/train_org.jpg" style="width:50%" class><img src="Figures/Training/report_body1120.jpg" style="width:46.5%" class>
+<p></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖5: 物理治療師：「橘色OOTD」我說：「應該算OOTT」 (左)</b></font></span></p>
+<p align="center"><span style="color: #FFD9EB;"><font size="4"><b>圖6: 身體數據測量 (右)</b></font></span></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-20</b></font></span></p>
+</div>
+<br>
 
 <div class="story">
 <h3><p style="color:#FFD9EB;"><b>術後約兩個月</b></p></h3>
