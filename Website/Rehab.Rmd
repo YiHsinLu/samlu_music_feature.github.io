@@ -77,10 +77,10 @@ function move() {
   var width = 1;
   var id = setInterval(frame, 60);
   function frame() {
-    if (width >= 17) {
+    if (width >= 18) {
       clearInterval(id);
       document.getElementById("myP").className = "w3-text-white w3-animate-opacity";
-      document.getElementById("myP").innerHTML = "Successfully finished for 62 days!";
+      document.getElementById("myP").innerHTML = "Successfully finished for 64 days!";
     } else {
       width++; 
       elem.style.width = width + '%'; 
@@ -96,6 +96,16 @@ function move() {
 
 <h2 align="center"><span style="color: #DB7093;"><b>手術復健日記</b></span></h2>
 <p align="right"><span style="color: #DB7093;"><b>文 / 呂一昕</b></span></p>
+
+<div class="story">
+<h3><p style="color:#FFD9EB;"><b>術後64天</b></p></h3>
+****
+<p style="color:#FFD9EB;"><font size="3">陽光照亮了入冬的早晨，因為行程的關係，今天特別走74號快速道路去慈濟，正值大家上班趕路的時間，我悠哉地開在速限內卻顯得與這個世界格格不入。順利經過幾十分鐘的小壅塞後，殊不知還有更大的難題，慈濟的停車場滿到必須停到另一個院區，不過奇怪的是我的心情似乎沒有任何的起伏，既不生氣也不會覺得煩躁，正當我以為是我真的長大、學會控制自己的情緒時，10點多的艷陽搭配上步行10分鐘的路程還是讓我忍不住翻了一個大大的白眼。</font></p>
+<p style="color:#FFD9EB;"><font size="3">不過，一想到今天又是一個新的訓練日時，微笑又重新出現在我臉上。今天課程之前給自己的訓練是滾筒的熱身和器械的坐姿腿後勾和腿屈伸(腿後勾雙腳20公斤\*2組、左腳15公斤\*2組、腿屈伸雙腳20公斤\*1組、左腳20公斤\*1組)。正式進入今天的課程，主要還是使用TRX來做下肢傳導和控制的訓練，進階的訓練就是無法反手撐地，必須將手抱胸並使用更多的下肢力量去控制平衡，姐姐還很邪惡的加了半圓球板在我支撐的背下，加入了更不穩定的因素，害我原本容易流汗的體質一覽無疑，這是從術後就沒有發生的情況，真的非常感謝物理治療師姊姊，讓我重溫以前那個要帶四到五件球衣訓練的時光。</font></p>
+<p style="color:#FFD9EB;"><font size="3"></font>開玩笑歸開玩笑，我還是全力以赴的完成今日的課表，雖然一度核心的火力見底，但是這次我並沒有說，我不行。這次，只能成功、不許失敗，就算失敗，也要失敗的更有意義，然後再捲土重來。目標，一年後成功回歸，成為台灣西田有志、全能型的球員、最高打點320公分，希望到那個時候，讓所有跟我打過球的人都驕傲地說：「很開心曾經是你的隊友。」</p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-11-22</b></font></span></p>
+</div>
+<br>
 
 <div class="story">
 <h3><p style="color:#FFD9EB;"><b>術後62天 (兩個月整、第八週)</b></p></h3>
@@ -115,7 +125,7 @@ function move() {
 <br>
 
 <div class="story">
-<h3><p style="color:#FFD9EB;"><b>術後約兩個月</b></p></h3>
+<h3><p style="color:#FFD9EB;"><b>術後57天 (接近兩個月)</b></p></h3>
 ****
 <p style="color:#FFD9EB;"><font size="3">光陰似箭，兩週共6天的訓練之下，明顯感覺到力量和控制漸漸回來，膝蓋的角度也達到120度，每個禮拜兩堂的訓練課程就是我前進的動力，我知道要非常有耐心。不需要快、不需要輕鬆、不需要馬上有效果，如果這個過程如此簡單，那我就不需要努力、也不需要開刀了。唯有經歷過這些痛苦，每次課程中全力地完成所有動作、課程後因力竭而軟腳、凹膝蓋角度的疼痛感是真實的成就感，才是達到最終目標的必經之路。</font></p>
 <p style="color:#FFD9EB;"><font size="3">菜單更新：</font></p>
@@ -145,7 +155,7 @@ function move() {
 </div>
 <br>
 <div class="story">
-<h3><p style="color:#FFD9EB;"><b>術後一個半月</b></p></h3>
+<h3><p style="color:#FFD9EB;"><b>術後45天 (一個半月)</b></p></h3>
 ****
 <p style="color:#FFD9EB;"><font size="3">真正開始訂菜單進行訓練：</font></p>
 <p style="text-indent:1cm;color:#FFD9EB;"><font size="3">靠強深蹲 (多出臀部的力量將身體帶起來)</font></p>
@@ -175,7 +185,7 @@ function move() {
 </div>
 <br>
 <div class="story">
-<h3><p style="color:#FFD9EB;"><b>術後一個月</b></p></h3>
+<h3><p style="color:#FFD9EB;"><b>術後29天 (接近一個月)</b></p></h3>
 ****
 <p style="color:#FFD9EB;"><font size="3">醫師的規劃是過去的這一個月讓支架的角度在0-30度，盡量讓左腳伸直，等待癒合。術後的第一次回診，已經不需要再使用拐杖並且將護膝的角度調整到0-90度，醫師特別安排我到慈濟的功能性健身房找物理治療師評估。這位物理治療師姊姊也就是之後帶我訓練的人，但還在適應沒有拐杖的我，連路都忘記怎麼走，更不要說做一些屈膝的動作了。</font></p>
 <p align="right"><span style="color: #FFD9EB;"><font size="4"><b>2023-10-18</b></font></span></p>
