@@ -80,7 +80,7 @@ function move() {
     if (width >= 18) {
       clearInterval(id);
       document.getElementById("myP").className = "w3-text-white w3-animate-opacity";
-      document.getElementById("myP").innerHTML = "Successfully finished for 64 days!";
+      document.getElementById("myP").innerHTML = "Successfully finished for 65 days!";
     } else {
       width++; 
       elem.style.width = width + '%'; 
