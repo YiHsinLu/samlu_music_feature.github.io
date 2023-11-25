@@ -31,6 +31,9 @@ div.story {
 <div class="story">
 <p style="color:#FFD9EB;"><font size="4"><b>This page includes my writing performances, stories, lovely memories. The words are the most powerful strength to help people and be a lighthouse in front of dark ocean, I believe those stories will encourage and inspire someone who are confuse in their life.</b></font></p>
 <p align="right"><span style="color: #FFD9EB;"><font size="4"><b>------ Yi-Hsin Lu, Nov. 14th, 2023.</b></font></span></p>
+<p></p>
+<p style="color:#FFD9EB;"><font size="4"><b>Chalie Chaplin once said "life is a tragedy when seen in close-up, but comedy in long-shot".</b></font></p>
+<p align="right"><span style="color: #FFD9EB;"><font size="4"><b>------ Yi-Hsin Lu, Nov. 25th, 2023.</b></font></span></p>
 </div>
 
 ****
