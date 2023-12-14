@@ -330,6 +330,7 @@ h1 span{
 
 .home img{
     max-width: 100%;
+	z-index:-1;
 }
 
 .home a{
@@ -339,6 +340,7 @@ h1 span{
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
+	z-index:2;
 }
 
 .home .yi{
