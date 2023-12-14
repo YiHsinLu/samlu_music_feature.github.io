@@ -23,7 +23,7 @@
 body{
 	font-family: arial;
     display: flex;
-	background: #081320;
+	background: linear-gradient(#081320 70% , white );
 	color: white;
     justify-content: center;
     text-align: center;
@@ -110,7 +110,6 @@ body{
     margin-left: -250px;
     opacity: 0.5;
     filter: blur(2px);
-    animation-direction: reverse;
     animation-duration: 6s;
 }
 
@@ -120,7 +119,6 @@ body{
     margin-left: -150px;
     opacity: 0.7;
     filter: blur(1px);
-    animation-direction: reverse;
     animation-duration: 8s;
 }
 
@@ -265,6 +263,16 @@ h1{
     font-size: 50px;
     color:transparent;
     margin-top: 100px;
+    z-index: 1;
+    filter: blur(2px);
+    text-shadow: 0 0 10px white,
+    0 0 20px white,
+    0 0 40px white,
+    0 0 80px white,
+    0 0 120px white,
+    0 0 200px white,
+    0 0 300px white,
+    0 0 400px white;
 }
 
 h1 span{
