@@ -260,10 +260,17 @@ body{
 
 h1{
     display: flex;
+<<<<<<< HEAD
     font-size: 100px;
     color:white;
     top: 30%;
     z-index: -1;
+=======
+    font-size: 50px;
+    color:transparent;
+    margin-top: 100px;
+    z-index: 1;
+>>>>>>> e88348df59c6235bf7bbfdaf030ea435c599fb85
     filter: blur(2px);
     text-shadow: 0 0 10px white,
     0 0 20px white,
@@ -273,7 +280,10 @@ h1{
     0 0 200px white,
     0 0 300px white,
     0 0 400px white;
+<<<<<<< HEAD
     height: 200px;
+=======
+>>>>>>> e88348df59c6235bf7bbfdaf030ea435c599fb85
 }
 
 h1 span{
@@ -355,7 +365,11 @@ h2 span{
 
 .home img{
     max-width: 100%;
+<<<<<<< HEAD
     z-index: -1;
+=======
+	z-index:-1;
+>>>>>>> e88348df59c6235bf7bbfdaf030ea435c599fb85
 }
 
 .home a{
@@ -365,7 +379,11 @@ h2 span{
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
+<<<<<<< HEAD
     z-index: 2;
+=======
+	z-index:2;
+>>>>>>> e88348df59c6235bf7bbfdaf030ea435c599fb85
 }
 
 .home .yi{
