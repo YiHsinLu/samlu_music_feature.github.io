@@ -1,5 +1,4 @@
 
-@import url('https://fonts.cdnfonts.com/css/bad-script-2');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 
@@ -7,24 +6,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bad Script',cursive;
+    font-family: 'Poppins', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
 
 *:after, *:before{
-    font-family: 'Bad Script',cursive;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
 body{
-	font-family: arial;
+    font-family: arial;
     display: flex;
-	background: linear-gradient(#081320 70% , white );
-	color: white;
+    background: linear-gradient(#081320 70% , white );
+    color: white;
     justify-content: center;
     text-align: center;
     height: 100vh;
@@ -50,13 +49,13 @@ body{
 }
 
 .snow_wrap{
-	height: 100vh;
-	width: 100%;
-	background:transparent;
-	background-size: cover;
-	background-position: center bottom; 
-	overflow: hidden;
-	position: absolute;
+    height: 100vh;
+    width: 100%;
+    background:transparent;
+    background-size: cover;
+    background-position: center bottom; 
+    overflow: hidden;
+    position: absolute;
     justify-content: center;
     text-align: center;
     display: flex;
@@ -260,9 +259,9 @@ body{
 
 h1{
     display: flex;
-    font-size: 100px;
+    font-size: 50px;
     color:white;
-    top: 30%;
+    top: 10px;
     z-index: -1;
     filter: blur(2px);
     text-shadow: 0 0 10px white,
@@ -276,18 +275,13 @@ h1{
     height: 200px;
 }
 
-h1 span{
-    animation: animate 4s linear infinite;
-    animation-delay: calc(0.1s * var(--i));
-}
-
 h2{
     position: absolute;
     display: flex;
-    font-size: 50px;
+    font-size: 25px;
     color:white;
     z-index: -1;
-    top: 200px;
+    top: 65px;
     filter: blur(2px);
     text-shadow: 0 0 10px white,
     0 0 20px white,
@@ -300,49 +294,14 @@ h2{
     height: 100px;
 }
 
-h2 span{
-    animation: animate 4s linear infinite;
-    animation-delay: calc(0.1s * var(--i));
-}
-
-@keyframes animate {
-    0%{
-        color: #fff;
-        filter: blur(2px) hue-rotate(0deg);
-        text-shadow: 0 0 10px pink,
-        0 0 20px pink,
-        0 0 40px pink,
-        0 0 80px pink,
-        0 0 120px pink,
-        0 0 200px pink,
-        0 0 300px pink,
-        0 0 400px pink;
-    }
-    30%,70%{
-        color: #fff;
-        filter: blur(2px) hue-rotate(360deg);
-        text-shadow: 0 0 10px pink,
-        0 0 20px pink,
-        0 0 40px pink,
-        0 0 80px pink,
-        0 0 120px pink,
-        0 0 200px pink,
-        0 0 300px pink,
-        0 0 400px pink;
-    }
-    100%{
-        color: transparent;
-        box-shadow: none;
-        filter: blur(2px) hue-rotate(0deg);
-    }
-}
-
 .snow-ground{
     width: 100%;
     height: 25%;
     position: absolute;
     bottom: 0;
     background: white;
+    box-shadow: 0 0 200px white;
+    filter: blur(10px);
 }
 
 .home{
@@ -363,6 +322,22 @@ h2 span{
     font-size: 40px;
     color: #CFCFCF;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    z-index: 2;
+}
+
+
+.snow_wrap .name{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    z-index: 2;
+}
+.snow_wrap a{
+    color: #142f50;
+    font-size: 40px;
+    margin-left: 10px;
     display: inline-block;
     text-decoration: none;
     z-index: 2;
