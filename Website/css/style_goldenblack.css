@@ -1,0 +1,551 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+*:after, *:before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+        
+body{
+    background: #1e1e1f;
+    color: #CFCFCF;
+    margin:0px;
+    font-size:100%;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 44px;
+    color: #CFCFCF;
+    text-decoration: none;
+    font-weight: 600;
+    width: 30%;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.navbar a {
+    font-size: 40px;
+    color: #CFCFCF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+
+
+.navbar a:hover{
+    color: #CAA36E;
+    font-size: 50px;
+}
+
+.navbar a.active{
+    color: #CAA36E;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background:#1e1e1f;
+    animation: showRight 2s ease forwards;
+    animation-delay: .6s;
+    z-index: 100;
+}
+
+.volley{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.volley-contact{
+    max-width: 400px;
+}
+
+.volley-contact h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.volley-contact h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.volley-contact h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #CAA36E;
+}
+
+.volley-contact h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+.volley-contact h4{
+    position: relative;
+    font-size: 30px;
+    margin: 20px 0 40px;
+}
+
+.volley-contact h4::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.volley-contact .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+
+}
+
+.volley-contact .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #CAA36E;
+    border: 2px solid #CAA36E;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #1e1e1f;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+    color: #CAA36E;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #CAA36E;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #1e1e1f;
+}
+
+.btn-box a:nth-child(2)::before{
+    background: #CAA36E;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #1e1e1f;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.volley-sci{
+    position: absolute;
+    bottom: 10%;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.volley-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3.5s;
+    z-index: 3;
+}
+
+.volley-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #CAA36E;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #CAA36E;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.volley-sci a:hover{
+    color: #1e1e1f;
+}
+
+.volley-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #CAA36E;
+    z-index: -1;
+    transition: .5s;
+}
+
+.volley-sci a:hover::before{
+    width: 100%;
+}
+
+.volley-imagHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+
+
+.volley-imagHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #1e1e1f;
+    animation: showVisible 2s ease forwards;
+    animation-delay: 4s;
+    z-index: -1;
+}
+
+@keyframes showVisible {
+    100% {
+        opacity: 0;
+    }
+}
+
+
+img{
+    position: fixed;
+    left: 45%;
+    max-height: 100%;
+    max-width: 55%;
+    opacity: 1;
+    z-index: -3;
+}
+
+
+
+.snowing, .snowing:after, .snowing:before{
+    content: "";
+    position: absolute;
+    top: -600px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 482px 132px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 186px, #fff, transparent),
+    radial-gradient(3px 3px at 290px 368px, #fff, transparent),
+    radial-gradient(3px 3px at 587px 593px, #fff, transparent),
+    radial-gradient(3px 3px at 19px 572px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 428px, #fff, transparent),
+    radial-gradient(3px 3px at 320px 202px, #fff, transparent),
+    radial-gradient(3px 3px at 582px 514px, #fff, transparent),
+    radial-gradient(3px 3px at 128px 381px, #fff, transparent),
+    radial-gradient(3px 3px at 372px 466px, #fff, transparent),
+    radial-gradient(4px 4px at 384px 252px, #fff, transparent),
+    radial-gradient(4px 4px at 599px 404px, #fff, transparent),
+    radial-gradient(4px 4px at 155px 265px, #fff, transparent),
+    radial-gradient(4px 4px at 159px 187px, #fff, transparent),
+    radial-gradient(4px 4px at 172px 239px, #fff, transparent),
+    radial-gradient(4px 4px at 238px 55px, #fff, transparent),
+    radial-gradient(4px 4px at 113px 565px, #fff, transparent),
+    radial-gradient(4px 4px at 466px 367px, #fff, transparent),
+    radial-gradient(4px 4px at 505px 218px, #fff, transparent),
+    radial-gradient(4px 4px at 589px 296px, #fff, transparent),
+    radial-gradient(5px 5px at 270px 307px, #fff, transparent),
+    radial-gradient(5px 5px at 115px 23px, #fff, transparent),
+    radial-gradient(5px 5px at 15px 327px, #fff, transparent),
+    radial-gradient(5px 5px at 249px 508px, #fff, transparent),
+    radial-gradient(5px 5px at 86px 169px, #fff, transparent),
+    radial-gradient(5px 5px at 595px 38px, #fff, transparent),
+    radial-gradient(5px 5px at 77px 588px, #fff, transparent),
+    radial-gradient(5px 5px at 477px 15px, #fff, transparent),
+    radial-gradient(5px 5px at 410px 403px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 600px;
+    animation: snwoningAnim 5s linear infinite;
+}
+
+.snowing:after{
+    position: absolute;
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 6s;
+}
+
+
+.snowing:before{
+    position: absolute;
+    margin-left: -150px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 8s;
+}
+
+@keyframes snwoningAnim{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(600px);
+    }
+}
+
+.snowingRight, .snowingRight:after, .snowingRight:before{
+    content: "";
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: -600px;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 482px 132px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 186px, #fff, transparent),
+    radial-gradient(3px 3px at 290px 368px, #fff, transparent),
+    radial-gradient(3px 3px at 587px 593px, #fff, transparent),
+    radial-gradient(3px 3px at 19px 572px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 428px, #fff, transparent),
+    radial-gradient(3px 3px at 320px 202px, #fff, transparent),
+    radial-gradient(3px 3px at 582px 514px, #fff, transparent),
+    radial-gradient(3px 3px at 128px 381px, #fff, transparent),
+    radial-gradient(5px 5px at 86px 169px, #fff, transparent),
+    radial-gradient(5px 5px at 595px 38px, #fff, transparent),
+    radial-gradient(5px 5px at 77px 588px, #fff, transparent),
+    radial-gradient(5px 5px at 477px 15px, #fff, transparent),
+    radial-gradient(5px 5px at 410px 403px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 1000px;
+    animation: snwoningAnimRight 20s linear infinite;
+    filter: blur(1px);
+}
+
+.snowingRight:after{
+    position: absolute;
+    margin-left: -200px;
+    filter: blur(2px);
+    animation-duration: 22s;
+}
+
+
+.snowingRight:before{
+    position: absolute;
+    margin-left: -300px;
+    filter: blur(1px);
+    animation-duration: 30s;
+}
+
+@keyframes snwoningAnimRight{
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(600px, 1000px);
+    }
+}
+
+.snowingLeft, .snowingLeft:after, .snowingLeft:before{
+    content: "";
+    position: absolute;
+    top: -1200px;
+    right: -600px;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 372px 466px, #fff, transparent),
+    radial-gradient(4px 4px at 384px 252px, #fff, transparent),
+    radial-gradient(4px 4px at 599px 404px, #fff, transparent),
+    radial-gradient(4px 4px at 155px 265px, #fff, transparent),
+    radial-gradient(4px 4px at 238px 55px, #fff, transparent),
+    radial-gradient(4px 4px at 113px 565px, #fff, transparent),
+    radial-gradient(4px 4px at 466px 367px, #fff, transparent),
+    radial-gradient(5px 5px at 15px 327px, #fff, transparent),
+    radial-gradient(5px 5px at 249px 508px, #fff, transparent),
+    radial-gradient(5px 5px at 86px 169px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 1200px;
+    animation: snwoningAnimLeft 20s linear infinite;
+}
+
+.snowingLeft:after{
+    position: absolute;
+    margin-left: -50px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 23s;
+}
+
+
+.snowingLeft:before{
+    position: absolute;
+    margin-left: -400px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 25s;
+}
+
+@keyframes snwoningAnimLeft{
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(-600px, 1200px);
+    }
+}
+
+.snow_wrap{
+	height: 100vh;
+	width: 100%;
+	background:transparent;
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: absolute;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.timeline{
+    position: absolute;
+    top: 100px;
+    left: 49%;
+    bottom: 100px;
+    background: #CFCFCF;
+    border-radius: 5px;
+    height: 1000vh;
+    width: 8px;
+}

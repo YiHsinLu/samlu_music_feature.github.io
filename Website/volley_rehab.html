@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/style_rehab.css">
+<script src="js/script.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+</head>
+
+<body>
+    <div class="container" id="blur">
+        <header class="header">
+            <a href="index.html" class="logo">Yi-Hsin</a>
+            
+            
+            <nav class="navbar">
+                <a href="index.html"><abbr title="Home"><i class="fas fa-home"></i></abbr></a>
+                <a href="#"><abbr title="Profile"><i class="fas fa-id-card"></i></abbr></a>
+                <a href="#"><abbr title="Research"><i class="fas fa-microscope"></i></abbr></a>
+                <a href="volley.html" class="active"><abbr title="Volleyball"><i class="fas fa-volleyball-ball"></i></abbr></a>
+                <a href="music.html"><abbr title="Music"><i class="fas fa-guitar"></i></abbr></a>
+                <a href="#"><abbr title="Dream"><i class="fas fa-archway"></i></abbr></a>
+            </nav>
+            
+        </header>
+        <div class="rehab">
+            <div class="timeline"></div>
+            <div class="timeline-storybox-2014-2022">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup2014')"><span style="font-size: 20px;">2014~2022</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #1e1e1f;font-size: 20px;">2014~2022</span></a>
+            </div>
+            <div class="timeline-storybox-2023">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup2023')"><span style="color: #1e1e1f;font-size: 20px;">2023</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023</span></a>
+            </div>
+            <div class="timeline-storybox-20230809">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20230809')"><span style="color: #1e1e1f;font-size: 20px;">2023-08-09</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-08-09</span></a>
+            </div>
+            <div class="timeline-storybox-20230917">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20230917')"><span style="font-size: 20px;">2023-09-17</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #1e1e1f;font-size: 20px;">2023-09-17</span></a>
+            </div>
+            <div class="timeline-storybox-20230918">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20230918')"><span style="font-size: 20px;">2023-09-18 ~ 2023-09-21</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #1e1e1f;font-size: 20px;">2023-09-18 ~ 2023-09-21</span></a>
+            </div>
+            <div class="timeline-storybox-20231018">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231018')"><span style="color: #1e1e1f;font-size: 20px;">2023-10-18</span><span style="color: #CAA36E">29</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-10-18</span><span style="color: #1e1e1f;">29</span></a>
+            </div>
+            <div class="timeline-storybox-rehab">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popuprehab')">Rehab. Start&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #1e1e1f;">Rehab. Start</span></a>
+            </div>
+            <div class="timeline-storybox-20231103">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231103')"><span style="color: #1e1e1f;">45</span><span style="font-size: 20px;">2023-11-03</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">45</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-03</span></a>
+            </div>
+            <div class="timeline-storybox-20231115">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231115')"><span style="color: #1e1e1f;">57</span><span style="font-size: 20px;">2023-11-15</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">57</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-15</span></a>
+            </div>
+            <div class="timeline-storybox-20231120">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231120')"><span style="color: #1e1e1f;">62</span><span style="font-size: 20px;">2023-11-20</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">62</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-20</span></a>
+            </div>
+            <div class="timeline-storybox-20231122">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231122')"><span style="color: #1e1e1f;">64</span><span style="font-size: 20px;">2023-11-22</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">64</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-22</span></a>
+            </div>
+            <div class="timeline-storybox-20231127">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231127')"><span style="color: #1e1e1f;">69</span><span style="font-size: 20px;">2023-11-27</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">69</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-27</span></a>
+            </div>
+            <div class="timeline-storybox-20231129">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231129')"><span style="color: #1e1e1f;">71</span><span style="font-size: 20px;">2023-11-29</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">71</span><span style="color: #1e1e1f;font-size: 20px;">2023-11-29</span></a>
+            </div>
+            <div class="timeline-storybox-20231201">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231201')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-01</span><span style="color: #CAA36E">73</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-01</span><span style="color: #1e1e1f;">73</span></a>
+            </div>
+            <div class="timeline-storybox-20231204">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231204')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-04</span><span style="color: #CAA36E">76</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-04</span><span style="color: #1e1e1f;">76</span></a>
+            </div>
+            <div class="timeline-storybox-20231206">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231206')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-06</span><span style="color: #CAA36E">78</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-06</span><span style="color: #1e1e1f;">78</span></a>
+            </div>
+            <div class="timeline-storybox-20231208">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231208')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-08</span><span style="color: #CAA36E">80</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-08</span><span style="color: #1e1e1f;">80</span></a>
+            </div>
+            <div class="timeline-storybox-20231211">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231211')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-11</span><span style="color: #CAA36E">83</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-11</span><span style="color: #1e1e1f;">83</span></a>
+            </div>
+            <div class="timeline-storybox-20231215">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231215')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-15</span><span style="color: #CAA36E">87</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-15</span><span style="color: #1e1e1f;">87</span></a>
+            </div>
+            <div class="timeline-storybox-20231218">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231218')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-18</span><span style="color: #CAA36E">90</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-18</span><span style="color: #1e1e1f;">90</span></a>
+            </div>
+            <div class="timeline-storybox-20231222">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231222')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-22</span><span style="color: #CAA36E">94</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-22</span><span style="color: #1e1e1f;">94</span></a>
+            </div>
+            <div class="timeline-storybox-20231225">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231225')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-25</span><span style="color: #CAA36E">97</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-25</span><span style="color: #1e1e1f;">97</span></a>
+            </div>
+            <div class="timeline-storybox-20231229">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20231229')"><span style="color: #1e1e1f;font-size: 20px;">2023-12-29</span><span style="color: #CAA36E">101</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="font-size: 20px;">2023-12-29</span><span style="color: #1e1e1f;">101</span></a>
+            </div>
+            <div class="timeline-storybox-20240101">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20240101')"><span style="color: #1e1e1f;">104</span><span style="font-size: 20px;">2024-01-01</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">104</span><span style="color: #1e1e1f;font-size: 20px;">2024-01-01</span></a>
+            </div>
+            <div class="timeline-storybox-20240105">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20240105')"><span style="color: #1e1e1f;">108</span><span style="font-size: 20px;">2024-01-05</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">108</span><span style="color: #1e1e1f;font-size: 20px;">2024-01-05</span></a>
+            </div>
+            <div class="timeline-storybox-20240108">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20240108')"><span style="color: #1e1e1f;">111</span><span style="font-size: 20px;">2024-01-08</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">111</span><span style="color: #1e1e1f;font-size: 20px;">2024-01-08</span></a>
+            </div>
+            <div class="timeline-storybox-20240115">
+                <div class="timeline-point"></div>
+                <a href="#" onclick="toggle('popup20240115')"><span style="color: #1e1e1f;">118</span><span style="font-size: 20px;">2024-01-15</span>&nbsp;<i class="fas fa-volleyball-ball"></i>&nbsp;<span style="color: #CAA36E">118</span><span style="color: #1e1e1f;font-size: 20px;">2024-01-15</span></a>
+            </div>
+
+
+            <div class="Present">
+                <div class="Present-point"></div>
+                <a href="#" onclick="toggle('rehabilitation')">Finished <span id="percentage"></span> % (<span id="day" style="color: #CAA36E"></span>/365)</a>
+                <div class="progress-bar">
+                    <div id="done" class="progress-bar-done"></div>
+                </div>
+            </div>
+            <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Sep 19, 2023").getTime();
+                // Get today's date and time
+                var now = new Date().getTime();
+                // Find the distance between now and the count down date
+                var distance = now - countDownDate;
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                // Output the result in an element with id="demo"
+                var percen = Math.round(distance / (60 * 60 * 24 * 365)) / 10;
+                // Output the result in an element with id="demo"
+                
+                document.getElementById("percentage").innerHTML = percen;
+                document.getElementById("day").innerHTML = days;
+                document.getElementById("done").style.width = percen +"%";
+            </script>
+
+
+        </div>
+    </div>
+
+
+
+    <div id="popup20240115" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20240115')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後118天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>新的階段、新的開始、新的挑戰，其實我一直都知道我身體的狀況，核心不夠強會讓我在空中沒辦法有很很好的表現，左側膝蓋角度會讓我所有左邊來的球沒辦法掌握得很好，腿後的肌力低前側太多會讓我緩衝的效果不佳，這些都是復健過程中必須去處理的問題，但這也讓治療師姐姐非常苦惱。
+        </p><br>
+        <p>紅繩的部分已經非常熟悉又令我避之唯恐不及，因為在紅繩上的我根本是一個武功盡失的普通人，就算核心收緊也沒辦法阻止我左腳的顫抖，不過只要我能夠在紅繩上練出絕世神功，那我空戰的技巧應該可以更多元。</p><br>
+        <img src="figures/Training/20240115_1legjump1.gif" style="width:50%" class><img src="figures/Training/20240115_1legjump2.gif" style="width:50%" class>
+        <p align="center"><b>圖 34：單腳跳</b></p><br>
+        <img src="figures/Training/20240115_falling2.gif" style="width:50%" class><img src="figures/Training/20240115_falling3.gif" style="width:50%" class>
+        <p align="center"><b>圖 35：落地緩衝</b></p><br>
+        <img src="figures/Training/20240115_spikejump.gif" style="width:50%" class><img src="figures/Training/20240115_spikejump1.gif" style="width:50%" class>
+        <p align="center"><b>圖 36：助跑跳</b></p><br>
+        <img src="figures/Training/20240115_deadlift10kg.gif" style="width:50%" class><img src="figures/Training/20240115_deadlift24kg.gif" style="width:50%" class>
+        <p align="center"><b>圖 37：單側硬舉</b></p><br>
+        <img src="figures/Training/20240115_squatD.jpg" style="width:50%" class><img src="figures/Training/20240115_squatU.jpg" style="width:50%" class>
+        <p align="center"><b>圖 38：扛槓深蹲</b></p><br>
+        <p align="right"><b>2024-01-15</b></p>
+    </div>
+    <div id="popup20240108" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20240108')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後111天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>大病初癒，姊姊說：「控制能力有更好了！接下來會加強阻力跟平衡訓練，提升穩定的控制能力；這一個月會以小跑步為目標。」髂腰的疼痛逐漸在消散，復健正式宣告進入第二階段，雖然膝蓋彎曲離全角度還有一段距離，但是在過程中可以加入新的進度和難度了。這是我第一次這麼認真的面對我自己身體的真實情況，而且目標是解決膝蓋的主要問題並重回球場。目前最弱的左側腿後肌群是主要肌力要加強的部分，由於開刀取的是腿後的半健、半膜肌腱來補十字韌帶，所以辛苦是一定的，訓練期間的「很痠」、「是不是做不了」將會是成長的養分，有這個感覺就對了，突破之後才會變強。</p><br>
+        <p>今天訓練強度還可以，控制的部分號像沒這麼困難，但是特別要提到的是臀推個動作時，腳放在紅繩上，上推時因為左膝的自主彎曲還不夠穩定加上腿後也不夠強壯，所以會往前滑出，整體做起來，左側的力量必須出到右側的兩倍以上才有辦法勉強平衡。這個也是需要靠腿後訓練去克服的一點，如果單單只有膝蓋角度達到可能也沒辦法很好的平衡。這個信階段加入了跳躍的項目，還是有紅繩可以抓握作落地的緩衝，特別是單腳跳的時候，必須克服心理的因素去倚靠地面的反作用力，這邊就可以發現在左側單腳跳時，我的手無意識地抓得更用力，不過這也只是剛開始，慢慢必須適應膝蓋受力的感覺。最後的訓練就是硬舉，作為腿後肌群的訓練動作之首，槓線雖然還是不夠好，但是腿後的感受度也出現了，分腿硬舉時還是需要特別注意臀後推的位置和平衡。
+        </p><br>
+        <img src="figures/Training/20240108_OneLegJumpL.gif" style="width:50%" class><img src="figures/Training/20240108_OneLegJumpR.gif" style="width:50%" class>
+        <p align="center"><b>圖 32：單腳跳</b></p><br>
+        <img src="figures/Training/20240108_deadlift.gif" style="width:42.85%" class><img src="figures/Training/20240108_deadlift1.gif" style="width:57.15%" class>
+        <p align="center"><b>圖 33：分腿硬舉</b></p><br>
+        <p align="right"><b>2024-01-08</b></p>
+    </div>
+    <div id="popup20240101" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20240101')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後104天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>我做了一個夢，一個很美很美不想醒來的夢。那天我站在球場上，我深知膝蓋還在復健中，但我也明白這就是「那個時刻」，那個我這輩子都不想放過的難得機會。神奇的是我竟然沒有陷入兩難，毫不猶豫地選擇無視任何病痛，那個我宛如解開枷鎖一般，那個畫面歷歷在目，打點高過一切，俯視全場的視野令我無法自拔，開始瘋狂進攻，小心翼翼的落地緩衝，肆意的嘗試各種極限球路，當我看著腦中模擬的畫面都化為現實，真的讓我興奮不已。醒來之後依舊還那個復健中的膝蓋，不過這場夢卻沒有春夢清醒般的空虛感，相反的，這是我對於夢想真的有可能達成的那份激動，還有加上對未來滿懷期待的心情，這才是我！
+        </p><br>
+        <p>西元2024年1月4號，偶然滑到苡任的IG分享她家通訊行有著整個櫥窗裡都她粉絲、家人、朋友的紀念品，其中看到了我在去年台北鯨華奪冠、見面送出的卡片，很開心我是苡任的粉絲，更開心苡任的是一位很棒的球員、偶像、女神，這讓我知道就是這一年了，我一定要做出一些不一樣的事情。</p><br>
+        <img src="figures/Training/draw_spikeForm.jpg" style="width:100%" class>
+        <p align="center"><b>圖 27：夢想中的跳發姿勢</b></p><br>
+        <img src="figures/Training/elaine_ig.gif" style="width:100%" class>
+        <p align="center"><b>圖 28：苡任的現實動態</b></p><br>
+        <p align="right"><b>2024-01-01</b></p>
+    </div>
+    <div id="popup20231229" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231229')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <img src="figures/nishida.jpg" style="width:100%" class><br>
+        <h3><b>術後101天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>隨著休息的時間拉長，我越來越坐不住、越來越想趕快去球場活動筋骨，經過三天的禁足、禁止訓練之後，雖然臀部疼痛的情況沒什麼變化，但是一成不變應該也算是不錯的變化了，驗證我目前的情況可能需要靠訓練來改善。姊姊他們給出的方法是換個方向從薦髂關節下手，不同於之前的髂腰肌群，用伸展或拉筋的方式去放鬆。</p><br>
+        <p>今天第一項就是側棒式姿勢，外側腿的膝蓋、小腿彎曲貼在板凳上，正個身體水平支撐、核心收緊，內側腳懸空做前後的水平移動，除了考驗核心的穩定，還有內群的支撐控制，動作的當下才是靠腿部力量向前踢(腿前)、向後帶(腿後)，輛個方向的作動又需要外展拉住整隻腿不接觸地面。第二項就是剛剛提到的薦髂關節的活動，躺著、雙手平放地板、雙腳做死蟲式的下肢、小腿和地面平行、膝蓋彎曲約90度，雙腳中間夾滾桶，下腹發力讓尾椎稍微離開地面，單側坐薦髂關節的滑動，將膝蓋垂直向上頂、轉動滾筒，練完之後有明顯的感覺好像哪裡不一樣、又好像什麼都還是一樣。後面的屈膝前蹬(雙肘撐TRX)、肩夾穩定收腿和圖24、25的訓練，真的在改變。</p><br>
+        <img src="figures/Training/20231229_balance.gif" style="width:100%" class>
+        <p align="center"><b>圖 24：穩定度訓練</b></p><br>
+        <img src="figures/Training/20231229_lowerBalance.gif" style="width:44.68%" class><img src="figures/Training/report_body1229.jpg" style="width:55.32%" class>
+        <p align="center"><b>圖 25：平衡穩定度訓練</b></p>
+        <p align="center"><b>圖 26：INBODY</b></p><br>
+        <p align="right"><b>2023-12-25</b></p>
+    </div>
+    <div id="popup20231225" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231225')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後97天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>復健期間最重要的事情：｢任何的運動和訓練適量就好，積極復健是好事，同時也是壞事」、「保持健康的身體」、「休息很重要，肌肉的生長在於恢復」，這些事情我明明非常清楚，卻一個也沒做到，隨著膝蓋越來越好、角度越來越大，身體問題也一一浮現。目前的疼痛點在左側髂腰肌和髖關節附近、臀中肌和髂脛束三個區塊，疼痛的感覺大概像是以那個區塊為中心向外擴張去抓其他肌群，走路、站立有時還可以承受、有時卻痛得要命，唯一不痛的時候大概就是坐著，但是坐久了一樣會痛，躺著算是一個折衷的辦法，會痛但可以接受。現階段的解決辦法只有休息、必須要站立或走路時，要將骨盆底肌收好，再不行就再多收一條核心，再來就是要調整姿勢和骨盆的位置。由於目前骨盆有傾斜的情況，左邊前傾、右邊後傾，這突然讓我思考到造成這個的可能原因，過去的七年裡因為膝蓋沒辦法彎到底 所以我很多時候必須要蹲下的時候就會下意識去避開左側可能需要到底的所有姿勢，則正常兩邊可以交替平衡的蹲就會變成有點高跪姿左腳在前的蹲法。不過這可能也是復健和真正成為運動員的必經之路，有姊姊在，我什麼都不擔心，因為它會比較擔心我每次見面時會不會又多一個狀況，這也算是姊姊成為拆彈專家的必經之路。</p><br>
+        <p>今天因為早上拉筋的時候天氣冷加上不小心拉過頭，右側的內收肌有點拉傷，那種撕裂感是會讓我不敢出力，所以今天大部分的動作都在於核心的穩定，除此之外貓式用來控制骨盆、增加本體感覺，讓我感受骨盆最大的的旋轉區間，再來就是深蹲的髖啟動，最後才是器械的大腿肌下壓和上抬。這個禮拜就休息三天看看情況，讓身體恢復。</p><br>
+        <p>「Merry Christmas」，沒想到竟然還可以收到聖誕禮物，不知道多久沒有收到禮物了，除了又驚又喜外，最多的還是感動，榮獲今年最感動得事情之一，唯一的聖誕禮物。姊姊的禮物送的我猝不及防、受寵若驚、欣喜若狂，還特別挑了我最愛的配色，讓我內心無比的溫暖。</p><br>
+        <img src="figures/Gift/sox.jpg" style="width:100%" class>
+        <img src="figures/Gift/volley_sox.jpg" style="width:100%" class>
+        <p align="center"><b>圖 22, 23：讓我愛不釋手的聖誕禮物 <i class="fa-solid fa-heart"></i></b></p><br>
+        <p align="right"><b>2023-12-25</b></p>
+    </div>
+    <div id="popup20231222" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231222')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後94天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>髂腰肌、臀肌的疼痛時好時壞，不過今天總算是確定主要其中一項的內收肌訓練會讓情況惡化，另外，起床、身體還未開機的幾個小時也是疼痛最嚴重的時候，所以可能要注意睡姿問題。禮拜一晚上睡前做了一次完整全身性的放鬆，有點放得太過頭了，左側的疼痛在隔天才顯現出來。</p><br>
+        <p>今天的身體絲毫沒有受到氣溫的影響，只是簡單的熱身、拉筋運動還是可以讓我汗流浹背，今天以調整姿勢為主，左側從腰、髂、下背、臀、腿後、腿前都是比較緊繃的，也因為有疼痛，所以也偏無力，有一種想出力卻沒辦法出的感覺。不過，核心的強度有慢慢在提升回原本的水準，前面再做棒式的延伸訓練時，比之前都還要輕鬆，無論是腿的開合或是捲腹上推都相對容易。最後的訓練是：器械內收(30kg*15*3)、側邊弓箭步蹲(R*15*3、L*15*3)、股二頭下壓(15kg*10*2、R15kg*10*2、L15kg*10*2)。最後還是需要拜託姊姊加班一下，幫我放鬆非常緊繃的左側，我就知道姊姊是最漂亮、最善良、最溫柔、對我最好的，下次就用餵食的方式體貼一下姊姊的辛勞。</p><br>
+        <img src="figures/Training/20231222_push.gif" style="width:50%" class><img src="figures/Training/20231222_SideSquat.gif" style="width:50%" class><br>
+        <p align="center"><b>圖 20：整體軀幹、下肢穩定訓練</b></p>
+        <p align="center"><b>圖 21：側邊抓屁股蹲(側邊弓箭步蹲)</b></p><br>
+        <p align="right"><b>2023-12-22</b></p>
+    </div>
+    <div id="popup20231218" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231218')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後90天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>「不敢相信！」，如電影《關於我和鬼變成家人的那件事》經典台詞，感覺才剛開始而已，就已經完成三個月的訓練、完成第一階段，期待回到球場的那一刻。</p><br>
+        <p>本日的訓練，雖然髂腰肌群的疼痛還是存在，但是身體熱開之後就會逐漸減少。前面的訓練還是一樣在TRX上完成，棒式的屈膝收腹和轉體收復、圖19的訓練。再來就來到六腳槓硬舉和弓箭步的轉體交錯做，最後用器械訓練內收肌 (25*3)、四頭上抬 (15*1、L15*2、R10*2)、二頭下壓 (15*1、L15*2、R10*2)，強度大概是會力竭，不過還算可以接受。最後的最後還有麻煩姊姊放鬆，每次放都很痛苦，但放完比較舒服。</p><br>
+        <img src="figures/Training/20231218_lonch.gif" style="width:42.9%" class><img src="figures/Training/20231218_6.jpg" style="width: 57.1%" class><br>
+        <p align="center"><b>圖 17：弓箭步蹲+肩關節活動</b></p>
+        <p align="center"><b>圖 18：六角槓硬舉</b></p><br>
+        <img src="figures/Training/20231218_but.jpg" style="width:100%" class><br>
+        <p align="center"><b>圖 19：背側下肢穩定度訓練</b></p><br>
+        <p align="right"><b>2023-12-18</b></p>
+    </div>
+    <div id="popup20231215" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231215')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後87天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>感嘆時間不等人，一個禮拜就這樣過去，令人開心的還是復建所遇到的第一個瓶頸期似乎走向尾聲，髂腰肌群的疼痛和不適已經紓解不少，膝蓋也確實因著肌貼而消腫，膝蓋從彎曲到伸直時，原本因為腫脹和擠壓會受到限制、無法伸直，髕骨下緣腫脹的組織的軟化、密度降低，讓髕骨的滑動更順暢，膝蓋不適感也降低了不少。</p><br>
+        <p>復健的過程住要包含三項訓練：功能性訓練、肌力訓練、專項訓練，三個項目有著密不可分的關係、互相支撐著彼此，今天加入輕量的肌力訓練，三組15下的六角槓硬舉，用心的身體在感受以前做過的訓練好像有種說不出的微妙感，就像你的靈魂跑到50歲的老人身上，千年傳統、全新感受。談到新的訓練內容，加入了緩衝的項目：階梯落地緩衝、垂直跳落地緩衝 (雙手抓TRX緩衝)，一開始我是很害怕的，畢竟術後就沒有離開地球表面，還好姊姊給了我很大的安全感。最後的收操是器械的內收肌，三組20、25、30公斤，最後一組的最後5下根本已經力竭。</p><br>
+        <img src="figures/Training/20231215_1Leg.gif" style="width:42.8%" class><img src="figures/Training/20231215_6.gif" style="width:57.2%" class><br>
+        <p align="center"><b>圖 14：單腳穩定</b></p>
+        <p align="center"><b>圖 15：術後第一次六角槓硬舉</b></p><br>
+        <img src="figures/Training/20231215_openLeg.gif" style="width:100%" class><br>
+        <p align="center"><b>圖 16：內收、外展交叉控制</b></p><br>
+        <p align="right"><b>2023-12-15</b></p>
+    </div>
+    <div id="popup20231211" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231211')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後83天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>訓練真正的價值在於當中所有的時間、汗水、代償、肌肉痠痛，這些經歷才會讓訓練的成果產生真正的價值。復健的過程也是一樣，這條路不但漫長而且不知道終點在哪，還時不時會出現一些情況，但一想到總有一天我會達成我的夢想、我的目標、站在球場上打出漂亮的攻擊、自由自在七彩炫麗的舉球、神出鬼沒的接球，這些會讓這個漫長的過程變得更有動力，仔細想想我沒什麼擅長，但是唯有「按部就班」、「一步一腳印」是我最會做的事情。今天我不再依靠咖啡因來訓練，訓練強度在慢慢恢復，髂腰肌群疼痛的情況也有比較好，伸展和放鬆還是這個階段最重要的事情之一，雖然以前的很討厭收操。</p><br>
+        <p>髂腰肌緊繃、疼痛的情況還是需要時間恢復和訓練，也是因為這個狀況影響我膝蓋前測的腫脹，讓我目前的復健處在瓶頸期，今天的訓練加入了圖13的動作，在這個穩定之下要做雙腳的踏步，支點從四個變三個，一方面要保持身體的水平，另一方面還要用三個支點抓住懸空腳的重量，需要調配左右力量的比例。再來就是階梯的訓練，比起之前，現在不需要扶就可以維持平衡，主要的重點在於台階上的那隻腳必須採把重量移到腳跟做好底座的部分，另外一個重點就是膝蓋的位置不能偏移，最後就是發力把身體向上帶銜接到臀部的力量。</p><br>
+        <img src="figures/Training/training_stairs1.gif" style="width:50%" class><img src="figures/Training/training_stairs2.gif" style="width:50%" class><br>
+        <p align="center"><b>圖 12：階梯訓練</b></p><br>
+        <img src="figures/Training/training_1211.jpg" style="width:100%" class><br>
+        <p align="center"><b>圖 13：訓練日常</b></p><br>
+        <p align="right"><b>2023-12-11</b></p>
+    </div>
+    <div id="popup20231208" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231208')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後80天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>「休息是為了走更長遠的路」，經過三天的充分休養，核心控制、肌肉記憶都陷入了深深的沉睡當中，但換來的是更好的訓練狀態，雖然花很多時間喚醒整體的動力，對於訓練也非常吃力，但當完成訓練時，我就知道我之前所練的東西終究是我的，並沒有消失。訓練的過程中多少是有些吃力、幾度把自己撐到極限並且在這種情況下還需要做其他的動作，但姊姊一直鼓勵我、說我可以的，我覺得我跟以前最大的不同是就算自己覺得好像已經不行了，還是會好好撐住把它做完。</p><br>
+        <p>談談訓練內容，本體感覺的缺乏會導致無法帶動臀肌啟動，所以前面做了一系列的動作喚醒臀肌，也是因為本體感覺的問題，讓我懷疑臀肌是否有在出力。再來說到核心，核心對我來說非常重要，而且只要一天沒練就會相差巨大，更何況我接近四天沒做任何的訓練，跟游泳、騎腳踏車一樣，會忘記，但是不會失憶。最後就不得不提到這次的重點：骨盆，關於我內外側肌力不平衡、臀部肌群薄弱、前陣子腰背臀疼痛情況，目前像是側邊、正面階梯都需要特留意骨盆的位置，原因在於內外肌力差會影像到單腳支撐時的平衡，會向弱側偏移。另外，前傾和後傾也是我會疼痛的位置，必須抓住其中的平衡點，才能有效的訓練，否則一切都是徒勞，還有機會造成更嚴重疼痛。</p><br>
+        <p>今天整體算是非常不錯的，又可以開始慢慢重新開始訓練，梨狀肌緊繃、臀肌代償、可能還有腰大肌和髂骨肌的不適都減緩不少，膝蓋的出力角度也更多了！這段時間還是非常感謝姊姊的辛苦，不僅每次的訓練的非常紮實，還有常常被我強制加班幫我做徒手的治療，還有非常細心地去注意我的每個情況並做出相應的講解和對策，真的讓我感覺非常窩心，謝謝華萱姊姊。</p><br>
+        <p align="right"><b>2023-12-08</b></p>
+    </div>
+    <div id="popup20231206" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231206')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後78天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>原本訂在下週的回診，因梨狀肌的情況而提早，心情也如海浪般起伏，從上週歡樂的花蓮行，到週一痛到只能躺在床上時，我擔心恢復的情況不太樂觀，而焦急求助姊姊，直到昨天暫停訓練、休息、伸展感到放鬆，再到今天明顯感覺身體的所有零件都重新清理完成，雖然還是有短暫的疼痛，但懸著的心終於放下。</p><br>
+        <p>回診時，謝醫師針對我說的情況做了一些測試，正躺屈膝做大腿內旋的動作，臀部有些許的緊繃，外轉則沒有特別的感覺，確實跟姐姐所說的情況相同，目前還是要慢慢訓練、恢復左側的肌力。另外，醫師也有說，如果梨狀肌的疼痛是嚴重到無法正常行走，那就必須做藥物注射的處理，不過我還是可以正常行走，不需要到這一步。</p><br>
+        <p align="right"><b>2023-12-06</b></p>
+    </div>
+    <div id="popup20231204" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231204')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後76天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>週末愉快的花蓮約會行，總算見到心心念念的寶貝筱嵐，回憶起這趟為期兩天半旅程，上場發了球、開車到處晃晃、約會走路逛街都是手術後就沒有體驗過的生活，唯一不變的就是下背的疼痛，但是原本只有做骨盆前傾時才會有被擠壓的痠痛感，到上個禮拜轉變成連站都會有的不適感，原本覺得是疲勞所造成的，直到今天下午出現了前所未有的痛苦，唯有躺著是不痛的，其他無論是坐著甚至是站立，都會痛到無法承受。幸好，姊姊建議我做梨狀肌的伸展，神奇的是我才做不到10秒，疼痛的情況就有明顯的緩解，之後查了一些關於梨狀肌疼痛的資訊，所有的症狀都和我的情況完全符合，包含梨狀肌過於緊繃的後果，不得不佩服姊姊真的很厲害，果然漂亮的女孩都不會騙人還很專業。</p><br>
+        <p>今天的訓練加強臀中肌和臀大肌的連接、跪姿時下肢支撐的力量，也加入了新的項目：階梯，主要有兩個動作，其一是左腳在台階上，運用臀、腿的肌力踩踏帶動身體克服高度差，其二也是類似動作，只是轉變成側邊，最後才是器械的肌力訓練。不過也是因為今天的這些訓練才讓我臀部肌群的代償感越發明顯，事實證明，訓練有效，休息也是必要。</p><br>
+        <p align="right"><b>2023-12-04</b></p>
+    </div>
+    <div id="popup20231201" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231201')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後73天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>在進行一個長期規劃的事情，比如說，可能在進行一個新事物的學習或是像我一樣給了自己一年的時間復健並重新回到場上，不知道你有沒有過這樣的感覺，當事情都如預期地進行、越來越好的時候，突然會有一些困難加在這件事上面。手術後，透過姊姊認真地幫我規畫各種不同的訓練，兩個多月的時間中，我覺得膝蓋和身體都朝著目標發展時，依然記得我的膝蓋已經有八年左右有沒有到正常的角度，再加上最近膝蓋的狀況處於一伸直就會因擠壓造成的不適感，不僅如此，內收肌力量的不足、下背連接左側臀肌時不時痠痛，這些種種的狀況都不禁讓我懷疑自己的恢復是否有問題，又或是自己練得太過頭了？因為曾經有醫師說過，積極復健是好事，但同時也不見得是好事。</p><br>
+        <p>這個內容真的太沉重了，來換換話題吧！姊姊趁我剛訓練完，完全無法動彈時，開始幫我處理膝蓋角度的問題，我終於知道什麼是用最溫柔的語氣做最慘忍的事情。在姐姐「溫柔」的治療之下，總算讓腿後和小腿接觸的面積增加，接下來就是要看腳跟和屁股之間的距離了。</p><br>
+        <img src="figures/Training/Training.gif" style="width:50%" class><img src="figures/Training/training_cross.jpg" style="width:50%" class><br>
+        <p align="center"><b>圖 8: Cross-Line的穩定訓練</b></p><br>
+        <img src="figures/Training/knee_angle.jpg" style="width:100%" class>
+        <p align="center"><b>圖 9：膝蓋目前角度，姊姊說我很棒！</b></p><br>
+        <img src="figures/Training/leg_kabble.jpg" style="width:50%" class><img src="figures/Training/me.jpg" style="width:50%" class><br>
+        <p align="center"><b>圖 10：器械肌力訓練，股四頭上抬、股二頭下壓 (左)</b></p>
+        <p align="center"><b>圖 11：遭到妹妹的朋友偷拍，聽說我妹都說我欺負他 (右)</b></p>
+        <p align="right"><b>2023-12-01</b></p>
+    </div>
+    <div id="popup20231129" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231129')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後71天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>自從改成一三五練下肢、二四六練上肢之後，訓練品質有越來越好的趨勢，肌肉和體能也有比較足夠的時間恢復。最近，我和姊姊討論到膝蓋的角度，目前確實可以到自主彎曲130度，但是從130度左右在凹到底的過程應該是最困難也是最辛苦的。除了要克服心理的障礙之外，還要再加上已經7-8年沒有看過膝蓋彎到底，看來這大概就是要復健第一階段最後的魔王關了，我相信我可以努力去克服的，我都可以少一條韌帶跳到290公分、成為統研盃的季軍戰MVP，這有什麼難的？</p>
+        <br>
+        <p align="right"><b>2023-11-29</b></p>
+    </div>
+    <div id="popup20231127" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231127')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後69天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>學生和工作時期最討厭的「Blue Monday」突然變成「愉快」的訓練日，對我這個坐不住的待業人員來說真是一大福音。手術也過了兩個月，我明顯感覺到身體逐漸在恢復當中，肌肉力量的轉換、核心肌群的控制都有顯著的提升。不僅如此，最近這陣子也慢慢學會如何掌握肌肉的力量，由於我長時間踝關節、膝關節、肩關節都會有聲響，今天在做芭蕾深蹲時，當我精神集中在控制腿內收肌、四頭和腿後肌的力量，在這個情況下就不會有任何的聲響，但是每當我不小心閃神在想女友或是被姊姊的美色吸引，就會馬上失去關節的控制，聲響就會像警報器一樣叫個不停。確實如此，上次回診時，就有請教過主治醫師關於關節聲響的問題，他的回答是，在四頭肌肌肉量不足以拉住髕骨、屈膝到伸直時，髕骨可能會錯位滑動，因此產生聲響。說回到肌肉的控制，所有關節彎曲相關的動作主要還是著重在周圍肌肉的控制，確實地讓肌肉收縮帶動關節，並不是用關節去帶動肌肉收縮，畢竟各個關節在穩定度不夠時，很容易因擠壓造成軟骨磨損或疼痛甚至直接受傷。特別是膝蓋，膝蓋必須承受人體大部分的體重，更何況我身為排球員，每一次跳躍舉球、扣球或攔網，要頂住自身體重和地心引力起跳，還要緩衝落地承受大約6倍的體重，對於膝蓋穩定的重要性，我再清楚不過了，所以這次也必須多加注意並全力完成。</p><br>
+        <p>來說說今天練了什麼吧！今天應該是最受挫的一次，上週自主訓練左側單腳站立時發現鏡子中的自己，像左邊傾斜，大腿內收的肌群好像抓不住，多半靠外展支撐整個身體，所以今天訓練動作是側棒式、上側腳放在TRX上，要單靠上側腳內收肌的力量身體往上帶，令我信心受挫的是這個動作就算挑了一個最簡單的方式，我依舊是力不從心。今天訓練的另一個大主題就是弓箭步蹲，但是前腳必須在半圓球版上，為了降低難度，後腳在平台上，仍然還是個力不從心的動作，特別是右腳在前、左腳在後的時候，左膝好像被螺絲鎖住一般。不過，經過兩組10下的嘗試之後，後面的兩組漸漸可以控制，我總共做了八組，前四組10下有手扶、保持平衡，後面四組5下是無支撐，困難的點在於要在控制力量的同時保持軀幹、髖關節的平衡。</p><br>
+        <p>最後來到下午的自主訓練，菜單：單側屈膝踮腳10下兩組和單側踮腳(有支撐、左腳多一組)、深蹲10下兩組(蹲到目前最低角度)、單側臀推10下三組(第一組正常、第二組踩球、第三組滾球)、彈力帶內收肌10下兩組(<a style="color:white;" href="https://www.youtube.com/watch?v=tmcB-WrsVMw&t=278s">內收肌抬腿 0:55-2:03</a>)、棒式60秒兩組、側棒式15秒兩組(左右算一組)、鳥狗10下一組30秒一組(第一組空中手腳內收、手肘碰膝蓋、第二組單純支撐)，最後的最後再用內收肌抬腿收操。</p>
+        <br>
+        <p align="right"><b>2023-11-27</b></p>
+    </div>
+    <div id="popup20231122" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231122')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後64天</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>陽光照亮了入冬的早晨，因為行程的關係，今天特別走74號快速道路去慈濟，正值大家上班趕路的時間，我悠哉地開在速限內卻顯得與這個世界格格不入。順利經過幾十分鐘的小壅塞後，殊不知還有更大的難題，慈濟的停車場滿到必須停到另一個院區，不過奇怪的是我的心情似乎沒有任何的起伏，既不生氣也不會覺得煩躁，正當我以為是我真的長大、學會控制自己的情緒時，10點多的艷陽搭配上步行10分鐘的路程還是讓我忍不住翻了一個大大的白眼。</p>
+        <p>不過，一想到今天又是一個新的訓練日時，微笑又重新出現在我臉上。今天課程之前給自己的訓練是滾筒的熱身和器械的坐姿腿後勾和腿屈伸(腿後勾雙腳20公斤*2組、左腳15公斤*2組、腿屈伸雙腳20公斤*1組、左腳20公斤*1組)。正式進入今天的課程，主要還是使用TRX來做下肢傳導和控制的訓練，進階的訓練就是無法反手撐地，必須將手抱胸並使用更多的下肢力量去控制平衡，姐姐還很邪惡的加了半圓球板在我支撐的背下，加入了更不穩定的因素，害我原本容易流汗的體質一覽無疑，這是從術後就沒有發生的情況，真的非常感謝物理治療師姊姊，讓我重溫以前那個要帶四到五件球衣訓練的時光。</p>
+        <p>開玩笑歸開玩笑，我還是全力以赴的完成今日的課表，雖然一度核心的火力見底，但是這次我並沒有說，我不行。這次，只能成功、不許失敗，就算失敗，也要失敗的更有意義，然後再捲土重來。目標，一年後成功回歸，成為台灣西田有志、全能型的球員、最高打點320公分，希望到那個時候，讓所有跟我打過球的人都驕傲地說：「很開心曾經是你的隊友。」</p>
+        <br>
+        <img src="figures/Training/train_darkblue.jpg" style="width:100%" class><br>
+        <p align="center"><b>圖 7：訓練日常</b></p>
+        <p align="right"><b>2023-11-22</b></p>
+    </div>
+    <div id="popup20231120" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231120')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後62天 (兩個月整、第八週)</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>兩個月過去了，懷念起那些自由自在的日子，盡情在球場活蹦亂跳。大學、工作、研究所時期就算再忙，也會擠出一些時間來運動、打球，排球好像漸漸成為我抒發壓力和心中不滿的最佳手段。如今，我的肌力、核心控制、神經傳導都還屬於重生的最初步階段，我深知這些能力沒有重建完成，我不可能再次回到場上的，我可能也不願意回去。上禮拜五，有位學長來台中找我，其中就有討論到明年大約四月的東華校友盃，就算我應付不了高強度比賽，但是也是可以上去發球和舉球。然而，我的想法卻與其背道而馳，我會上場，但是還不是時候，術後出現在眾人面前的我必須是一個全新的我、一個達到目標高度的我、真正有得分和防守能力的我。一想到這些，我才有辦法放下心中的那份急躁和很久沒打球的悶熱感，將精力投入在訓練課程上，無論是在家的自我訓練還是在姊姊協助下的訓練課程，我都會全力以赴去完成。</p>
+        <p>聽完我的心境分享之後，該談談今天的訓練了。身體離隨心所欲的控制還有很長的一段路要走。訓練動作中，肌群間的神經傳導和連接有些許的提升，雖然有時還是會因為傳導上的錯亂導致控制得不好，比如說，當正躺讓雙腳懸掛在TRX上面、臀部懸空，單就這個動作需要核心、骨盆底肌收緊並且臀肌出力，再來要做交錯的屈膝收腿，當要收右腳時，就必須專注的控制左側臀部保持出力、右側腿後收縮，交錯時則反過來，但困難的點就在於如何將臀肌和腿後的力量連接。</p>
+        <p>除此之外，器械的勾腿動作是我今天的熱身和收操，在熱身階段漸漸感受到左側腿後的肌力有明顯的提升，雖然還是需要靠下壓或右腳的力量去帶，但在收操階段，已經能單靠腿後的收縮完整作出下勾的動作。</p>
+        <p>訓練完之後，好奇測了一下INBODY(<b>圖6</b>)，驚人的發現體之竟然高達25.5%，在我的印象中從來沒有出現過這個數字，曾經一度在調整時期達到生涯最低的16.3%，沒想到在一個月床上的術後生活下出現的可怕的變化，雖然體重沒有變化，但是住院到復原期間真的吃得太「營養」了，最驚人的還是左右側的肌力是平衡的，意味著轉去當左手球員還是有機會的。</p><br>
+        <img src="figures/Training/train_org.jpg" style="width:50%" class><img src="figures/Training/report_body1120.jpg" style="width:46.5%" class><br>
+        <p align="center"><b>圖 5：物理治療師：「橘色OOTD」我說：「應該算OOTT」 (左)</b></p>
+        <p align="center"><b>圖6：身體數據測量 (右)</b></p>
+        <p align="right"><b>2023-11-20</b></p>
+    </div>
+    <div id="popup20231115" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231115')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後57天 (接近兩個月)</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>光陰似箭，兩週共6天的訓練之下，明顯感覺到力量和控制漸漸回來，膝蓋的角度也達到120度，每個禮拜兩堂的訓練課程就是我前進的動力，我知道要非常有耐心。不需要快、不需要輕鬆、不需要馬上有效果，如果這個過程如此簡單，那我就不需要努力、也不需要開刀了。唯有經歷過這些痛苦，每次課程中全力地完成所有動作、課程後因力竭而軟腳、凹膝蓋角度的疼痛感是真實的成就感，才是達到最終目標的必經之路。</p>
+        <p>菜單更新：</p>
+        <p style="text-indent:1cm;">深蹲 (多出臀部的力量將身體帶起來)</p>
+        <p style="text-indent:1cm;">屈膝單側墊腳 (保持身體平衡、腳尖和膝蓋朝前)</p>
+        <p style="text-indent:1cm;">單側墊腳 (保持上半深不偏移、腳尖和膝蓋朝前、朝前上出力)</p>
+        <p style="text-indent:1cm;">正趴姿腿後勾(單靠腿後的收縮做到勾腳的動作、增強腿後肌力)</p>
+        <p style="text-indent:1cm;">單側臀推 (臀部力量、腳踩球訓練支撐)</p>
+        <p style="text-indent:1cm;">棒式 (核心還是很重要的、軀幹直線、背不塌)</p>
+        <p style="text-indent:1cm;">側棒式 (大腿、骨盆呈一直線)</p>
+        <p style="text-indent:1cm;">鳥狗</p>
+        <p style="text-indent:1cm;">身前二頭彎舉</p>
+        <p style="text-indent:1cm;">三頭臂屈伸</p>
+        <p style="text-indent:1cm;">反手二頭彎舉</p>
+        <p style="text-indent:1cm;">俯身臂屈伸</p>
+        <p style="text-indent:1cm;">高位二頭彎舉</p>
+        <p style="text-indent:1cm;">三頭下壓</p>
+        <p style="text-indent:1cm;">肩胛前推</p>
+        <p style="text-indent:1cm;">肩胛後收</p>
+        <p style="text-indent:1cm;">肩推</p>
+        <p style="text-indent:1cm;">肩胛下壓外旋</p>
+        <p style="text-indent:1cm;">上背滾筒 (胸椎活動度、呼吸肋骨擴張、吐氣肋骨下沉、腰椎不拱)</p>
+        <p style="text-indent:1cm;">下肢伸展</p>
+        <p style="text-indent:1cm;">軀幹旋轉拉伸</p>
+        <p>今天的回診做了一些測試，韌帶沒有鬆動、左膝微微的腫脹、角度達標，最開心的還是不需要戴護膝支架了。另外，醫師也回答了我的疑問，膝蓋的聲響目前是正常現象，由於肌力稍許萎縮會導致髕骨滑動的錯位。再來，我也突然想到關於我軟骨磨損的情況，術前MRI和術後X光都顯示我的軟骨沒有太大的問題，無須擔憂。</p>
+        <p align="right"><b>2023-11-15</b></p>
+    </div>
+    <div id="popup20231103" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231103')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後45天 (一個半月)</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>真正開始訂菜單進行訓練：</p>
+        <p style="text-indent:1cm;">靠強深蹲 (多出臀部的力量將身體帶起來)</p>
+        <p style="text-indent:1cm;">屈膝墊腳 (保持身體平衡、腳尖和膝蓋朝前)</p>
+        <p style="text-indent:1cm;">單側墊腳 (保持上半深不偏移、腳尖和膝蓋朝前朝前上出力)</p>
+        <p style="text-indent:1cm;">腿後勾 (單靠腿後的收縮做到勾腳的動作、增強後肌力)</p>
+        <p style="text-indent:1cm;">單側臀推 (臀部力量)</p>
+        <p style="text-indent:1cm;">棒式 (核心還是很重要的、軀幹直線、背不塌)</p>
+        <p style="text-indent:1cm;">側棒式 (大腿、骨盆呈一直線)</p>
+        <p>另外，既然下肢沒辦法練大重量，那就來操一下上肢的力量：</p>
+        <p style="text-indent:1cm;">身前二頭彎舉、三頭臂屈伸、反手二頭彎舉、俯身屈伸、高位二頭彎舉、三頭下壓</p>
+        <p style="text-indent:1cm;">肩胛前推、肩胛後收、肩推</p>
+        <p>主要以身體能負荷的程度作為訓練量的上限，但是上肢的部分不在此限制內，我超級組的效果去刺激肌肉生長。</p>
+        <p align="right"><b>2023-11-03</b></p>
+    </div>
+    <div id="popup20231018" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231018')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後29天 (一個半月)</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>醫師的規劃是過去的這一個月讓支架的角度在0-30度，盡量讓左腳伸直，等待癒合。術後的第一次回診，已經不需要再使用拐杖並且將護膝的角度調整到0-90度，醫師特別安排我到慈濟的功能性健身房找物理治療師評估。這位物理治療師姊姊也就是之後帶我訓練的人，但還在適應沒有拐杖的我，連路都忘記怎麼走，更不要說做一些屈膝的動作了。</p>
+            <p></p>
+            <p align="right"><b>2023-10-18</b></p>
+    </div>
+    <div id="popuprehab" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popuprehab')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>復健開始</b></h3>
+        <br>
+        <hr />
+        <br>
+        <img src="figures/rehab/img_rehab_ex.jpg" style="width:100%" class>
+        <p align="center">圖 4：物理治療師姊姊幫我訓練</b></span></p>
+        <br>
+        <img src="figures/rehab/img_look3.jpg" style="width:25%" class><img src="figures/rehab/img_look1.jpg" style="width:25%" class><img src="figures/rehab/img_look4.jpg" style="width:25%" class><img src="figures/rehab/img_look2.jpg" style="width:25%" class><br>
+        <p align="center"><b>圖 3：復健配色穿搭</b></p>
+        
+    </div>
+    <div id="popup20231018" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20231018')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術後29天 (接近一個月)</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>醫師的規劃是過去的這一個月讓支架的角度在0-30度，盡量讓左腳伸直，等待癒合。術後的第一次回診，已經不需要再使用拐杖並且將護膝的角度調整到0-90度，醫師特別安排我到慈濟的功能性健身房找物理治療師評估。這位物理治療師姊姊也就是之後帶我訓練的人，但還在適應沒有拐杖的我，連路都忘記怎麼走，更不要說做一些屈膝的動作了。</p>
+            <p></p>
+            <p align="right"><b>2023-10-18</b></p>
+    </div>
+    <div id="popup20230918" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20230918')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>手術住院時期</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>18日，早上剛做完術前檢查，下午就接到住院的電話。</p>
+        <br>
+        <img src="figures/rehab/img_surg.jpg" style="width:100%" class>
+        <br>
+        <p align="center"><b>圖 2：準備進手術室</b></p><br>
+        <p>19日，手術當天，一大清早就被接到手術準備的地方。</p>
+        <p>20日，學習穿戴護膝支架、拐杖走路和復健運動。</p><br>
+        <img src="figures/rehab/img_walk2.jpg" style="width:33%" class><img src="figures/rehab/img_walk3.jpg" style="width:33%" class><img src="figures/rehab/img_bed.jpg" style="width:33%" class>
+        <br>
+        <p align="center"><b>圖 1：練習走路</b></p><br>
+        <p>21日，收拾好行李，在醫院渡過最後一個爛膝蓋的夜晚。終於出院了，準備過床上生活。</p>
+        <p align="right">2023-09-18~2023-09-21</p>
+    </div>
+    <div id="popup20230917" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20230917')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>手術前兩天</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>這天剛打完手術前的最後一場球，沒什麼特別的感覺，只是覺得好像有一件大事要發生了。</p>
+            <p></p>
+            <p align="right"><b>2023-09-17</b></p>
+    </div>
+    <div id="popup20230809" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup20230809')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>術前確認門診</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>正式確定給原中國醫骨科醫師謝尚霖醫師
+                (現台中慈濟微創脊椎關節中心醫師)作為我的主治醫師，以下內容僅參考，如有需要，請給專業醫師評估。我的狀況比較特殊，屬於慢性的運動傷害，跟大多數人不一樣的是我的韌帶是慢慢撕裂、最後斷裂，而且我除了前十字韌帶之外，還有半月板的修補。整個手術中，除健保給付的部分之外，關節鏡穿透、固定韌帶的鉚釘、幫助癒合的PRP、護膝支架，總金額約13.6萬，還好我的醫療險的金額差不多打平。</p>
+            <p></p>
+            <p align="right"><b>2023-08-09</b></p>
+    </div>
+    <div id="popup2023" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup2023')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>前十字韌帶斷裂半月板合併傷害</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>西元2022年12月，從第一週的幸福城市盃、老馬盃、東部系際盃到最後平安夜、聖誕節的統研盃，統研盃前膝蓋都還承受得住，開始用肌貼保護膝蓋並下場直接冰敷降溫，但最後一場比賽我拚盡全力希望能拿下冠軍，再加上寒流過境，我的膝蓋終究承受不了的開始隱隱作痛。</p>
+            <p>隔年1月，再次求助門諾醫師，這次排了核磁共振的檢查，最終的結果是「前十字韌帶斷裂、半月板受損、後十字韌帶輕微撕裂」。接著，我開始到處諮詢骨科、復健科醫師，所有的答案都是：「手術吧！」</p>
+            <p></p>
+            <p align="right"><b>2023</b></p>
+    </div>
+    <div id="popup2014" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('popup2014')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3><b>我與我的玻璃膝蓋</b></h3>
+        <br>
+            <hr />
+            <br>
+            <p>我是運動員，大學新鮮人時期，在同學的呼朋引伴之下進入系排，九年的籃球之路也厭倦肢體碰撞，決定轉戰排球。扣球作為排球中最吸引人的一項技術，讓我也深深地對這個相較籃球和棒球之下冷門的球類運動吸引，我開始一直跳、不停跳、拚了命的跳，終於，大一下的暑假在排球聖地中興大學，一次的扣球，單腳落地扭傷了膝蓋。</p>
+            <p>大二養傷復健，但當時仗著自己年輕、恢復快、討厭復健，草草完成復健回到場上。結果，大三的大數盃回到了那個熟悉的中興大學，第一場比賽前的自由攻擊，狀態非常好、也非常的興奮，打第二顆時，我全力起跳、擺臂、煞車急停、大力蹬地，完全接收木地板給我的反作用力起跳，停在空中時彷彿時間暫停並能清晰看見白帶後的地板，「磅」的一聲將球重重擊穿地板。但，落地時，我的膝蓋一陣無力，「咖」，瞬間我直接倒在地上站不起來，最後一次的大數盃和整個賽季就在這一刻宣告報銷。回到花蓮之後又再次開始我最討厭的復健之路，但是比賽多加上沒什麼時間，我不痛之後就回到場上繼續比賽，後來也順順利利的打了好幾場，也平安無事。</p>
+            <p>直到大四，我記得是大家畢業前的最後一場北數盃，那年我們終於拿到了感動無數人的冠軍了，但是這段故事在排球的篇章再提，我在冠軍之路的四強戰，第一局火力全開成功以一記Touch-out拿下這場的第一個攻擊得分，因為當時我作為副攻手主要的重心放在攔網和接球上。第一局末段，面對對手大砲的強力攻擊，我的攔網失誤，對方的攻擊球從我手吞了下來，我立刻單手將球勾起，由攔中的博班學長林逸軒修正給我，我很聰明的刀球到對方二號位的邊角成功得分。越戰越勇的我們也讓我越打越有信心，第二局占盡優勢的我們屢屢強攻得分，但，這次我在一次多波的來回球，持續的攻擊、攔網、接球、攻擊，就當我再次強攻時，沒踩好不慎讓膝蓋再次毀掉。</p>
+            <p>再次回到門諾做復健，之後經歷大五、中研院工作、當兵回到台中。過了不久再次回到花蓮念研究所，原本以為可以平平安安地順利打球到畢業，但終究還是沒辦法。</p>
+            <p></p>
+            <p align="right"><b>2014~2022</b></p>
+    </div>
+    <div id="rehabilitation" class="popup-window">
+        <p align="right"><a href="#" onclick="toggle('rehabilitation')"><i class="fa-solid fa-xmark"></i></a></p>
+        
+        <h3 align="center"><b>Rehabilitation</b></h3>
+        <br>
+        <hr />
+        <br>
+        <p>Last Christmas, I gave you my heart, but the very next
+            day, you gave it away. As the lyrics suggest, my left knee left me.
+            December, the month of Last Christmas, was filled with competitions
+            every weekend. After all the events, I ended up in the hospital, where I
+            underwent an MRI to assess my injury.</p><br>
+        <p>A few days later, the MRI report confirmed that my
+            left knee’s ACL was broken. Consequently, I consulted with multiple
+            doctors, all of whom advised me to prepare for an ACL reconstruction
+            surgery. Despite having the entire season ahead for my team, I made the
+            decision to undergo surgery this September.</p><br>
+        <p align="right"><b> — Yi-Hsin Lu,
+            Nov. 14th, 2023.</b></p>
+    </div>
+    <script type="text/javascript">
+        function toggle(target){
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById(target);
+            popup.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>     
