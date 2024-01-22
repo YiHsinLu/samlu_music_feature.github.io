@@ -28,6 +28,40 @@ body{
     justify-content: center;
 }
 
+.rehab{
+    position: relative;
+    top: 120px;
+    background: transparent;
+    width: 100%;
+    height: 3400px;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+
+.container{
+    position: absolute;
+    height: 3400px;
+    width: 100%;
+    display: flex;
+    transition: 0.5s;
+	background:transparent;
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+    align-items: center;
+    overflow: hidden;
+}
+
+.training_list{
+    border: 2px solid #CFCFCF;
+    width: 100%;
+}
+.training_list tr, .training_list tr th, .training_list tr td{
+    border: 2px solid #CFCFCF;
+    text-align: center;
+}
+
 
 
 
@@ -294,30 +328,7 @@ body{
 
 /* rehab height */
 
-.rehab{
-    position: relative;
-    top: 120px;
-    background: transparent;
-    width: 100%;
-    height: 3300px;
-    justify-items: center;
-    align-items: center;
-    display: grid;
-}
 
-.container{
-    position: absolute;
-    height: 3300px;
-    width: 100%;
-    display: flex;
-    transition: 0.5s;
-	background:transparent;
-	background-size: cover;
-	background-position: center bottom; 
-	overflow: hidden;
-    align-items: center;
-    overflow: hidden;
-}
 
 .timeline{
     margin: auto;
@@ -426,7 +437,8 @@ body{
 #popup20240105,
 #popup20240108,
 #popup20240115,
-#popup20240119{
+#popup20240119,
+#popup20240122{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -471,7 +483,8 @@ body{
 #popup20240105.active,
 #popup20240108.active,
 #popup20240115.active,
-#popup20240119.active{
+#popup20240119.active,
+#popup20240122.active{
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
@@ -596,7 +609,8 @@ body{
 .timeline-storybox-20240105,
 .timeline-storybox-20240108,
 .timeline-storybox-20240115,
-.timeline-storybox-20240119{
+.timeline-storybox-20240119,
+.timeline-storybox-20240122{
     position: absolute;
     width: 100%;
     height: 50px;
@@ -638,7 +652,8 @@ body{
 .timeline-storybox-20240105 a,
 .timeline-storybox-20240108 a,
 .timeline-storybox-20240115 a,
-.timeline-storybox-20240119 a{
+.timeline-storybox-20240119 a,
+.timeline-storybox-20240122 a{
     position: absolute;
     font-size: 40px;    
     color: #CFCFCF;
@@ -673,7 +688,8 @@ body{
 .timeline-storybox-20240105 a:hover,
 .timeline-storybox-20240108 a:hover,
 .timeline-storybox-20240115 a:hover,
-.timeline-storybox-20240119 a:hover{
+.timeline-storybox-20240119 a:hover,
+.timeline-storybox-20240122 a:hover{
     color: #CAA36E;
     font-size: 50px;
 }
@@ -760,4 +776,7 @@ body{
 }
 .timeline-storybox-20240119{
     bottom: 3000px;
+}
+.timeline-storybox-20240122{
+    bottom: 3100px;
 }
