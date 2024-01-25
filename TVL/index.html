@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日)</title>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <h1>第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日)</h1>
+    <div class="match">
+        <div class="home">
+            <img src="https://tvl.ctvba.org.tw/upload/w_team/logo_3_1635492564.png" alt="" style="
+            filter:  drop-shadow(0 0 20px #e1f1fb); z-index: 2;">
+        </div>
+        <div class="guest">
+            <img src="https://tvl.ctvba.org.tw/upload/w_team/logo_4_1634727275.png" alt="" style="
+            filter:  drop-shadow(0 0 40px #e1f1fb); z-index: 1;">
+        </div>
+
+        <div class="home-sets"><div class="sets">1</div></div>
+        <div class="guest-sets"><div class="sets-win">3</div></div>
+        
+    </div>
+    <div class="sets-bar">
+        <div class="setbox"></div>
+        <div class="setbox"></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="set-title"><a href="Matches/webVisual/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日)_team.html"><i class="fa-solid fa-chart-line"></i></a></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+    </div>
+    <br>
+    <div class="match-result">
+        <div data-include="Matches/results/html/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).html"></div>
+    </div>
+    <br>
+    <script>
+        document.addEventListener("DOMContentLoaded", (e) => {
+        const includeHTML = (el, url) => {
+          const xhr = new XMLHttpRequest();
+        
+          xhr.addEventListener("readystatechange", (e) => {
+            if (xhr.readyState !== 4) return;
+        
+            if (xhr.status >= 200 && xhr.status < 300) {
+              el.outerHTML = xhr.responseText;
+            } else {
+              let message =
+                xhr.statusText ||
+                "Error loading the file, verify that you are making the request by http or https";
+              el.outerHTML = `<div><p>Error ${xhr.status}: ${message}</p></div>`;
+            }
+          });
+      
+          xhr.open("GET", url);
+          xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
+          xhr.send();
+        };
+    
+        document
+          .querySelectorAll("[data-include]")
+          .forEach((el) => includeHTML(el, el.getAttribute("data-include")));
+      });
+    </script>
+    <div class="data-visual">
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="pointL"></div>
+                <div class="bar-l" id="pointTotalL">
+                    <span id="inpointTotalL"></span>
+                    <p id="pointperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Points</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="pointR"></div>
+                <div class="bar-r" id="pointTotalR">
+                    <span id="inpointTotalR"></span>
+                    <p id="pointperR"></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="pt" style="background: #6288d4;">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="atk_pointL">44</div>
+                <div class="bar-l" id="atk_pointTotalL">
+                    <span id="inatk_pointTotalL">151</span>
+                    <p id="atk_pointperL">29%</p>
+                </div>
+            </div>
+            <div class="pt-title" style="background: #6288d4;">Attack Success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="atk_pointR">55</div>
+                <div class="bar-r" id="atk_pointTotalR">
+                    <span id="inatk_pointTotalR">159</span>
+                    <p id="atk_pointperR">35%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt" style="background: #6288d4;">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="atk_pointL_oh">33</div>
+                <div class="bar-l" id="atk_pointTotalL_oh">
+                    <span id="inatk_pointTotalL_oh">97</span>
+                    <p>34%</p>
+                </div>
+            </div>
+            <div class="pt-title" style="background: #6288d4;">Attack (OH)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="atk_pointR_oh">28</div>
+                <div class="bar-r" id="atk_pointTotalR_oh">
+                    <span id="inatk_pointTotalR_oh">80</span>
+                    <p class="winning">35%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt" style="background: #6288d4;">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="atk_pointL_mb">9</div>
+                <div class="bar-l" id="atk_pointTotalL_mb">
+                    <span id="inatk_pointTotalL_mb">41</span>
+                    <p>22%</p>
+                </div>
+            </div>
+            <div class="pt-title" style="background: #6288d4;">Attack (MB)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="atk_pointR_mb">23</div>
+                <div class="bar-r" id="atk_pointTotalR_mb">
+                    <span id="inatk_pointTotalR_mb">51</span>
+                    <p class="winning">45%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt" style="background: #6288d4;">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="atk_pointL_op">1</div>
+                <div class="bar-l" id="atk_pointTotalL_op">
+                    <span id="inatk_pointTotalL_op">12</span>
+                    <p>8%</p>
+                </div>
+            </div>
+            <div class="pt-title" style="background: #6288d4;">Attack (OP)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="atk_pointR_op">4</div>
+                <div class="bar-r" id="atk_pointTotalR_op">
+                    <span id="inatk_pointTotalR_op">26</span>
+                    <p class="winning">15%</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="rcv_sucsL">23</div>
+                <div class="bar-l" id="rcv_sucsTotalL">
+                    <span id="inrcv_sucsTotalL">83</span>
+                    <p>28%</p>
+                </div>
+            </div>
+            <div class="pt-title">Receive Success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="rcv_sucsR">29</div>
+                <div class="bar-r" id="rcv_sucsTotalR">
+                    <span id="inrcv_sucsTotalR">71</span>
+                    <p class="winning">41%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="rcv_sucsL_L">14</div>
+                <div class="bar-l" id="rcv_sucsTotalL_L">
+                    <span id="inrcv_sucsTotalL_L">45</span>
+                    <p>31%</p>
+                </div>
+            </div>
+            <div class="pt-title">Receive (L)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="rcv_sucsR_L">8</div>
+                <div class="bar-r" id="rcv_sucsTotalR_L">
+                    <span id="inrcv_sucsTotalR_L">11</span>
+                    <p class="winning">73%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="rcv_sucsL_OH">8</div>
+                <div class="bar-l" id="rcv_sucsTotalL_OH">
+                    <span id="inrcv_sucsTotalL_OH">31</span>
+                    <p>26%</p>
+                </div>
+            </div>
+            <div class="pt-title">Receive (OH)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="rcv_sucsR_OH">17</div>
+                <div class="bar-r" id="rcv_sucsTotalR_OH">
+                    <span id="inrcv_sucsTotalR_OH">49</span>
+                    <p class="winning">35%</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL">24</div>
+                <div class="bar-l" id="dig_sucsTotalL">
+                    <span id="indig_sucsTotalL">96</span>
+                    <p>25%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig Success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR">35</div>
+                <div class="bar-r" id="dig_sucsTotalR">
+                    <span id="indig_sucsTotalR">115</span>
+                    <p class="winning">30%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL_L">6</div>
+                <div class="bar-l" id="dig_sucsTotalL_L">
+                    <span id="indig_sucsTotalL_L">21</span>
+                    <p>29%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig &nbsp;(L)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR_L">17</div>
+                <div class="bar-r" id="dig_sucsTotalR_L">
+                    <span id="indig_sucsTotalR_L">33</span>
+                    <p class="winning">52%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL_OH">12</div>
+                <div class="bar-l" id="dig_sucsTotalL_OH">
+                    <span id="indig_sucsTotalL_OH">41</span>
+                    <p>29%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig (OH)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR_OH">15</div>
+                <div class="bar-r" id="dig_sucsTotalR_OH">
+                    <span id="indig_sucsTotalR_OH">43</span>
+                    <p class="winning">35%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL_OP">4</div>
+                <div class="bar-l" id="dig_sucsTotalL_OP">
+                    <span id="indig_sucsTotalL_OP">8</span>
+                    <p class="winning">50%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig (OP)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR_OP">1</div>
+                <div class="bar-r" id="dig_sucsTotalR_OP">
+                    <span id="indig_sucsTotalR_OP">10</span>
+                    <p>10%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL_MB">1</div>
+                <div class="bar-l" id="dig_sucsTotalL_MB">
+                    <span id="indig_sucsTotalL_MB">8</span>
+                    <p class="winning">12%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig (MB)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR_MB">1</div>
+                <div class="bar-r" id="dig_sucsTotalR_MB">
+                    <span id="indig_sucsTotalR_MB">13</span>
+                    <p>8%</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" style="width: 50px;" id="dig_sucsL_S">1</div>
+                <div class="bar-l" id="dig_sucsTotalL_S">
+                    <span id="indig_sucsTotalL_S">18</span>
+                    <p>2%</p>
+                </div>
+            </div>
+            <div class="pt-title">Dig &nbsp;(S)</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" style="width: 72px;" id="dig_sucsR_S">1</div>
+                <div class="bar-r" id="dig_sucsTotalR_S">
+                    <span id="indig_sucsTotalR_S">16</span>
+                    <p>2%</p>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script>
+        function Number2Width(point, number, value){
+            var x = document.getElementById(point).innerHTML;
+            document.getElementById(number).style.width = x*2 + "px";
+        }
+
+        function DataStat(pt1,ptt1,pt1p,pt2,ptt2,pt2p,atk1,atkt1,atk1p,atk2,atkt2,atk2p){
+            document.getElementById("pointL").innerHTML = pt1;
+            document.getElementById("inpointTotalL").innerHTML = ptt1;
+            document.getElementById("pointperL").innerHTML = Math.round(pt1p*100) + "%";
+            document.getElementById("pointR").innerHTML = pt2;
+            document.getElementById("inpointTotalR").innerHTML = ptt2;
+            document.getElementById("pointperR").innerHTML = Math.round(pt2p*100) + "%";
+            if(pt1p>pt2p){
+                document.getElementById("pointperL").className = "winning";
+            }else if(pt1p<pt2p){
+                document.getElementById("pointperR").className = "winning";
+            }
+            document.getElementById("atk_pointL").innerHTML = atk1;
+            document.getElementById("inatk_pointTotalL").innerHTML = atkt1;
+            document.getElementById("atk_pointperL").innerHTML = Math.round(atk1p*100) + "%";
+            document.getElementById("atk_pointR").innerHTML = atk2;
+            document.getElementById("inatk_pointTotalR").innerHTML = atkt2;
+            document.getElementById("atk_pointperR").innerHTML = Math.round(atk2p*100) + "%";
+            if(atk1p>atk2p){
+                document.getElementById("atk_pointperL").className = "winning";
+            }else if(atk1p<atk2p){
+                document.getElementById("atk_pointperR").className = "winning";
+            }
+        }
+
+        DataStat(50,84,0.6,72,96,0.84,44,151,0.29,55,159,0.35);
+
+        Number2Width("inpointTotalL", "pointTotalL");
+        Number2Width("inpointTotalR", "pointTotalR");
+        Number2Width("pointL", "pointL");
+        Number2Width("pointR", "pointR");
+
+        Number2Width("inatk_pointTotalL", "atk_pointTotalL");
+        Number2Width("inatk_pointTotalR", "atk_pointTotalR");
+        Number2Width("atk_pointL", "atk_pointL");
+        Number2Width("atk_pointR", "atk_pointR");
+
+        Number2Width("inatk_pointTotalL_oh", "atk_pointTotalL_oh");
+        Number2Width("inatk_pointTotalR_oh", "atk_pointTotalR_oh");
+        Number2Width("atk_pointL_oh", "atk_pointL_oh");
+        Number2Width("atk_pointR_oh", "atk_pointR_oh");
+
+        Number2Width("inatk_pointTotalL_mb", "atk_pointTotalL_mb");
+        Number2Width("inatk_pointTotalR_mb", "atk_pointTotalR_mb");
+        Number2Width("atk_pointL_mb", "atk_pointL_mb");
+        Number2Width("atk_pointR_mb", "atk_pointR_mb");
+
+        Number2Width("inatk_pointTotalL_op", "atk_pointTotalL_op");
+        Number2Width("inatk_pointTotalR_op", "atk_pointTotalR_op");
+        Number2Width("atk_pointL_op", "atk_pointL_op");
+        Number2Width("atk_pointR_op", "atk_pointR_op");
+
+        Number2Width("inrcv_sucsTotalL", "rcv_sucsTotalL");
+        Number2Width("inrcv_sucsTotalR", "rcv_sucsTotalR");
+        Number2Width("rcv_sucsL", "rcv_sucsL");
+        Number2Width("rcv_sucsR", "rcv_sucsR");
+
+        Number2Width("inrcv_sucsTotalL_L", "rcv_sucsTotalL_L");
+        Number2Width("inrcv_sucsTotalR_L", "rcv_sucsTotalR_L");
+        Number2Width("rcv_sucsL_L", "rcv_sucsL_L");
+        Number2Width("rcv_sucsR_L", "rcv_sucsR_L");
+
+        Number2Width("inrcv_sucsTotalL_OH", "rcv_sucsTotalL_OH");
+        Number2Width("inrcv_sucsTotalR_OH", "rcv_sucsTotalR_OH");
+        Number2Width("rcv_sucsL_OH", "rcv_sucsL_OH");
+        Number2Width("rcv_sucsR_OH", "rcv_sucsR_OH");
+
+        Number2Width("indig_sucsTotalL", "dig_sucsTotalL");
+        Number2Width("indig_sucsTotalR", "dig_sucsTotalR");
+        Number2Width("dig_sucsL", "dig_sucsL");
+        Number2Width("dig_sucsR", "dig_sucsR");
+
+        Number2Width("indig_sucsTotalL_L", "dig_sucsTotalL_L");
+        Number2Width("indig_sucsTotalR_L", "dig_sucsTotalR_L");
+        Number2Width("dig_sucsL_L", "dig_sucsL_L");
+        Number2Width("dig_sucsR_L", "dig_sucsR_L");
+
+        Number2Width("indig_sucsTotalL_OH", "dig_sucsTotalL_OH");
+        Number2Width("indig_sucsTotalR_OH", "dig_sucsTotalR_OH");
+        Number2Width("dig_sucsL_OH", "dig_sucsL_OH");
+        Number2Width("dig_sucsR_OH", "dig_sucsR_OH");
+
+        Number2Width("indig_sucsTotalL_OP", "dig_sucsTotalL_OP");
+        Number2Width("indig_sucsTotalR_OP", "dig_sucsTotalR_OP");
+        Number2Width("dig_sucsL_OP", "dig_sucsL_OP");
+        Number2Width("dig_sucsR_OP", "dig_sucsR_OP");
+
+        Number2Width("indig_sucsTotalL_MB", "dig_sucsTotalL_MB");
+        Number2Width("indig_sucsTotalR_MB", "dig_sucsTotalR_MB");
+        Number2Width("dig_sucsL_MB", "dig_sucsL_MB");
+        Number2Width("dig_sucsR_MB", "dig_sucsR_MB");
+
+        Number2Width("indig_sucsTotalL_S", "dig_sucsTotalL_S");
+        Number2Width("indig_sucsTotalR_S", "dig_sucsTotalR_S");
+        Number2Width("dig_sucsL_S", "dig_sucsL_S");
+        Number2Width("dig_sucsR_S", "dig_sucsR_S");
+
+        document.getElementById("test")[0].innerHTML = 100 +"%";
+
+    </script>
+</body>
+
+</html>
