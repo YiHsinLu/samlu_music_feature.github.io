@@ -1,0 +1,675 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+*:after, *:before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+        
+body{
+    background: #4478bc;
+    color: #e1f1fb;
+    margin:0px;
+    height: auto;
+    font-size:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 44px;
+    color: #e1f1fb;
+    text-decoration: none;
+    font-weight: 600;
+    width: 30%;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.navbar a {
+    font-size: 40px;
+    color: #e1f1fb;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: #e9b4d1;
+    font-size: 50px;
+}
+
+.navbar a.active{
+    color: #e9b4d1;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background:#4478bc;
+    animation: showRight 2s ease forwards;
+    animation-delay: .6s;
+    z-index: 100;
+}
+
+.img-logo{
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 3s ease-in-out infinite;
+    filter:  drop-shadow(0 0 20px #e1f1fb);
+    width: 320px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.home-contact{
+    max-width: 400px;
+}
+
+.home-contact h1{
+    position: relative;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #e9b4d1;
+}
+
+.home-contact h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.home-contact h2{
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #e1f1fb;
+}
+
+.home-contact h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.home-contact h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e9b4d1;
+}
+
+.home-contact h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+.home-contact p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-contact p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 2s;
+}
+
+.home-contact .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+
+}
+
+.home-contact .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #e9b4d1;
+    border: 2px solid #e9b4d1;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #4478bc;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover{
+    color: #e9b4d1;
+}
+
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #e9b4d1;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #4478bc;
+}
+
+.btn-box a:nth-child(2)::before{
+    background: #e9b4d1;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4478bc;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 10%;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #4478bc;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 3;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #e9b4d1;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #e9b4d1;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover{
+    color: #4478bc;
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #e9b4d1;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imagHover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+
+.home-imagHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#4478bc;
+    animation: showVisible 2s ease forwards;
+    animation-delay: 4s;
+    z-index: -1;
+}
+
+@keyframes showVisible {
+    100% {
+        opacity: 0;
+    }
+}
+
+.snowing, .snowing:after, .snowing:before{
+    content: "";
+    position: absolute;
+    top: -600px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 482px 132px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 186px, #fff, transparent),
+    radial-gradient(3px 3px at 290px 368px, #fff, transparent),
+    radial-gradient(3px 3px at 587px 593px, #fff, transparent),
+    radial-gradient(3px 3px at 19px 572px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 428px, #fff, transparent),
+    radial-gradient(3px 3px at 320px 202px, #fff, transparent),
+    radial-gradient(3px 3px at 582px 514px, #fff, transparent),
+    radial-gradient(3px 3px at 128px 381px, #fff, transparent),
+    radial-gradient(3px 3px at 372px 466px, #fff, transparent),
+    radial-gradient(4px 4px at 384px 252px, #fff, transparent),
+    radial-gradient(4px 4px at 599px 404px, #fff, transparent),
+    radial-gradient(4px 4px at 155px 265px, #fff, transparent),
+    radial-gradient(4px 4px at 159px 187px, #fff, transparent),
+    radial-gradient(4px 4px at 172px 239px, #fff, transparent),
+    radial-gradient(4px 4px at 238px 55px, #fff, transparent),
+    radial-gradient(4px 4px at 113px 565px, #fff, transparent),
+    radial-gradient(4px 4px at 466px 367px, #fff, transparent),
+    radial-gradient(4px 4px at 505px 218px, #fff, transparent),
+    radial-gradient(4px 4px at 589px 296px, #fff, transparent),
+    radial-gradient(5px 5px at 270px 307px, #fff, transparent),
+    radial-gradient(5px 5px at 115px 23px, #fff, transparent),
+    radial-gradient(5px 5px at 15px 327px, #fff, transparent),
+    radial-gradient(5px 5px at 249px 508px, #fff, transparent),
+    radial-gradient(5px 5px at 410px 403px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 600px;
+    animation: snwoningAnim 15s linear infinite;
+    filter: blur(1px);
+}
+
+.snowing:after{
+    position: absolute;
+    margin-left: -250px;
+    filter: blur(2px);
+    animation-duration: 16s;
+}
+
+
+.snowing:before{
+    position: absolute;
+    margin-left: -150px;
+    filter: blur(1px);
+    animation-duration: 18s;
+}
+
+@keyframes snwoningAnim{
+    from{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(130px);
+    }
+    50%{
+        transform: translateY(300px);
+    }
+    75%{
+        transform: translateY(480px);
+    }
+    to{
+        transform: translateY(600px);
+    }
+}
+
+.snowingRight, .snowingRight:after, .snowingRight:before{
+    content: "";
+    position: absolute;
+    top: -1000px;
+    right: 0;
+    left: -600px;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 482px 132px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 186px, #fff, transparent),
+    radial-gradient(3px 3px at 290px 368px, #fff, transparent),
+    radial-gradient(3px 3px at 587px 593px, #fff, transparent),
+    radial-gradient(3px 3px at 19px 572px, #fff, transparent),
+    radial-gradient(3px 3px at 569px 428px, #fff, transparent),
+    radial-gradient(3px 3px at 320px 202px, #fff, transparent),
+    radial-gradient(3px 3px at 582px 514px, #fff, transparent),
+    radial-gradient(3px 3px at 128px 381px, #fff, transparent),
+    radial-gradient(5px 5px at 86px 169px, #fff, transparent),
+    radial-gradient(5px 5px at 595px 38px, #fff, transparent),
+    radial-gradient(5px 5px at 77px 588px, #fff, transparent),
+    radial-gradient(5px 5px at 477px 15px, #fff, transparent),
+    radial-gradient(5px 5px at 410px 403px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 1000px;
+    animation: snwoningAnimRight 20s linear infinite;
+    filter: blur(1px);
+}
+
+.snowingRight:after{
+    position: absolute;
+    margin-left: -200px;
+    filter: blur(2px);
+    animation-duration: 22s;
+}
+
+
+.snowingRight:before{
+    position: absolute;
+    margin-left: -300px;
+    filter: blur(1px);
+    animation-duration: 30s;
+}
+
+@keyframes snwoningAnimRight{
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(600px, 1000px);
+    }
+}
+
+.snowingLeft, .snowingLeft:after, .snowingLeft:before{
+    content: "";
+    position: absolute;
+    top: -1200px;
+    right: -600px;
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    background-image:
+    radial-gradient(3px 3px at 372px 466px, #fff, transparent),
+    radial-gradient(4px 4px at 384px 252px, #fff, transparent),
+    radial-gradient(4px 4px at 599px 404px, #fff, transparent),
+    radial-gradient(4px 4px at 155px 265px, #fff, transparent),
+    radial-gradient(4px 4px at 238px 55px, #fff, transparent),
+    radial-gradient(4px 4px at 113px 565px, #fff, transparent),
+    radial-gradient(4px 4px at 466px 367px, #fff, transparent),
+    radial-gradient(5px 5px at 15px 327px, #fff, transparent),
+    radial-gradient(5px 5px at 249px 508px, #fff, transparent),
+    radial-gradient(5px 5px at 86px 169px, #fff, transparent),
+    radial-gradient(5px 5px at 68px 18px, #fff, transparent);
+    background-size: 600px 1200px;
+    animation: snwoningAnimLeft 20s linear infinite;
+}
+
+.snowingLeft:after{
+    position: absolute;
+    margin-left: -50px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-direction: reverse;
+    animation-duration: 23s;
+}
+
+
+.snowingLeft:before{
+    position: absolute;
+    margin-left: -400px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-direction: reverse;
+    animation-duration: 25s;
+}
+
+@keyframes snwoningAnimLeft{
+    from{
+        transform: translate(0, 0);
+    }
+    to{
+        transform: translate(-600px, 1200px);
+    }
+}
+
+.snow_wrap{
+	height: 100vh;
+	width: 100%;
+	background:transparent;
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: absolute;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -650px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-image: 
+  radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+  radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+  radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+  radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+  radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+  radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 3s linear infinite;
+  content: "";
+}
+
+.snow:after {
+  margin-left: -250px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+.snow:before {
+	margin-left: -350px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 9s;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #e1f1fb;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    width: 40px;
+    background-color: #e9b4d1;
+}
+
+.option-box{
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+}
+
+
+  .readMe{
+    width: 100%;
+    height: 1000px;
+    justify-content: center;
+    align-items: start;
+    display: flex;
+  }
+
+  .readMe-box{
+    margin-top: 20px;
+    height: auto;
+    width: 90%;
+    border: 2px solid #e1f1fb;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .readMe-box h1{
+    font-size: 44px;
+  }
+  .readMe-box h2{
+    color: #e9b4d1;
+    font-size: 40px;
+  }
+  .readMe-box h3{
+    font-size: 36px;
+  }
+  .readMe-box p{
+    font-size: 30px;
+  }

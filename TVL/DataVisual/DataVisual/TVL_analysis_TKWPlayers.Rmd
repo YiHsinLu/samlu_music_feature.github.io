@@ -1,0 +1,201 @@
+```{r}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+```
+
+```{r}
+load("C:/_YiHsin/TVL/DataVisual/DataVisual/MatchData_1014_0107.RData")
+playerStat = read.csv('C:/_YiHsin/TVL/Matches/players/PlayersStat.csv')
+playerStat$team = gsub(".*\\)","",playerStat$team)
+playerStat$no_player = gsub(".*\\-","",playerStat$no_player)
+```
+
+```{r}
+PlayerStat_TKW = playerStat %>% 
+  select(team, no_player)
+
+PlayerStat_TKW = PlayerStat_TKW[grepl("臺北鯨華",PlayerStat_TKW$team),]
+PlayerStat_TKW
+```
+
+```{r}
+Match_TKW[[1]]$playerStat[grepl("廖苡任",Match_TKW[[1]]$playerStat$name),]
+```
+
+```{r}
+廖苡任 = c()
+
+for(i in c(1:12)){
+  廖苡任 = rbind(廖苡任, Match_TKW[[i]]$playerStat[grepl("廖苡任",Match_TKW[[i]]$playerStat$name),])
+}
+```
+
+
+```{r}
+for(TKW_plr in PlayerStat_TKW$no_player){
+  TKW_playerStat_player = c()
+  for(mach in c(1:12)){
+    if(TKW_plr %in% Match_TKW[[mach]]$playerStat$name){
+      TKW_playerStat_player = rbind(TKW_playerStat_player,
+       Match_TKW[[mach]]$playerStat[grepl(TKW_plr,Match_TKW[[mach]]$playerStat$name),])
+    }else{
+      TKW_playerStat_player = rbind(TKW_playerStat_player, Match_TKW[[mach]]$playerStat[1,])
+    }
+  }
+  TKW_playerStat_player = cbind(Match_vsteam_sets, TKW_playerStat_player)
+  TKW_playerStat = lappend(TKW_playerStat, TKW_playerStat_player)
+}
+
+
+```
+
+```{r}
+lappend <- function (lst, ...){
+    lst <- c(lst, list(...))
+    return(lst)
+  }
+```
+
+```{r}
+
+TKW_playerStat = list()
+
+
+for(TKW_plr in PlayerStat_TKW$no_player){
+  TKW_playerStat_player = c()
+  for(mach in c(1:12)){
+    if(TKW_plr %in% Match_TKW[[mach]]$playerStat$name){
+      TKW_playerStat_player = rbind(TKW_playerStat_player, Match_TKW[[mach]]$playerStat[grepl(TKW_plr,Match_TKW[[mach]]$playerStat$name),])
+    }else{
+      TKW_playerStat_player = rbind(TKW_playerStat_player, rep(0,15))
+    }
+  }
+  TKW_playerStat_player = cbind(Match_vsteam_sets, TKW_playerStat_player)
+  TKW_playerStat = lappend(TKW_playerStat, TKW_plr = TKW_playerStat_player)
+}
+
+```
+
+```{r}
+
+Match_vsteam_sets = c()
+
+for(i in c(1:12)){
+  if(Match_TKW[[i]]$result$set4[1]==0&&Match_TKW[[i]]$result$set4[1]==0){
+    Match_sets = 3
+  }else if(Match_TKW[[i]]$result$set5[1]==0&&Match_TKW[[i]]$result$set5[1]==0){
+    Match_sets = 4
+  }else{
+    Match_sets = 5
+  }
+  Match_team = rownames(Match_TKW[[i]]$result)[!grepl("臺北鯨華", rownames(Match_TKW[[1]]$result))]
+  Match_vsteam_sets = rbind(Match_vsteam_sets, cbind(Match_team, Match_sets))
+}
+
+Match_vsteam_sets = as.data.frame(Match_vsteam_sets)
+Match_vsteam_sets = transform(Match_vsteam_sets, Match_sets = as.integer(Match_sets))
+
+```
+
+
+```{r}
+names(TKW_playerStat)[c(1:16)] = PlayerStat_TKW$no_player
+```
+
+```{r}
+TKW_playerStat$POLINA$short_number = TKW_playerStat$POLINA$short_number[12]
+TKW_playerStat$POLINA$name = TKW_playerStat$POLINA$name[12]
+TKW_playerStat$POLINA$position = TKW_playerStat$POLINA$position[12]
+TKW_playerStat$POLINA[c(1:11), c(6:17)] = 0
+
+TKW_playerStat$POLINA
+TKW_playerStat$廖苡任
+```
+
+```{r}
+library(highcharter)
+
+match_date = c(
+  '10月14日',
+  '11月04日',
+  '11月05日',
+  '11月11日',
+  '11月12日',
+  '11月25日',
+  '11月26日',
+  '12月16日',
+  '12月17日',
+  '12月23日',
+  '12月24日',
+  '01月07日'
+)
+
+TKW_playerStat$廖苡任%>% 
+  filter(position == "舉球") %>% 
+  hchart(., 
+         type = "line", 
+         hcaes(x = match_date,
+               y = set_success/Match_sets),
+         name = "舉球成功率",)%>%
+  hc_yAxis(max = 1)
+```
+
+```{r}
+library(tidyr)
+cbind(match_date, TKW_playerStat$BIA[TKW_playerStat$BIA$attack_total>0,]) %>% select(attack_points, attack_total, match_date) %>% 
+  gather("key", "value", attack_points, attack_total) %>%
+  hchart(type='line', hcaes(x='match_date', y='value', group='key'))
+```
+
+```{r}
+library(tidyr)
+cbind(match_date, TKW_playerStat$林書荷) %>% select(attack_points, attack_total, match_date) %>% 
+  gather("key", "value", attack_points, attack_total) %>%
+  hchart(type='line', hcaes(x='match_date', y='value', group='key'))
+```
+
+```{r}
+library(tidyr)
+cbind(match_date, TKW_playerStat$廖苡任) %>% 
+  select(set_success, set_total, match_date) %>%
+  gather("key", "value", set_success, set_total) %>%
+  hchart(type='line', hcaes(x='match_date', y='value', group='key'))
+```
+
+```{r}
+cbind(match_date, TKW_playerStat$廖苡任) %>%
+  mutate(sets_pers = round(set_success/Match_sets, digits = 2))%>%
+  mutate(sett_pers = round(set_total/Match_sets, digits = 2))%>%
+  select(sets_pers, sett_pers, match_date) %>%
+  gather("key", "value", sets_pers, sett_pers) %>%
+  hchart(type='line', hcaes(x='match_date', y='value', group='key'))
+
+```
+
+```{r}
+TKW_playerStat$廖苡任
+
+```

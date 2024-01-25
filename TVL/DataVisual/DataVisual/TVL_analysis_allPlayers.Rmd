@@ -1,0 +1,116 @@
+```{r}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+```
+
+```{r}
+playerStat
+```
+
+```{r}
+playerStat = read.csv('C:/_YiHsin/TVL/Matches/players/PlayersStat.csv')
+
+playerStat_stats = playerStat[, -c(1,2)]
+
+playerStat_plr = playerStat$no_player
+
+set.seed(19970608)
+playerStat_tsne = Rtsne(playerStat_stats, perplexity = 15, check_duplicates = FALSE)
+
+playerStat_tsneVisual = cbind(playerStat_tsne$Y, playerStat$team)
+
+colnames(playerStat_tsneVisual) = c('tsne1', 'tsne2', 'team')
+
+#playerStat_tsneVisual = cbind(match01_tsne$Y, match01_plrStat$position)
+
+#colnames(playerStat_tsneVisual) = c('tsne1', 'tsne2', 'position')
+rownames(playerStat_tsneVisual) = playerStat_plr
+
+
+playerStat_tsneVisual = as.data.frame(playerStat_tsneVisual)
+playerStat_tsneVisual = transform(playerStat_tsneVisual, tsne1 = as.numeric(tsne1), tsne2 = as.numeric(tsne2))
+
+plot_ly(playerStat_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~team, text = playerStat_plr)
+#plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~position, text = plr)
+
+```
+
+```{r}
+playerStat_avg = playerStat[, c(1, 2)] %>% 
+  mutate(attack = round(playerStat$attack_points/playerStat$attack_total, digits = 2))%>% 
+  mutate(serve = round(playerStat$serve_points/playerStat$serve_total, digits = 2))%>% 
+  mutate(receive = round(playerStat$receive_success/playerStat$receive_total, digits = 2))%>% 
+  mutate(dig = round(playerStat$dig_success/playerStat$dig_total, digits = 2))%>% 
+  mutate(set = round(playerStat$set_success/playerStat$set_total, digits = 2))%>% 
+  mutate(block = round(playerStat$block_points/playerStat$sets, digits = 2))
+
+playerStat_avg[is.na(playerStat_avg)] = 0
+playerStat_avg
+```
+
+```{r}
+playerStat_stats = playerStat_avg[, -c(1,2)]
+
+playerStat_plr = playerStat$no_player
+
+set.seed(19970608)
+playerStat_tsne = Rtsne(playerStat_stats, perplexity = 5, check_duplicates = FALSE)
+
+playerStat_tsneVisual = cbind(playerStat_tsne$Y, playerStat$team)
+
+colnames(playerStat_tsneVisual) = c('tsne1', 'tsne2', 'team')
+
+#playerStat_tsneVisual = cbind(match01_tsne$Y, match01_plrStat$position)
+
+#colnames(playerStat_tsneVisual) = c('tsne1', 'tsne2', 'position')
+rownames(playerStat_tsneVisual) = playerStat_plr
+
+
+playerStat_tsneVisual = as.data.frame(playerStat_tsneVisual)
+playerStat_tsneVisual = transform(playerStat_tsneVisual, tsne1 = as.numeric(tsne1), tsne2 = as.numeric(tsne2))
+
+plot_ly(playerStat_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~team, text = playerStat_plr)
+#plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~position, text = plr)
+```
+
+```{r}
+mean(playerStat_avg$attack[playerStat_avg$attack>0])
+mean(playerStat_avg$serve[playerStat_avg$serve>0])
+mean(playerStat_avg$receive[playerStat_avg$receive>0])
+mean(playerStat_avg$dig[playerStat_avg$dig>0])
+mean(playerStat_avg$set[playerStat_avg$set>0])
+mean(playerStat_avg$block[playerStat_avg$block>0])
+
+```
+
+```{r}
+hist(playerStat_avg$attack[playerStat_avg$attack>0], main = 'attack', xlab = 'attack average (attack.points/attack.total)', nclass = 20)
+hist(playerStat_avg$serve[playerStat_avg$serve>0], main = 'serve', xlab = 'serve average (serve.points/serve.total)', nclass = 20)
+hist(playerStat_avg$receive[playerStat_avg$receive>0], main = 'receive', xlab = 'receive average (receive.success/receive.total)', nclass = 20)
+hist(playerStat_avg$dig[playerStat_avg$dig>0], main = 'dig', xlab = 'dig average (dig.success/dig.total)', nclass = 20)
+hist(playerStat_avg$set[playerStat_avg$set>0], main = 'set', xlab = 'set average (set.success/set.total)', nclass = 20)
+hist(playerStat_avg$block[playerStat_avg$block>0], main = 'block', xlab = 'block average (block.points/set)', nclass = 20)
+```

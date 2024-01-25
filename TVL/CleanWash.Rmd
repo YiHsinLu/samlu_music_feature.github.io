@@ -1,0 +1,73 @@
+```{r}
+Match01_player = read.csv('Matches/players/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T)
+
+
+
+```
+
+```{r}
+
+Match02_plrStat = read.csv('Matches/players/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T)
+Match08_plrStat = read.csv('Matches/players/第2週-女 8：新北中纖 vs 臺北鯨華 (11月04日).csv', header = T)
+Match12_plrStat = read.csv('Matches/players/第2週-女 12：臺北鯨華 vs 凱撒飯店連鎖 (11月05日).csv', header = T)
+Match13_plrStat = read.csv('Matches/players/第3週-女 13：臺北鯨華 vs 極速超跑 (11月11日).csv', header = T)
+Match16_plrStat = read.csv('Matches/players/第3週-女 16：高雄台電 vs 臺北鯨華 (11月12日).csv', header = T)
+Match26_plrStat = read.csv('Matches/players/第5週-女 26：高雄台電 vs 臺北鯨華 (11月25日).csv', header = T)
+Match28_plrStat = read.csv('Matches/players/第5週-女 28：極速超跑 vs 臺北鯨華 (11月26日).csv', header = T)
+Match43_plrStat = read.csv('Matches/players/第8週-女 43：極速超跑 vs 臺北鯨華 (12月16日).csv', header = T)
+Match46_plrStat = read.csv('Matches/players/第8週-女 46：臺北鯨華 vs 凱撒飯店連鎖 (12月17日).csv', header = T)
+Match49_plrStat = read.csv('Matches/players/第9週-女 49：新北中纖 vs 臺北鯨華 (12月23日).csv', header = T)
+Match52_plrStat = read.csv('Matches/players/第9週-女 52：臺北鯨華 vs 新北中纖 (12月24日).csv', header = T)
+Match58_plrStat = read.csv('Matches/players/第10週-女 58：臺北鯨華 vs 凱撒飯店連鎖 (01月07日).csv', header = T)
+
+```
+
+```{r}
+
+Match02_rlt = read.csv('Matches/results/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T, row.names = 1)
+Match08_rlt = read.csv('Matches/results/第2週-女 8：新北中纖 vs 臺北鯨華 (11月04日).csv', header = T, row.names = 1)
+Match12_rlt = read.csv('Matches/results/第2週-女 12：臺北鯨華 vs 凱撒飯店連鎖 (11月05日).csv', header = T, row.names = 1)
+Match13_rlt = read.csv('Matches/results/第3週-女 13：臺北鯨華 vs 極速超跑 (11月11日).csv', header = T, row.names = 1)
+Match16_rlt = read.csv('Matches/results/第3週-女 16：高雄台電 vs 臺北鯨華 (11月12日).csv', header = T, row.names = 1)
+Match26_rlt = read.csv('Matches/results/第5週-女 26：高雄台電 vs 臺北鯨華 (11月25日).csv', header = T, row.names = 1)
+Match28_rlt = read.csv('Matches/results/第5週-女 28：極速超跑 vs 臺北鯨華 (11月26日).csv', header = T, row.names = 1)
+Match43_rlt = read.csv('Matches/results/第8週-女 43：極速超跑 vs 臺北鯨華 (12月16日).csv', header = T, row.names = 1)
+Match46_rlt = read.csv('Matches/results/第8週-女 46：臺北鯨華 vs 凱撒飯店連鎖 (12月17日).csv', header = T, row.names = 1)
+Match49_rlt = read.csv('Matches/results/第9週-女 49：新北中纖 vs 臺北鯨華 (12月23日).csv', header = T, row.names = 1)
+Match52_rlt = read.csv('Matches/results/第9週-女 52：臺北鯨華 vs 新北中纖 (12月24日).csv', header = T, row.names = 1)
+Match58_rlt = read.csv('Matches/results/第10週-女 58：臺北鯨華 vs 凱撒飯店連鎖 (01月07日).csv', header = T, row.names = 1)
+
+```
+
+```{r}
+
+Match02 = list(result = Match02_rlt, playerStat = Match02_plrStat)
+Match08 = list(result = Match08_rlt, playerStat = Match08_plrStat)
+Match12 = list(result = Match12_rlt, playerStat = Match12_plrStat)
+Match13 = list(result = Match13_rlt, playerStat = Match13_plrStat)
+Match16 = list(result = Match16_rlt, playerStat = Match16_plrStat)
+Match26 = list(result = Match26_rlt, playerStat = Match26_plrStat)
+Match28 = list(result = Match28_rlt, playerStat = Match28_plrStat)
+Match43 = list(result = Match43_rlt, playerStat = Match43_plrStat)
+Match46 = list(result = Match46_rlt, playerStat = Match46_plrStat)
+Match49 = list(result = Match49_rlt, playerStat = Match49_plrStat)
+Match52 = list(result = Match52_rlt, playerStat = Match52_plrStat)
+Match58 = list(result = Match58_rlt, playerStat = Match58_plrStat)
+```
+
+```{r}
+Match_TKW = list(
+  Match02 = Match02,
+  Match08 = Match08,
+  Match12 = Match12,
+  Match13 = Match13,
+  Match16 = Match16,
+  Match26 = Match26,
+  Match28 = Match28,
+  Match43 = Match43,
+  Match46 = Match46,
+  Match49 = Match49,
+  Match52 = Match52,
+  Match58 = Match58
+)
+```

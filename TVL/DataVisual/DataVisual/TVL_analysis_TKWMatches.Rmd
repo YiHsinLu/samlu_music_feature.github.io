@@ -1,0 +1,258 @@
+```{r}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+```
+
+```{r}
+load("MatchData_1014_0107.RData")
+```
+
+```{r}
+match01_plrStat = Match_TKW$Match02$playerStat
+match01_plrStat
+```
+
+```{r}
+match01_plrStat$team = rep(rownames(Match_TKW$Match02$result)[1:2], each = 14, len = 28)
+
+match01_plrStat = relocate(match01_plrStat, team, .after = position)
+match01_plrStat
+```
+```{r}
+match01 = match01_plrStat[, -c(1,2,3,4)]
+rownames(match01) = match01_plrStat$name
+match01
+```
+
+
+
+
+
+```{r}
+match01 <- as.data.frame(scale(match01)) 
+```
+
+#PCA
+```{r}
+match01_pca = prcomp(t(match01), center = TRUE, retx = T)
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:3], match01_plrStat$position)
+match01_pcaVisual = cbind(match01_pcaVisual, match01_plrStat$team)
+
+colnames(match01_pcaVisual) = c('x', 'y', 'z', 'position', 'team')
+rownames(match01_pcaVisual) = plr
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, x = as.numeric(x), y = as.numeric(y), z = as.numeric(z))
+
+plotly_match01_pos = plot_ly(match01_pcaVisual, x = ~x, y = ~y, color = ~position, text = ~plr)%>%
+    layout(plot_bgcolor  = "#4478bc",
+           paper_bgcolor = "#4478bc",
+           fig_bgcolor   = "#4478bc")%>% add_text(textfont = list(size = 16), textposition = "top center")
+
+plot_ly(match01_pcaVisual, x = ~x, y = ~y, color = ~team, colors = c('#e1f1fb', '#e9b4d1'), text = plr)%>%
+    layout(plot_bgcolor  = "#4478bc",
+           paper_bgcolor = "#4478bc",
+           fig_bgcolor   = "#4478bc")%>% add_text(textfont = list(size = 20), textposition = "top center")
+
+```
+
+##save as HTML
+
+```{r}
+
+htmlwidgets::saveWidget(
+                widget = plotly_match01_pos, #the plotly object
+                file = sprintf("%s.html", "01"), #the path & file name
+                selfcontained = TRUE #creates a single html file
+                )
+```
+#tSNE
+```{r}
+plr = match01_plrStat$name
+
+set.seed(19970608)
+match01_tsne = Rtsne(match01, perplexity = 5, check_duplicates = FALSE)
+
+match01_tsneVisual = cbind(match01_tsne$Y, match01_plrStat$team)
+match01_tsneVisual = cbind(match01_tsneVisual, match01_plrStat$position)
+
+colnames(match01_tsneVisual) = c('tsne1', 'tsne2', 'team', 'position')
+rownames(match01_tsneVisual) = plr
+
+
+match01_tsneVisual = as.data.frame(match01_tsneVisual)
+match01_tsneVisual = transform(match01_tsneVisual, tsne1 = as.numeric(tsne1), tsne2 = as.numeric(tsne2))
+
+plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~team, text = plr)
+plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~position, text = plr)
+
+```
+
+```{r}
+match01_pca = prcomp(t(match01), center = TRUE, retx = T)
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$position)
+
+colnames(match01_pcaVisual) = c('pc1', 'pc2', 'position')
+rownames(match01_pcaVisual) = plr
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, pc1 = as.numeric(pc1), pc2 = as.numeric(pc2))
+
+plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~position, text = plr)
+```
+
+```{r}
+hist(match01$points[match01$points>0], nclass = 15, main = 'Points', xlab = 'points', ylab = 'p')
+```
+```{r}
+Match01_avg = match01_plrStat[, -c(6, 9)] %>% 
+  mutate(attack = round(match01_plrStat$attack_points/match01_plrStat$attack_total, digits = 2))%>% 
+  mutate(serve = round(match01_plrStat$serve_points/match01_plrStat$serve_total, digits = 2))%>% 
+  mutate(receive = round(match01_plrStat$receive_success/match01_plrStat$receive_total, digits = 2))%>% 
+  mutate(dig = round(match01_plrStat$dig_success/match01_plrStat$dig_total, digits = 2))%>% 
+  mutate(set = round(match01_plrStat$set_success/match01_plrStat$set_total, digits = 2))
+
+Match01_avg[is.na(Match01_avg)] = 0
+Match01_avg
+```
+
+```{r}
+match01_pca = prcomp(t(Match01_avg[, -c(1,2,3,4)]), center = TRUE, retx = T)
+
+#match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$position)
+
+#colnames(match01_pcaVisual) = c('pc1', 'pc2', 'position')
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:2], Match01_avg$team)
+
+colnames(match01_pcaVisual) = c('pc1', 'pc2', 'team')
+rownames(match01_pcaVisual) = Match01_avg$name
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, pc1 = as.numeric(pc1), pc2 = as.numeric(pc2))
+
+#plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~position, text = plr)
+plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~team, text = plr)
+
+```
+
+```{r}
+match01_pca = prcomp(t(Match01_avg[, -c(1,2,3,4)]), center = TRUE, retx = T)
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$position)
+
+colnames(match01_pcaVisual) = c('pc1', 'pc2', 'position')
+rownames(match01_pcaVisual) = Match01_avg$name
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, pc1 = as.numeric(pc1), pc2 = as.numeric(pc2))
+
+plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~position, text = plr)
+
+```
+
+# Match02
+
+```{r}
+match01_plrStat = Match_TKW$Match02$playerStat
+match01_plrStat
+```
+
+```{r}
+match01_plrStat$team = rep(rownames(Match_TKW$Match02$result)[1:2], each = 14, len = 28)
+
+match01_plrStat = relocate(match01_plrStat, team, .after = position)
+match01_plrStat
+```
+```{r}
+match01 = match01_plrStat[, -c(1,2,3,4)]
+rownames(match01) = match01_plrStat$name
+match01
+```
+
+
+#tSNE
+```{r}
+plr = match01_plrStat$name
+
+set.seed(19970608)
+match01_tsne = Rtsne(match01, perplexity = 2, check_duplicates = FALSE)
+
+match01_tsneVisual = cbind(match01_tsne$Y, match01_plrStat$team)
+
+colnames(match01_tsneVisual) = c('tsne1', 'tsne2', 'team')
+
+#match01_tsneVisual = cbind(match01_tsne$Y, match01_plrStat$position)
+
+#colnames(match01_tsneVisual) = c('tsne1', 'tsne2', 'position')
+rownames(match01_tsneVisual) = plr
+
+
+match01_tsneVisual = as.data.frame(match01_tsneVisual)
+match01_tsneVisual = transform(match01_tsneVisual, tsne1 = as.numeric(tsne1), tsne2 = as.numeric(tsne2))
+
+plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~team, text = plr)
+#plot_ly(match01_tsneVisual, x = ~tsne1, y = ~tsne2, color = ~position, text = plr)
+
+```
+
+
+#PCA
+```{r}
+match01_pca = prcomp(t(match01), center = TRUE, retx = T)
+
+#match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$position)
+
+#colnames(match01_pcaVisual) = c('pc1', 'pc2', 'position')
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$team)
+
+colnames(match01_pcaVisual) = c('pc1', 'pc2', 'team')
+rownames(match01_pcaVisual) = plr
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, pc1 = as.numeric(pc1), pc2 = as.numeric(pc2))
+
+#plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~position, text = plr)
+plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~team, text = plr)
+
+```
+
+```{r}
+match01_pca = prcomp(t(match01), center = TRUE, retx = T)
+
+match01_pcaVisual = cbind(match01_pca$rotation[,1:2], match01_plrStat$position)
+
+colnames(match01_pcaVisual) = c('pc1', 'pc2', 'position')
+rownames(match01_pcaVisual) = plr
+
+match01_pcaVisual = as.data.frame(match01_pcaVisual)
+match01_pcaVisual = transform(match01_pcaVisual, pc1 = as.numeric(pc1), pc2 = as.numeric(pc2))
+
+plot_ly(match01_pcaVisual, x = ~pc1, y = ~pc2, color = ~position, text = plr)
+```
