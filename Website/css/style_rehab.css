@@ -33,7 +33,7 @@ body{
     top: 120px;
     background: transparent;
     width: 100%;
-    height: 3400px;
+    height: 3500px;
     justify-items: center;
     align-items: center;
     display: grid;
@@ -41,7 +41,7 @@ body{
 
 .container{
     position: absolute;
-    height: 3400px;
+    height: 3500px;
     width: 100%;
     display: flex;
     transition: 0.5s;
@@ -438,7 +438,8 @@ body{
 #popup20240108,
 #popup20240115,
 #popup20240119,
-#popup20240122{
+#popup20240122,
+#popup20240126{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -484,7 +485,8 @@ body{
 #popup20240108.active,
 #popup20240115.active,
 #popup20240119.active,
-#popup20240122.active{
+#popup20240122.active,
+#popup20240126.active{
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
@@ -610,7 +612,8 @@ body{
 .timeline-storybox-20240108,
 .timeline-storybox-20240115,
 .timeline-storybox-20240119,
-.timeline-storybox-20240122{
+.timeline-storybox-20240122,
+.timeline-storybox-20240126{
     position: absolute;
     width: 100%;
     height: 50px;
@@ -653,7 +656,8 @@ body{
 .timeline-storybox-20240108 a,
 .timeline-storybox-20240115 a,
 .timeline-storybox-20240119 a,
-.timeline-storybox-20240122 a{
+.timeline-storybox-20240122 a,
+.timeline-storybox-20240126 a{
     position: absolute;
     font-size: 40px;    
     color: #CFCFCF;
@@ -689,7 +693,8 @@ body{
 .timeline-storybox-20240108 a:hover,
 .timeline-storybox-20240115 a:hover,
 .timeline-storybox-20240119 a:hover,
-.timeline-storybox-20240122 a:hover{
+.timeline-storybox-20240122 a:hover,
+.timeline-storybox-20240126 a:hover{
     color: #CAA36E;
     font-size: 50px;
 }
@@ -779,4 +784,7 @@ body{
 }
 .timeline-storybox-20240122{
     bottom: 3100px;
+}
+.timeline-storybox-20240126{
+    bottom: 3200px;
 }
