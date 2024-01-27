@@ -16,7 +16,28 @@
 </head>
 
 <body>
-    <h1>第5週-女 26：高雄台電 vs 臺北鯨華 (11月25日)</h1>
+    <div class="option-box">
+        <div class="dropdown">
+            <button class="dropbtn">第5週-女 26：高雄台電 vs 臺北鯨華 (11月25日)
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Match01.html">第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日)</a>
+                <a href="Match02.html">第2週-女 8：新北中纖 vs 臺北鯨華 (11月04日)</a>
+                <a href="Match03.html">第2週-女 12：臺北鯨華 vs 凱撒飯店連鎖 (11月05日)</a>
+                <a href="Match04.html">第3週-女 13：臺北鯨華 vs 極速超跑 (11月11日)</a>
+                <a href="Match05.html">第3週-女 16：高雄台電 vs 臺北鯨華 (11月12日)</a>
+                <a href="Match06.html">第5週-女 26：高雄台電 vs 臺北鯨華 (11月25日)</a>
+                <a href="Match07.html">第5週-女 28：極速超跑 vs 臺北鯨華 (11月26日)</a>
+                <a href="Match08.html">第8週-女 43：極速超跑 vs 臺北鯨華 (12月16日)</a>
+                <a href="Match09.html">第8週-女 46：臺北鯨華 vs 凱撒飯店連鎖 (12月17日)</a>
+                <a href="Match10.html">第9週-女 49：新北中纖 vs 臺北鯨華 (12月23日)</a>
+                <a href="Match11.html">第9週-女 52：臺北鯨華 vs 新北中纖 (12月24日)</a>
+                <a href="Match12.html">第10週-女 58：臺北鯨華 vs 凱撒飯店連鎖 (01月07日)</a>
+                <a href="Match13.html">第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日)</a>
+            </div>
+        </div>
+    </div>
     <div class="match">
         <div class="home">
             <img src="https://tvl.ctvba.org.tw/upload/w_team/logo_3_1635492564.png" alt="" style="
@@ -93,7 +114,7 @@
                 </div>
             </div>
         </div>
-        <div class="pt" style="background: #6288d4;">
+        <button type="button" class="pt-collapsible1">
             <div class="bar-chart-left">
                 <div class="inbar-l" id="atk_pointL"></div>
                 <div class="bar-l" id="atk_pointTotalL">
@@ -101,7 +122,7 @@
                     <p id="atk_pointperL"></p>
                 </div>
             </div>
-            <div class="pt-title" style="background: #6288d4;">Attack success</div>
+            <div class="pt-title">Attack success</div>
             <div class="bar-chart-right">
                 <div class="inbar-r" id="atk_pointR"></div>
                 <div class="bar-r" id="atk_pointTotalR">
@@ -109,62 +130,62 @@
                     <p id="atk_pointperR"></p>
                 </div>
             </div>
+        </button>
+        <div class="pt-sub">
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_oh"></div>
+                    <div class="bar-l" id="atk_pointTotalL_oh">
+                        <span id="inatk_pointTotalL_oh"></span>
+                        <p id="atk_pointperL_oh"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_oh"></div>
+                    <div class="bar-r" id="atk_pointTotalR_oh">
+                        <span id="inatk_pointTotalR_oh"></span>
+                        <p id="atk_pointperR_oh"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_mb"></div>
+                    <div class="bar-l" id="atk_pointTotalL_mb">
+                        <span id="inatk_pointTotalL_mb"></span>
+                        <p id="atk_pointperL_mb"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (MB)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_mb"></div>
+                    <div class="bar-r" id="atk_pointTotalR_mb">
+                        <span id="inatk_pointTotalR_mb"></span>
+                        <p id="atk_pointperR_mb"></p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_op"></div>
+                    <div class="bar-l" id="atk_pointTotalL_op">
+                        <span id="inatk_pointTotalL_op"></span>
+                        <p id="atk_pointperL_op"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (OP)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_op"></div>
+                    <div class="bar-r" id="atk_pointTotalR_op">
+                        <span id="inatk_pointTotalR_op"></span>
+                        <p id="atk_pointperR_op"></p>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="pt" style="background: #6288d4;">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="atk_pointL_oh"></div>
-                <div class="bar-l" id="atk_pointTotalL_oh">
-                    <span id="inatk_pointTotalL_oh"></span>
-                    <p id="atk_pointperL_oh"></p>
-                </div>
-            </div>
-            <div class="pt-title" style="background: #6288d4;">Attack (OH)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="atk_pointR_oh"></div>
-                <div class="bar-r" id="atk_pointTotalR_oh">
-                    <span id="inatk_pointTotalR_oh"></span>
-                    <p id="atk_pointperR_oh"></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="pt" style="background: #6288d4;">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="atk_pointL_mb"></div>
-                <div class="bar-l" id="atk_pointTotalL_mb">
-                    <span id="inatk_pointTotalL_mb"></span>
-                    <p id="atk_pointperL_mb"></p>
-                </div>
-            </div>
-            <div class="pt-title" style="background: #6288d4;">Attack (MB)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="atk_pointR_mb"></div>
-                <div class="bar-r" id="atk_pointTotalR_mb">
-                    <span id="inatk_pointTotalR_mb"></span>
-                    <p id="atk_pointperR_mb"></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="pt" style="background: #6288d4;">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="atk_pointL_op"></div>
-                <div class="bar-l" id="atk_pointTotalL_op">
-                    <span id="inatk_pointTotalL_op"></span>
-                    <p id="atk_pointperL_op"></p>
-                </div>
-            </div>
-            <div class="pt-title" style="background: #6288d4;">Attack (OP)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="atk_pointR_op"></div>
-                <div class="bar-r" id="atk_pointTotalR_op">
-                    <span id="inatk_pointTotalR_op"></span>
-                    <p id="atk_pointperR_op"></p>
-                </div>
-            </div>
-        </div>
-        <div class="pt">
+        <button class="pt-collapsible" type="button">
             <div class="bar-chart-left">
                 <div class="inbar-l" id="rcv_sucsL"></div>
                 <div class="bar-l" id="rcv_sucsTotalL">
@@ -180,43 +201,45 @@
                     <p id="rcv_sucsperR"></p>
                 </div>
             </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="rcv_sucsL_L"></div>
-                <div class="bar-l" id="rcv_sucsTotalL_L">
-                    <span id="inrcv_sucsTotalL_L"></span>
-                    <p id="rcv_sucsperL_L"></p>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="rcv_sucsL_L"></div>
+                    <div class="bar-l" id="rcv_sucsTotalL_L">
+                        <span id="inrcv_sucsTotalL_L"></span>
+                        <p id="rcv_sucsperL_L"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Receive (L)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="rcv_sucsR_L"></div>
+                    <div class="bar-r" id="rcv_sucsTotalR_L">
+                        <span id="inrcv_sucsTotalR_L"></span>
+                        <p id="rcv_sucsperR_L"></p>
+                    </div>
                 </div>
             </div>
-            <div class="pt-title">Receive (L)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="rcv_sucsR_L"></div>
-                <div class="bar-r" id="rcv_sucsTotalR_L">
-                    <span id="inrcv_sucsTotalR_L"></span>
-                    <p id="rcv_sucsperR_L"></p>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="rcv_sucsL_OH"></div>
+                    <div class="bar-l" id="rcv_sucsTotalL_OH">
+                        <span id="inrcv_sucsTotalL_OH"></span>
+                        <p id="rcv_sucsperL_OH"></p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="rcv_sucsL_OH"></div>
-                <div class="bar-l" id="rcv_sucsTotalL_OH">
-                    <span id="inrcv_sucsTotalL_OH"></span>
-                    <p id="rcv_sucsperL_OH"></p>
-                </div>
-            </div>
-            <div class="pt-title">Receive (OH)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="rcv_sucsR_OH"></div>
-                <div class="bar-r" id="rcv_sucsTotalR_OH">
-                    <span id="inrcv_sucsTotalR_OH"></span>
-                    <p id="rcv_sucsperR_OH"></p>
+                <div class="pt-title">Receive (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="rcv_sucsR_OH"></div>
+                    <div class="bar-r" id="rcv_sucsTotalR_OH">
+                        <span id="inrcv_sucsTotalR_OH"></span>
+                        <p id="rcv_sucsperR_OH"></p>
+                    </div>
                 </div>
             </div>
         </div>
         <br>
-        <div class="pt">
+        <button class="pt-collapsible" type="button">
             <div class="bar-chart-left">
                 <div class="inbar-l" id="dig_sucsL"></div>
                 <div class="bar-l" id="dig_sucsTotalL">
@@ -232,89 +255,91 @@
                     <p id="dig_sucsperR"></p>
                 </div>
             </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="dig_sucsL_L"></div>
-                <div class="bar-l" id="dig_sucsTotalL_L">
-                    <span id="indig_sucsTotalL_L"></span>
-                    <p id="dig_sucsperL_L"></p>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_L"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_L">
+                        <span id="indig_sucsTotalL_L"></span>
+                        <p id="dig_sucsperL_L"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (L)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_L"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_L">
+                        <span id="indig_sucsTotalR_L"></span>
+                        <p id="dig_sucsperR_L"></p>
+                    </div>
                 </div>
             </div>
-            <div class="pt-title">Dig <br> (L)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="dig_sucsR_L"></div>
-                <div class="bar-r" id="dig_sucsTotalR_L">
-                    <span id="indig_sucsTotalR_L"></span>
-                    <p id="dig_sucsperR_L"></p>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_OH"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_OH">
+                        <span id="indig_sucsTotalL_OH"></span>
+                        <p id="dig_sucsperL_OH"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_OH"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_OH">
+                        <span id="indig_sucsTotalR_OH"></span>
+                        <p id="dig_sucsperR_OH"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="dig_sucsL_OH"></div>
-                <div class="bar-l" id="dig_sucsTotalL_OH">
-                    <span id="indig_sucsTotalL_OH"></span>
-                    <p id="dig_sucsperL_OH"></p>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_S"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_S">
+                        <span id="indig_sucsTotalL_S"></span>
+                        <p id="dig_sucsperL_S"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (S)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_S"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_S">
+                        <span id="indig_sucsTotalR_S"></span>
+                        <p id="dig_sucsperR_S"></p>
+                    </div>
                 </div>
             </div>
-            <div class="pt-title">Dig <br> (OH)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="dig_sucsR_OH"></div>
-                <div class="bar-r" id="dig_sucsTotalR_OH">
-                    <span id="indig_sucsTotalR_OH"></span>
-                    <p id="dig_sucsperR_OH"></p>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_OP"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_OP">
+                        <span id="indig_sucsTotalL_OP"></span>
+                        <p id="dig_sucsperL_OP"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (OP)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_OP"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_OP">
+                        <span id="indig_sucsTotalR_OP"></span>
+                        <p id="dig_sucsperR_OP"></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="dig_sucsL_S"></div>
-                <div class="bar-l" id="dig_sucsTotalL_S">
-                    <span id="indig_sucsTotalL_S"></span>
-                    <p id="dig_sucsperL_S"></p>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_MB"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_MB">
+                        <span id="indig_sucsTotalL_MB"></span>
+                        <p id="dig_sucsperL_MB"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="pt-title">Dig <br> (S)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="dig_sucsR_S"></div>
-                <div class="bar-r" id="dig_sucsTotalR_S">
-                    <span id="indig_sucsTotalR_S"></span>
-                    <p id="dig_sucsperR_S"></p>
-                </div>
-            </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="dig_sucsL_OP"></div>
-                <div class="bar-l" id="dig_sucsTotalL_OP">
-                    <span id="indig_sucsTotalL_OP"></span>
-                    <p id="dig_sucsperL_OP"></p>
-                </div>
-            </div>
-            <div class="pt-title">Dig <br> (OP)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="dig_sucsR_OP"></div>
-                <div class="bar-r" id="dig_sucsTotalR_OP">
-                    <span id="indig_sucsTotalR_OP"></span>
-                    <p id="dig_sucsperR_OP"></p>
-                </div>
-            </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="dig_sucsL_MB"></div>
-                <div class="bar-l" id="dig_sucsTotalL_MB">
-                    <span id="indig_sucsTotalL_MB"></span>
-                    <p id="dig_sucsperL_MB"></p>
-                </div>
-            </div>
-            <div class="pt-title">Dig <br> (MB)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="dig_sucsR_MB"></div>
-                <div class="bar-r" id="dig_sucsTotalR_MB">
-                    <span id="indig_sucsTotalR_MB"></span>
-                    <p id="dig_sucsperR_MB"></p>
+                <div class="pt-title">Dig <br> (MB)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_MB"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_MB">
+                        <span id="indig_sucsTotalR_MB"></span>
+                        <p id="dig_sucsperR_MB"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -353,7 +378,7 @@
                 </div>
             </div>
         </div>
-        <div class="pt">
+        <button class="pt-collapsible" type="button">
             <div class="bar-chart-left">
                 <div class="inbar-l" id="set_sucsL"></div>
                 <div class="bar-l" id="set_sucsTotalL">
@@ -369,27 +394,61 @@
                     <p id="set_sucsperR"></p>
                 </div>
             </div>
-        </div>
-        <div class="pt">
-            <div class="bar-chart-left">
-                <div class="inbar-l" id="set_sucsL_S"></div>
-                <div class="bar-l" id="set_sucsTotalL_S">
-                    <span id="inset_sucsTotalL_S"></span>
-                    <p id="set_sucsperL_S"></p>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="set_sucsL_S"></div>
+                    <div class="bar-l" id="set_sucsTotalL_S">
+                        <span id="inset_sucsTotalL_S"></span>
+                        <p id="set_sucsperL_S"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="pt-title">Set <br> (S)</div>
-            <div class="bar-chart-right">
-                <div class="inbar-r" id="set_sucsR_S"></div>
-                <div class="bar-r" id="set_sucsTotalR_S">
-                    <span id="inset_sucsTotalR_S"></span>
-                    <p id="set_sucsperR_S"></p>
+                <div class="pt-title">Set <br> (S)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="set_sucsR_S"></div>
+                    <div class="bar-r" id="set_sucsTotalR_S">
+                        <span id="inset_sucsTotalR_S"></span>
+                        <p id="set_sucsperR_S"></p>
+                    </div>
                 </div>
             </div>
         </div>
 
         
     </div>
+    <script>
+        var coll = document.getElementsByClassName("pt-collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("pt-collapsible1");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
     <script>
         function Number2Width(point, number){
             var x = document.getElementById(point).innerHTML;
