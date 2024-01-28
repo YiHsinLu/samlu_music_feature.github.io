@@ -71,3 +71,50 @@ Match_TKW = list(
   Match58 = Match58
 )
 ```
+
+```{r}
+library(rvest)
+library(dplyr)
+library(httr)
+
+# gets data from the second popup
+# returns a data frame of town_id, town_name, area_id, area_name
+addArea <- function(town_id, town_name) {
+
+  # make the AJAX URL and grab the data
+  url <- sprintf("http://www.majidata.go.ke/ajax-list-area.php?reg=towns&type=projects&id=%s",
+                 town_id)
+  subunits <- html("http://114.35.229.141/Match.aspx?CupID=19")
+
+  # reformat into a data frame with the town data
+  data.frame(town_id=town_id,
+             town_name=town_name,
+             area_id=subunits %>% html_nodes("option") %>% html_attr("value"),
+             area_name=subunits %>% html_nodes("option") %>% html_text(),
+             stringsAsFactors=FALSE)[-1,]
+
+}
+
+# get data from the first popup and put it into a dat a frame
+majidata <- html("http://www.majidata.go.ke/town.php?MID=MTE=&SMID=MTM=")
+maji <- data.frame(town_id=majidata %>% html_nodes("#town option") %>% html_attr("value"),
+                   town_name=majidata %>% html_nodes("#town option") %>% html_text(),
+                   stringsAsFactors=FALSE)[-1,]
+
+# pass in the name and id to our addArea function and make the result into
+# a data frame with all the data (town and area)
+combined <- do.call("rbind.data.frame",
+                    mapply(addArea, maji$town_id,  maji$town_name,
+                           SIMPLIFY=FALSE, USE.NAMES=FALSE))
+```
+
+```{r}
+library(XML)
+majidata_get <- GET("http://114.35.229.141/Match.aspx?CupID=19")
+majidata_html <- htmlTreeParse(content(majidata_get, as="text"))
+
+options<-getNodeSet(xmlRoot(majidata_html), '//select[@id="divSelect"]')
+ids <- sapply(options, xmlGetAttr, "value")
+names <- sapply(options, xmlValue)
+data.frame(ID=ids, Name=names)
+```

@@ -1,0 +1,60 @@
+---
+output: html_document
+---
+
+<style>
+  .main-container{
+    width:100%;
+    margin:0;
+  }
+  a{
+    background: transparent;
+    color:#e1f1fb;
+  }
+</style>
+<body style = "background:#4478bc;color:#e1f1fb;padding-top:30px;display: flex;justify-content: center;align-items: center;width:100%;height:auto;text-align:center;">
+
+## **【第9週-女 52：臺北鯨華 vs 新北中纖 (12月24日)】**{.tabset}
+
+```{r include=FALSE}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+load("Rdata/MatchPlotlys.RData")
+```
+
+### **Positions**
+
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+MatchPlotly_positions_11%>% layout(autosize = F, width = 1000, height = 1000)
+```
+
+### **Team**
+
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+MatchPlotly_teams_11%>% layout(autosize = F, width = 1000, height = 1000)
+```

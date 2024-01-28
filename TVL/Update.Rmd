@@ -1,0 +1,408 @@
+```{r}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+```
+
+```{r}
+Match78_plrStat = read.csv('Matches/players/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T, row.names = 1)
+```
+
+```{r}
+match_plrStat = Match78_plrStat
+team_color = c('#e9b4d1', '#e1f1fb')
+
+# add team and color
+match_plrStat$team = rep(rev(rownames(Match78_rlt[1:2])), each = 14, len = 28)
+match_plrStat$team_colors = rep(team_color, each = 14, len = 28)
+
+match_plrStat = relocate(match_plrStat, team, .after = position)
+match_plrStat = relocate(match_plrStat, team_colors, .after = team)
+match_plrStat = match_plrStat[rowSums(match_plrStat[, -c(1,2,3,4,5)])>0,]
+
+match_Stat = match_plrStat[, -c(1,2,3,4,5)]
+rownames(match_Stat) = match_plrStat$name
+
+match_Stat = as.data.frame(scale(match_Stat))
+plr = match_plrStat$name
+
+#PCA
+match_pca = prcomp(t(match_Stat), center = TRUE, retx = T)
+
+match_pcaVisual = cbind(match_pca$rotation[,1:2], match_plrStat$position)
+match_pcaVisual = cbind(match_pcaVisual, match_plrStat$team)
+match_pcaVisual = cbind(match_pcaVisual, match_plrStat$team_colors)
+
+
+colnames(match_pcaVisual) = c('x', 'y', 'position', 'team', 'team_colors')
+rownames(match_pcaVisual) = plr
+
+match_pcaVisual = as.data.frame(match_pcaVisual)
+match_pcaVisual = transform(match_pcaVisual, x = as.numeric(x), y = as.numeric(y))
+
+plotly_match_pos = plot_ly(match_pcaVisual, x = ~x, y = ~y, color = ~position, text = plr)%>%
+    layout(plot_bgcolor  = "#4478bc",
+           paper_bgcolor = "#6288d4",
+           fig_bgcolor   = "#4478bc")%>% add_text(textfont = list(size = 20), textposition = "top center")
+
+plotly_match_team = plot_ly(match_pcaVisual, x = ~x, y = ~y, colors = ~team_colors, text = plr)%>%
+    layout(plot_bgcolor  = "#4478bc",
+           paper_bgcolor = "#6288d4",
+           fig_bgcolor   = "#4478bc")%>% add_text(textfont = list(size = 20, color = ~team_colors), textposition = "top center")
+ 
+assign(sprintf("MatchPlotly_teams_%s", 13), plotly_match_team)
+assign(sprintf("MatchPlotly_positions_%s", 13), plotly_match_pos)
+
+```
+
+```{r}
+plotly_match_pos
+plotly_match_team
+```
+
+#Stat
+
+```{r}
+Match_TKW = list(match78 = list(result = Match78_rlt, plrStat = Match78_plrStat))
+```
+
+```{r}
+Match_TKW[[1]]$team_stat$tkw = Match78_plrStat[1:14,]
+Match_TKW[[1]]$team_stat$agn = Match78_plrStat[15:28,]
+```
+
+```{r}
+n = length(Match_TKW)
+for(mach in c(1)){
+  if(grepl("臺北鯨華", rownames(Match_TKW[[mach]]$result)[1])){
+  point_total = Match_TKW[[mach]]$result$total
+}else{
+  point_total = rev(Match_TKW[[mach]]$result$total)
+}
+  TKW_stat = list(
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$points),
+    point_total[1],
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$points)/point_total[1], digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_points),
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_total),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$attack_points)/sum(Match_TKW[[mach]]$team_stat$tkw$attack_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"])/sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]), digits = 2)
+  )
+  ,
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$attack_points[Match_TKW[[mach]]$team_stat$tkw$position=="對角"])/sum(Match_TKW[[mach]]$team_stat$tkw$attack_total[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_success),
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_total),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$receive_success)/sum(Match_TKW[[mach]]$team_stat$tkw$receive_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_success[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_total[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$receive_success[Match_TKW[[mach]]$team_stat$tkw$position=="自由"])/sum(Match_TKW[[mach]]$team_stat$tkw$receive_total[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_success[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$receive_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$receive_success[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$tkw$receive_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success)/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="自由"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="自由"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="對角"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="攔中"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$block_points)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$serve_points),
+    sum(Match_TKW[[mach]]$team_stat$tkw$serve_total),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$serve_points)/sum(Match_TKW[[mach]]$team_stat$tkw$serve_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$set_success),
+    sum(Match_TKW[[mach]]$team_stat$tkw$set_total),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$set_success)/sum(Match_TKW[[mach]]$team_stat$tkw$set_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$tkw$set_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
+    sum(Match_TKW[[mach]]$team_stat$tkw$set_total[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$set_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$tkw$set_total[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]), digits = 2)
+  )
+)
+
+AGN_stat = list(
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$points),
+    point_total[2],
+    round(sum(Match_TKW[[mach]]$team_stat$agn$points)/point_total[2], digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_points),
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_total),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$attack_points)/sum(Match_TKW[[mach]]$team_stat$agn$attack_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="攔中"])/sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]), digits = 2)
+  )
+  ,
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="對角"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="對角"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$attack_points[Match_TKW[[mach]]$team_stat$agn$position=="對角"])/sum(Match_TKW[[mach]]$team_stat$agn$attack_total[Match_TKW[[mach]]$team_stat$agn$position=="對角"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_success),
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_total),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$receive_success)/sum(Match_TKW[[mach]]$team_stat$agn$receive_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_success[Match_TKW[[mach]]$team_stat$agn$position=="自由"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_total[Match_TKW[[mach]]$team_stat$agn$position=="自由"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$receive_success[Match_TKW[[mach]]$team_stat$agn$position=="自由"])/sum(Match_TKW[[mach]]$team_stat$agn$receive_total[Match_TKW[[mach]]$team_stat$agn$position=="自由"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_success[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$receive_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$receive_success[Match_TKW[[mach]]$team_stat$agn$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$agn$receive_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success)/sum(Match_TKW[[mach]]$team_stat$agn$dig_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="自由"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="自由"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="自由"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="自由"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="長攻"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="對角"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="對角"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="對角"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="對角"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="攔中"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="攔中"]), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$block_points)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$serve_points),
+    sum(Match_TKW[[mach]]$team_stat$agn$serve_total),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$serve_points)/sum(Match_TKW[[mach]]$team_stat$agn$serve_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$set_success),
+    sum(Match_TKW[[mach]]$team_stat$agn$set_total),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$set_success)/sum(Match_TKW[[mach]]$team_stat$agn$set_total), digits = 2)
+  ),
+  c(
+    sum(Match_TKW[[mach]]$team_stat$agn$set_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
+    sum(Match_TKW[[mach]]$team_stat$agn$set_total[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
+    round(sum(Match_TKW[[mach]]$team_stat$agn$set_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$agn$set_total[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]), digits = 2)
+  )
+)
+names(TKW_stat) = c(
+  "scores_rate",
+  "atk_ss",
+  "atk_ss_OH",
+  "atk_ss_MB",
+  "atk_ss_OP",
+  "rcv_ss",
+  "rcv_ss_L",
+  "rcv_ss_OH",
+  "dig_ss",
+  "dig_ss_L",
+  "dig_ss_OH",
+  "dig_ss_S",
+  "dig_ss_OP",
+  "dig_ss_MB",
+  "blk",
+  "srv_ss",
+  "set_ss",
+  "set_ss_S"
+)
+names(AGN_stat) = c(
+  "scores_rate",
+  "atk_ss",
+  "atk_ss_OH",
+  "atk_ss_MB",
+  "atk_ss_OP",
+  "rcv_ss",
+  "rcv_ss_L",
+  "rcv_ss_OH",
+  "dig_ss",
+  "dig_ss_L",
+  "dig_ss_OH",
+  "dig_ss_S",
+  "dig_ss_OP",
+  "dig_ss_MB",
+  "blk",
+  "srv_ss",
+  "set_ss",
+  "set_ss_S"
+)
+Match_TKW[[mach]]$tkw = TKW_stat
+Match_TKW[[mach]]$agn = AGN_stat
+}
+```
+
+```{r}
+stat_title = c(
+  "scores_rate",
+  "atk_ss",
+  "atk_ss_OH",
+  "atk_ss_MB",
+  "atk_ss_OP",
+  "rcv_ss",
+  "rcv_ss_L",
+  "rcv_ss_OH",
+  "dig_ss",
+  "dig_ss_L",
+  "dig_ss_OH",
+  "dig_ss_S",
+  "dig_ss_OP",
+  "dig_ss_MB",
+  "blk",
+  "srv_ss",
+  "set_ss",
+  "set_ss_S"
+)
+
+data_stat = c()
+
+for(st in stat_title){
+  data_stat = cbind(data_stat, Match_TKW[[1]]$tkw[[st]])
+  data_stat = cbind(data_stat, Match_TKW[[1]]$agn[[st]])
+}
+
+stat_title1 = c(
+  "scores_rate",
+  "scores_rate",
+  "atk_ss",
+  "atk_ss",
+  "atk_ss_OH",
+  "atk_ss_OH",
+  "atk_ss_MB",
+  "atk_ss_MB",
+  "atk_ss_OP",
+  "atk_ss_OP",
+  "rcv_ss",
+  "rcv_ss",
+  "rcv_ss_L",
+  "rcv_ss_L",
+  "rcv_ss_OH",
+  "rcv_ss_OH",
+  "dig_ss",
+  "dig_ss",
+  "dig_ss_L",
+  "dig_ss_L",
+  "dig_ss_OH",
+  "dig_ss_OH",
+  "dig_ss_S",
+  "dig_ss_S",
+  "dig_ss_OP",
+  "dig_ss_OP",
+  "dig_ss_MB",
+  "dig_ss_MB",
+  "blk",
+  "blk",
+  "srv_ss",
+  "srv_ss",
+  "set_ss",
+  "set_ss",
+  "set_ss_S",
+  "set_ss_S"
+)
+```
+
+```{r}
+as.vector(data_stat)
+```
+
+```{r}
+write.table(as.vector(data_stat), "1.txt", row.names = F, col.names = F, sep = ",", na = "0")
+```

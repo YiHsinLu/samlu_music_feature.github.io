@@ -1,0 +1,119 @@
+```{r}
+library(progress)
+library(rvest)
+library(dplyr)
+library(tidyverse)
+library(Rcrawler)
+library(XML)
+library(httr)
+
+```
+
+```{r}
+
+url = 'http://114.35.229.141/Match.aspx?CupID=19'
+page = read_html(url)
+
+page %>%html_nodes("option") %>% html_attr("value")
+page %>%html_nodes("option") %>% html_text()
+
+match_id = data.frame(mid = page %>%html_nodes("option") %>% html_attr("value"), 
+                      mname = page %>%html_nodes("option") %>% html_text())
+
+match_id_TKW = match_id[grepl("臺北鯨華", match_id$mname),]
+
+```
+
+```{r}
+match_id_TKW_id = sapply(as.vector(row.names(match_id_TKW)),as.numeric)
+match_id_TKW_id-1
+```
+
+```{r}
+match_id_TKW
+```
+
+```{r}
+page %>% 
+  html_table(xpath = "//*[@class = 'info-data marginBottom10  ']") %>%
+  html_text()
+```
+
+```{r}
+readHTMLTable('http://114.35.229.141/Match.aspx?CupID=19')
+```
+
+```{r}
+page %>%
+   html_nodes(xpath = '//form[@id="1"]/div[@class="MainContent"]/h3') %>% html_text()
+
+```
+
+```{r}
+
+# URL of the website
+url <- 'http://114.35.229.141/Match.aspx?CupID=19'
+
+# Read the HTML content of the webpage
+webpage <- read_html(url)
+
+# Extract options from the dropdown menu
+options <- webpage %>% 
+  html_nodes("select#divSelect option") %>% 
+  html_text()
+
+# Print the options
+print(options)
+
+# Select a specific option (replace "desired_option" with your actual choice)
+selected_option <- "1"
+
+# Construct the URL with the selected option
+selected_url <- modify_url(url, query = list(selected_option = selected_option))
+
+# Read the HTML content of the page with the selected option
+selected_webpage <- read_html(selected_url)
+
+# Now, you can extract the data from the selected webpage using appropriate CSS selectors
+# For example:
+data <- selected_webpage %>% 
+  html_nodes('//div[@class="TableFormat_1"]h3') %>% 
+  html_text()
+
+# Print the collected data
+print(data)
+
+```
+
+  
+
+****
+
+```{r}
+library(RSelenium)
+library(tidyverse)
+library(netstat)
+
+con <- RSelenium::remoteDriver(remoteServerAddr="127.0.0.1",port=4444,browserName="chrome")
+
+
+# Open the connection
+con$open()
+
+# Send an URL to the new session
+con$navigate("http://114.35.229.141/Match.aspx?CupID=19")
+```
+
+```{r}
+library(RSelenium)
+library(tidyverse)
+library(netstat)
+library(rvest)
+
+rs_driver_object = rsDriver(browser = 'chrome',
+                            chromever = '114.0.5735.90',
+                            port = free_port(),
+                            verbose = FALSE)
+
+binman::list_versions("chromedriver")
+```
