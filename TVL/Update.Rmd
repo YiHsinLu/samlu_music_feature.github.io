@@ -27,8 +27,8 @@ library(plotly)
 ```
 
 ```{r}
-Match78_plrStat = read.csv('Matches/players/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T)
-Match78_rlt = read.csv('Matches/results/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T, row.names = 1)
+Match78_plrStat = read.csv('Matches/players/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T, row.names = 1)
 ```
 
 ```{r}
@@ -86,15 +86,17 @@ plotly_match_team
 #Stat
 
 ```{r}
+Match78_plrStat = read.csv('Matches/players/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T, row.names = 1)
 Match_TKW = list(match78 = list(result = Match78_rlt, plrStat = Match78_plrStat))
-```
 
-```{r}
 Match_TKW[[1]]$team_stat$tkw = Match78_plrStat[1:14,]
-Match_TKW[[1]]$team_stat$agn = Match78_plrStat[15:28,]
-```
+if(length(Match78_plrStat[,1])==29){
+  Match_TKW[[1]]$team_stat$agn = Match78_plrStat[15:29,]
+}else{
+  Match_TKW[[1]]$team_stat$agn = Match78_plrStat[15:28,]
+}
 
-```{r}
 n = length(Match_TKW)
 for(mach in c(1)){
   if(grepl("臺北鯨華", rownames(Match_TKW[[mach]]$result)[1])){
@@ -162,7 +164,7 @@ for(mach in c(1)){
   c(
     sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
     sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]),
-    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="長攻"]), digits = 2)
+    round(sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$tkw$dig_total[Match_TKW[[mach]]$team_stat$tkw$position=="舉球"]), digits = 2)
   ),
   c(
     sum(Match_TKW[[mach]]$team_stat$tkw$dig_success[Match_TKW[[mach]]$team_stat$tkw$position=="對角"]),
@@ -254,7 +256,7 @@ AGN_stat = list(
   c(
     sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
     sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]),
-    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="長攻"]), digits = 2)
+    round(sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="舉球"])/sum(Match_TKW[[mach]]$team_stat$agn$dig_total[Match_TKW[[mach]]$team_stat$agn$position=="舉球"]), digits = 2)
   ),
   c(
     sum(Match_TKW[[mach]]$team_stat$agn$dig_success[Match_TKW[[mach]]$team_stat$agn$position=="對角"]),
@@ -328,9 +330,7 @@ names(AGN_stat) = c(
 Match_TKW[[mach]]$tkw = TKW_stat
 Match_TKW[[mach]]$agn = AGN_stat
 }
-```
 
-```{r}
 stat_title = c(
   "scores_rate",
   "atk_ss",
@@ -397,12 +397,9 @@ stat_title1 = c(
   "set_ss_S",
   "set_ss_S"
 )
-```
 
-```{r}
 as.vector(data_stat)
-```
 
-```{r}
+
 write.table(as.vector(data_stat), "1.txt", row.names = F, col.names = F, sep = ",", na = "0")
 ```
