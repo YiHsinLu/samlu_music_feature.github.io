@@ -15,7 +15,7 @@ driver = webdriver.Chrome(service=cService)
 
 driver.get('http://114.35.229.141/Match.aspx?CupID=19')
 
-for i in [76]:
+for i in [80]:
     Match_selection = driver.find_element('id', 'divSelect')
     all_match = Match_selection.find_elements(By.TAG_NAME, 'option')
     all_match[i].click()

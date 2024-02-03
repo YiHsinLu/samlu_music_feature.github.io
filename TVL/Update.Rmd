@@ -27,8 +27,8 @@ library(plotly)
 ```
 
 ```{r}
-Match78_plrStat = read.csv('Matches/players/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T)
-Match78_rlt = read.csv('Matches/results/第1週-女 2：臺北鯨華 vs 高雄台電 (10月14日).csv', header = T, row.names = 1)
+Match78_plrStat = read.csv('Matches/players/第14週-女 83：臺北鯨華 vs 極速超跑 (02月04日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/第14週-女 83：臺北鯨華 vs 極速超跑 (02月04日).csv', header = T, row.names = 1)
 ```
 
 ```{r}
@@ -86,8 +86,7 @@ plotly_match_team
 #Stat
 
 ```{r}
-Match78_plrStat = read.csv('Matches/players/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T)
-Match78_rlt = read.csv('Matches/results/第13週-女 78：新北中纖 vs 臺北鯨華 (01月28日).csv', header = T, row.names = 1)
+
 Match_TKW = list(match78 = list(result = Match78_rlt, plrStat = Match78_plrStat))
 
 Match_TKW[[1]]$team_stat$tkw = Match78_plrStat[1:14,]

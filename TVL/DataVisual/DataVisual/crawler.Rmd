@@ -32,6 +32,9 @@ match_id_TKW_id-1
 ```{r}
 match_id_TKW
 ```
+```{r}
+match_id_TKW[15,]
+```
 
 ```{r}
 page %>% 

@@ -54,7 +54,7 @@ print(players_stat)
 
 print(len(soup.find_all('table')[3].find_all('tr')[8].find_all('td')))
 
-for i in [76]:
+for i in [80]:
     Match_selection = driver.find_element('id', 'divSelect')
     all_match = Match_selection.find_elements(By.TAG_NAME, 'option')
     all_match[i].click()
