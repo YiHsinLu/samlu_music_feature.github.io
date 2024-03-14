@@ -1,0 +1,60 @@
+---
+output: html_document
+---
+
+<style>
+  .main-container{
+    width:100%;
+    margin:0;
+  }
+  a{
+    background: transparent;
+    color:#e1f1fb;
+  }
+</style>
+<body style = "background:#4478bc;color:#e1f1fb;padding-top:30px;display: flex;justify-content: center;align-items: center;width:100%;height:auto;text-align:center;">
+
+## **【第15週-女 86：臺北鯨華 vs 高雄台電 (02月17日)】**{.tabset}
+
+```{r include=FALSE}
+library(imputeTS)
+library(knitr)
+library(dplyr)
+library(flextable)
+library(magrittr)
+library(kableExtra)
+library(tidytext)
+library(tidyverse)
+library(plot.matrix)
+library(stringr)
+library(ggpubr)
+library(highcharter)
+library(ggpubr)
+library(tm)
+library(SnowballC)
+library(wordcloud)
+library(RColorBrewer)
+library(wordcloud2)
+library(viridisLite)
+library(Rtsne)
+library(qvalue)
+library(jaccard)
+library(lsa)
+library(patchwork)
+library(plotly)
+load("Rdata/Update-02-17.RData")
+```
+
+### **Positions**
+
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+plotly_match_pos%>% layout(autosize = F, width = 1000, height = 1000)
+```
+
+### **Team**
+
+
+```{r warning=FALSE, message=FALSE, echo=FALSE}
+plotly_match_team%>% layout(autosize = F, width = 1000, height = 1000)
+```

@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>第18週-女 110：臺北鯨華 vs 極速超跑 (03月10日)</title>
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="option-box">
+        <div class="dropdown">
+            <button class="dropbtn">第18週-女 110：臺北鯨華 vs 極速超跑 (03月10日)
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div data-include="head_opns.html"></div>
+        </div>
+    </div>
+    <div class="match">
+        <div class="home">
+            <img src="https://tvl.ctvba.org.tw/upload/w_team/logo_3_1635492564.png" alt="" style="
+            filter:  drop-shadow(0 0 20px #e1f1fb); z-index: 2;">
+        </div>
+        <div class="guest">
+            <img src="https://tvl.ctvba.org.tw/upload/w_team/logo_1_1634727356.png" alt="" style="
+            filter:  drop-shadow(0 0 20px #e1f1fb); z-index: 1;">
+        </div>
+
+        <div class="home-sets"><div class="sets-win">3</div></div>
+        <div class="guest-sets"><div class="sets">1</div></div> 
+        
+    </div>
+    <div class="sets-bar">
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="set-title">
+            <a href="MatchesPlotlys/Match20.html"><i class="fa-solid fa-chart-line"></i></a>
+        </div>
+        <div class="setbox" style="background: #e9b4d1;"></div>
+        <div class="setbox"></div>
+        <div class="setbox"></div>
+    </div>
+    <br>
+    <div class="match-result">
+        <div data-include="Matches/results/html/第18週-女 110：臺北鯨華 vs 極速超跑 (03月10日).html"></div>
+    </div>
+    <br>
+    <script>
+        document.addEventListener("DOMContentLoaded", (e) => {
+        const includeHTML = (el, url) => {
+          const xhr = new XMLHttpRequest();
+        
+          xhr.addEventListener("readystatechange", (e) => {
+            if (xhr.readyState !== 4) return;
+        
+            if (xhr.status >= 200 && xhr.status < 300) {
+              el.outerHTML = xhr.responseText;
+            } else {
+              let message =
+                xhr.statusText ||
+                "Error loading the file, verify that you are making the request by http or https";
+              el.outerHTML = `<div><p>Error ${xhr.status}: ${message}</p></div>`;
+            }
+          });
+      
+          xhr.open("GET", url);
+          xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
+          xhr.send();
+        };
+    
+        document
+          .querySelectorAll("[data-include]")
+          .forEach((el) => includeHTML(el, el.getAttribute("data-include")));
+      });
+    </script>
+    <div class="data-visual">
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="pointL"></div>
+                <div class="bar-l" id="pointTotalL">
+                    <span id="inpointTotalL"></span>
+                    <p id="pointperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Points</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="pointR"></div>
+                <div class="bar-r" id="pointTotalR">
+                    <span id="inpointTotalR"></span>
+                    <p id="pointperR"></p>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="pt-collapsible1">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="atk_pointL"></div>
+                <div class="bar-l" id="atk_pointTotalL">
+                    <span id="inatk_pointTotalL"></span>
+                    <p id="atk_pointperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Attack success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="atk_pointR"></div>
+                <div class="bar-r" id="atk_pointTotalR">
+                    <span id="inatk_pointTotalR"></span>
+                    <p id="atk_pointperR"></p>
+                </div>
+            </div>
+        </button>
+        <div class="pt-sub">
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_oh"></div>
+                    <div class="bar-l" id="atk_pointTotalL_oh">
+                        <span id="inatk_pointTotalL_oh"></span>
+                        <p id="atk_pointperL_oh"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_oh"></div>
+                    <div class="bar-r" id="atk_pointTotalR_oh">
+                        <span id="inatk_pointTotalR_oh"></span>
+                        <p id="atk_pointperR_oh"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_mb"></div>
+                    <div class="bar-l" id="atk_pointTotalL_mb">
+                        <span id="inatk_pointTotalL_mb"></span>
+                        <p id="atk_pointperL_mb"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (MB)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_mb"></div>
+                    <div class="bar-r" id="atk_pointTotalR_mb">
+                        <span id="inatk_pointTotalR_mb"></span>
+                        <p id="atk_pointperR_mb"></p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="pt1">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="atk_pointL_op"></div>
+                    <div class="bar-l" id="atk_pointTotalL_op">
+                        <span id="inatk_pointTotalL_op"></span>
+                        <p id="atk_pointperL_op"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Attack (OP)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="atk_pointR_op"></div>
+                    <div class="bar-r" id="atk_pointTotalR_op">
+                        <span id="inatk_pointTotalR_op"></span>
+                        <p id="atk_pointperR_op"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="pt-collapsible" type="button">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="rcv_sucsL"></div>
+                <div class="bar-l" id="rcv_sucsTotalL">
+                    <span id="inrcv_sucsTotalL"></span>
+                    <p id="rcv_sucsperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Receive success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="rcv_sucsR"></div>
+                <div class="bar-r" id="rcv_sucsTotalR">
+                    <span id="inrcv_sucsTotalR"></span>
+                    <p id="rcv_sucsperR"></p>
+                </div>
+            </div>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="rcv_sucsL_L"></div>
+                    <div class="bar-l" id="rcv_sucsTotalL_L">
+                        <span id="inrcv_sucsTotalL_L"></span>
+                        <p id="rcv_sucsperL_L"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Receive (L)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="rcv_sucsR_L"></div>
+                    <div class="bar-r" id="rcv_sucsTotalR_L">
+                        <span id="inrcv_sucsTotalR_L"></span>
+                        <p id="rcv_sucsperR_L"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="rcv_sucsL_OH"></div>
+                    <div class="bar-l" id="rcv_sucsTotalL_OH">
+                        <span id="inrcv_sucsTotalL_OH"></span>
+                        <p id="rcv_sucsperL_OH"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Receive (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="rcv_sucsR_OH"></div>
+                    <div class="bar-r" id="rcv_sucsTotalR_OH">
+                        <span id="inrcv_sucsTotalR_OH"></span>
+                        <p id="rcv_sucsperR_OH"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="pt-collapsible" type="button">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="dig_sucsL"></div>
+                <div class="bar-l" id="dig_sucsTotalL">
+                    <span id="indig_sucsTotalL"></span>
+                    <p id="dig_sucsperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Dig <br> success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="dig_sucsR"></div>
+                <div class="bar-r" id="dig_sucsTotalR">
+                    <span id="indig_sucsTotalR"></span>
+                    <p id="dig_sucsperR"></p>
+                </div>
+            </div>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_L"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_L">
+                        <span id="indig_sucsTotalL_L"></span>
+                        <p id="dig_sucsperL_L"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (L)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_L"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_L">
+                        <span id="indig_sucsTotalR_L"></span>
+                        <p id="dig_sucsperR_L"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_OH"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_OH">
+                        <span id="indig_sucsTotalL_OH"></span>
+                        <p id="dig_sucsperL_OH"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (OH)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_OH"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_OH">
+                        <span id="indig_sucsTotalR_OH"></span>
+                        <p id="dig_sucsperR_OH"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_S"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_S">
+                        <span id="indig_sucsTotalL_S"></span>
+                        <p id="dig_sucsperL_S"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (S)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_S"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_S">
+                        <span id="indig_sucsTotalR_S"></span>
+                        <p id="dig_sucsperR_S"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_OP"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_OP">
+                        <span id="indig_sucsTotalL_OP"></span>
+                        <p id="dig_sucsperL_OP"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (OP)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_OP"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_OP">
+                        <span id="indig_sucsTotalR_OP"></span>
+                        <p id="dig_sucsperR_OP"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="dig_sucsL_MB"></div>
+                    <div class="bar-l" id="dig_sucsTotalL_MB">
+                        <span id="indig_sucsTotalL_MB"></span>
+                        <p id="dig_sucsperL_MB"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Dig <br> (MB)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="dig_sucsR_MB"></div>
+                    <div class="bar-r" id="dig_sucsTotalR_MB">
+                        <span id="indig_sucsTotalR_MB"></span>
+                        <p id="dig_sucsperR_MB"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="pt">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="blkL"></div>
+                <div class="bar-l" id="blkL">
+                    <span id="inblkL"></span>
+                    <p id="blkL_n"></p>
+                </div>
+            </div>
+            <div class="pt-title">Block points</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="blkR"></div>
+                <div class="bar-r" id="blkR">
+                    <span id="inblkR"></span>
+                    <p id="blkR_n"></p>
+                </div>
+            </div>
+        </div>
+        <div class="pt" style="background: #6288d4;">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="srv_sucsL"></div>
+                <div class="bar-l" id="srv_sucsTotalL">
+                    <span id="insrv_sucsTotalL"></span>
+                    <p id="srv_sucsperL"></p>
+                </div>
+            </div>
+            <div class="pt-title" style="background: #6288d4;">Serve success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="srv_sucsR"></div>
+                <div class="bar-r" id="srv_sucsTotalR">
+                    <span id="insrv_sucsTotalR"></span>
+                    <p id="srv_sucsperR"></p>
+                </div>
+            </div>
+        </div>
+        <button class="pt-collapsible" type="button">
+            <div class="bar-chart-left">
+                <div class="inbar-l" id="set_sucsL"></div>
+                <div class="bar-l" id="set_sucsTotalL">
+                    <span id="inset_sucsTotalL"></span>
+                    <p id="set_sucsperL"></p>
+                </div>
+            </div>
+            <div class="pt-title">Set success</div>
+            <div class="bar-chart-right">
+                <div class="inbar-r" id="set_sucsR"></div>
+                <div class="bar-r" id="set_sucsTotalR">
+                    <span id="inset_sucsTotalR"></span>
+                    <p id="set_sucsperR"></p>
+                </div>
+            </div>
+        </button>
+        <div class="pt-sub">
+            <div class="pt">
+                <div class="bar-chart-left">
+                    <div class="inbar-l" id="set_sucsL_S"></div>
+                    <div class="bar-l" id="set_sucsTotalL_S">
+                        <span id="inset_sucsTotalL_S"></span>
+                        <p id="set_sucsperL_S"></p>
+                    </div>
+                </div>
+                <div class="pt-title">Set <br> (S)</div>
+                <div class="bar-chart-right">
+                    <div class="inbar-r" id="set_sucsR_S"></div>
+                    <div class="bar-r" id="set_sucsTotalR_S">
+                        <span id="inset_sucsTotalR_S"></span>
+                        <p id="set_sucsperR_S"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("pt-collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+    <script>
+        var coll = document.getElementsByClassName("pt-collapsible1");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+    </script>
+    <script>
+        function Number2Width(point, number){
+            var x = document.getElementById(point).innerHTML;
+            document.getElementById(number).style.width = x*2 + "px";
+        }
+
+        function DataStat(stat_value){
+            document.getElementById("pointL").innerHTML = stat_value[0];
+            document.getElementById("inpointTotalL").innerHTML = stat_value[1];
+            document.getElementById("pointperL").innerHTML = Math.round(stat_value[2]*100) + "%";
+            document.getElementById("pointR").innerHTML = stat_value[3];
+            document.getElementById("inpointTotalR").innerHTML = stat_value[4];
+            document.getElementById("pointperR").innerHTML = Math.round(stat_value[5]*100) + "%";
+            if(stat_value[2]>stat_value[5]){
+                document.getElementById("pointperL").className = "winning";
+            }else if(stat_value[2]<stat_value[5]){
+                document.getElementById("pointperR").className = "winning";
+            }
+            document.getElementById("atk_pointL").innerHTML = stat_value[6];
+            document.getElementById("inatk_pointTotalL").innerHTML = stat_value[7];
+            document.getElementById("atk_pointperL").innerHTML = Math.round(stat_value[8]*100) + "%";
+            document.getElementById("atk_pointR").innerHTML = stat_value[9];
+            document.getElementById("inatk_pointTotalR").innerHTML = stat_value[10];
+            document.getElementById("atk_pointperR").innerHTML = Math.round(stat_value[11]*100) + "%";
+            if(stat_value[8]>stat_value[11]){
+                document.getElementById("atk_pointperL").className = "winning";
+            }else if(stat_value[8]<stat_value[11]){
+                document.getElementById("atk_pointperR").className = "winning";
+            }
+            
+            document.getElementById("atk_pointL_oh").innerHTML = stat_value[12];
+            document.getElementById("inatk_pointTotalL_oh").innerHTML = stat_value[13];
+            document.getElementById("atk_pointperL_oh").innerHTML = Math.round(stat_value[14]*100) + "%";
+            document.getElementById("atk_pointR_oh").innerHTML = stat_value[15];
+            document.getElementById("inatk_pointTotalR_oh").innerHTML = stat_value[16];
+            document.getElementById("atk_pointperR_oh").innerHTML = Math.round(stat_value[17]*100) + "%";
+            if(stat_value[14]>stat_value[17]){
+                document.getElementById("atk_pointperL_oh").className = "winning";
+            }else if(stat_value[14]<stat_value[17]){
+                document.getElementById("atk_pointperR_oh").className = "winning";
+            }
+
+            document.getElementById("atk_pointL_oh").innerHTML = stat_value[12];
+            document.getElementById("inatk_pointTotalL_oh").innerHTML = stat_value[13];
+            document.getElementById("atk_pointperL_oh").innerHTML = Math.round(stat_value[14]*100) + "%";
+            document.getElementById("atk_pointR_oh").innerHTML = stat_value[15];
+            document.getElementById("inatk_pointTotalR_oh").innerHTML = stat_value[16];
+            document.getElementById("atk_pointperR_oh").innerHTML = Math.round(stat_value[17]*100) + "%";
+            if(stat_value[14]>stat_value[17]){
+                document.getElementById("atk_pointperL_oh").className = "winning";
+            }else if(stat_value[14]<stat_value[17]){
+                document.getElementById("atk_pointperR_oh").className = "winning";
+            }
+
+            document.getElementById("atk_pointL_mb").innerHTML = stat_value[18];
+            document.getElementById("inatk_pointTotalL_mb").innerHTML = stat_value[19];
+            document.getElementById("atk_pointperL_mb").innerHTML = Math.round(stat_value[20]*100) + "%";
+            document.getElementById("atk_pointR_mb").innerHTML = stat_value[21];
+            document.getElementById("inatk_pointTotalR_mb").innerHTML = stat_value[22];
+            document.getElementById("atk_pointperR_mb").innerHTML = Math.round(stat_value[23]*100) + "%";
+            if(stat_value[20]>stat_value[23]){
+                document.getElementById("atk_pointperL_mb").className = "winning";
+            }else if(stat_value[20]<stat_value[23]){
+                document.getElementById("atk_pointperR_mb").className = "winning";
+            }
+
+            document.getElementById("atk_pointL_op").innerHTML = stat_value[24];
+            document.getElementById("inatk_pointTotalL_op").innerHTML = stat_value[25];
+            document.getElementById("atk_pointperL_op").innerHTML = Math.round(stat_value[26]*100) + "%";
+            document.getElementById("atk_pointR_op").innerHTML = stat_value[27];
+            document.getElementById("inatk_pointTotalR_op").innerHTML = stat_value[28];
+            document.getElementById("atk_pointperR_op").innerHTML = Math.round(stat_value[29]*100) + "%";
+            if(stat_value[26]>stat_value[29]){
+                document.getElementById("atk_pointperL_op").className = "winning";
+            }else if(stat_value[26]<stat_value[29]){
+                document.getElementById("atk_pointperR_op").className = "winning";
+            }
+
+            document.getElementById("rcv_sucsL").innerHTML = stat_value[30];
+            document.getElementById("inrcv_sucsTotalL").innerHTML = stat_value[31];
+            document.getElementById("rcv_sucsperL").innerHTML = Math.round(stat_value[32]*100) + "%";
+            document.getElementById("rcv_sucsR").innerHTML = stat_value[33];
+            document.getElementById("inrcv_sucsTotalR").innerHTML = stat_value[34];
+            document.getElementById("rcv_sucsperR").innerHTML = Math.round(stat_value[35]*100) + "%";
+            if(stat_value[32]>stat_value[35]){
+                document.getElementById("rcv_sucsperL").className = "winning";
+            }else if(stat_value[32]<stat_value[35]){
+                document.getElementById("rcv_sucsperR").className = "winning";
+            }
+
+            document.getElementById("rcv_sucsL_L").innerHTML = stat_value[36];
+            document.getElementById("inrcv_sucsTotalL_L").innerHTML = stat_value[37];
+            document.getElementById("rcv_sucsperL_L").innerHTML = Math.round(stat_value[38]*100) + "%";
+            document.getElementById("rcv_sucsR_L").innerHTML = stat_value[39];
+            document.getElementById("inrcv_sucsTotalR_L").innerHTML = stat_value[40];
+            document.getElementById("rcv_sucsperR_L").innerHTML = Math.round(stat_value[41]*100) + "%";
+            if(stat_value[38]>stat_value[41]){
+                document.getElementById("rcv_sucsperL_L").className = "winning";
+            }else if(stat_value[38]<stat_value[41]){
+                document.getElementById("rcv_sucsperR_L").className = "winning";
+            }
+
+            document.getElementById("rcv_sucsL_OH").innerHTML = stat_value[42];
+            document.getElementById("inrcv_sucsTotalL_OH").innerHTML = stat_value[43];
+            document.getElementById("rcv_sucsperL_OH").innerHTML = Math.round(stat_value[44]*100) + "%";
+            document.getElementById("rcv_sucsR_OH").innerHTML = stat_value[45];
+            document.getElementById("inrcv_sucsTotalR_OH").innerHTML = stat_value[46];
+            document.getElementById("rcv_sucsperR_OH").innerHTML = Math.round(stat_value[47]*100) + "%";
+            if(stat_value[44]>stat_value[47]){
+                document.getElementById("rcv_sucsperL_OH").className = "winning";
+            }else if(stat_value[44]<stat_value[47]){
+                document.getElementById("rcv_sucsperR_OH").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL").innerHTML = stat_value[48];
+            document.getElementById("indig_sucsTotalL").innerHTML = stat_value[49];
+            document.getElementById("dig_sucsperL").innerHTML = Math.round(stat_value[50]*100) + "%";
+            document.getElementById("dig_sucsR").innerHTML = stat_value[51];
+            document.getElementById("indig_sucsTotalR").innerHTML = stat_value[52];
+            document.getElementById("dig_sucsperR").innerHTML = Math.round(stat_value[53]*100) + "%";
+            if(stat_value[50]>stat_value[53]){
+                document.getElementById("dig_sucsperL").className = "winning";
+            }else if(stat_value[50]<stat_value[53]){
+                document.getElementById("dig_sucsperR").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL_L").innerHTML = stat_value[54];
+            document.getElementById("indig_sucsTotalL_L").innerHTML = stat_value[55];
+            document.getElementById("dig_sucsperL_L").innerHTML = Math.round(stat_value[56]*100) + "%";
+            document.getElementById("dig_sucsR_L").innerHTML = stat_value[57];
+            document.getElementById("indig_sucsTotalR_L").innerHTML = stat_value[58];
+            document.getElementById("dig_sucsperR_L").innerHTML = Math.round(stat_value[59]*100) + "%";
+            if(stat_value[56]>stat_value[59]){
+                document.getElementById("dig_sucsperL_L").className = "winning";
+            }else if(stat_value[56]<stat_value[59]){
+                document.getElementById("dig_sucsperR_L").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL_OH").innerHTML = stat_value[60];
+            document.getElementById("indig_sucsTotalL_OH").innerHTML = stat_value[61];
+            document.getElementById("dig_sucsperL_OH").innerHTML = Math.round(stat_value[62]*100) + "%";
+            document.getElementById("dig_sucsR_OH").innerHTML = stat_value[63];
+            document.getElementById("indig_sucsTotalR_OH").innerHTML = stat_value[64];
+            document.getElementById("dig_sucsperR_OH").innerHTML = Math.round(stat_value[65]*100) + "%";
+            if(stat_value[62]>stat_value[65]){
+                document.getElementById("dig_sucsperL_OH").className = "winning";
+            }else if(stat_value[62]<stat_value[65]){
+                document.getElementById("dig_sucsperR_OH").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL_S").innerHTML = stat_value[66];
+            document.getElementById("indig_sucsTotalL_S").innerHTML = stat_value[67];
+            document.getElementById("dig_sucsperL_S").innerHTML = Math.round(stat_value[68]*100) + "%";
+            document.getElementById("dig_sucsR_S").innerHTML = stat_value[69];
+            document.getElementById("indig_sucsTotalR_S").innerHTML = stat_value[70];
+            document.getElementById("dig_sucsperR_S").innerHTML = Math.round(stat_value[71]*100) + "%";
+            if(stat_value[68]>stat_value[71]){
+                document.getElementById("dig_sucsperL_S").className = "winning";
+            }else if(stat_value[68]<stat_value[71]){
+                document.getElementById("dig_sucsperR_S").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL_OP").innerHTML = stat_value[72];
+            document.getElementById("indig_sucsTotalL_OP").innerHTML = stat_value[73];
+            document.getElementById("dig_sucsperL_OP").innerHTML = Math.round(stat_value[74]*100) + "%";
+            document.getElementById("dig_sucsR_OP").innerHTML = stat_value[75];
+            document.getElementById("indig_sucsTotalR_OP").innerHTML = stat_value[76];
+            document.getElementById("dig_sucsperR_OP").innerHTML = Math.round(stat_value[77]*100) + "%";
+            if(stat_value[74]>stat_value[77]){
+                document.getElementById("dig_sucsperL_OP").className = "winning";
+            }else if(stat_value[74]<stat_value[77]){
+                document.getElementById("dig_sucsperR_OP").className = "winning";
+            }
+
+            document.getElementById("dig_sucsL_MB").innerHTML = stat_value[78];
+            document.getElementById("indig_sucsTotalL_MB").innerHTML = stat_value[79];
+            document.getElementById("dig_sucsperL_MB").innerHTML = Math.round(stat_value[80]*100) + "%";
+            document.getElementById("dig_sucsR_MB").innerHTML = stat_value[81];
+            document.getElementById("indig_sucsTotalR_MB").innerHTML = stat_value[82];
+            document.getElementById("dig_sucsperR_MB").innerHTML = Math.round(stat_value[83]*100) + "%";
+            if(stat_value[80]>stat_value[83]){
+                document.getElementById("dig_sucsperL_MB").className = "winning";
+            }else if(stat_value[80]<stat_value[83]){
+                document.getElementById("dig_sucsperR_MB").className = "winning";
+            }
+
+            document.getElementById("blkL").innerHTML = stat_value[84];
+            document.getElementById("inblkL").innerHTML = stat_value[85];
+            document.getElementById("blkL_n").innerHTML = stat_value[86];
+            document.getElementById("blkR").innerHTML = stat_value[87];
+            document.getElementById("inblkR").innerHTML = stat_value[88];
+            document.getElementById("blkR_n").innerHTML = stat_value[89];
+            if(stat_value[86]>stat_value[89]){
+                document.getElementById("blkL_n").className = "winning";
+            }else if(stat_value[86]<stat_value[89]){
+                document.getElementById("blkR_n").className = "winning";
+            }
+
+            document.getElementById("srv_sucsL").innerHTML = stat_value[90];
+            document.getElementById("insrv_sucsTotalL").innerHTML = stat_value[91];
+            document.getElementById("srv_sucsperL").innerHTML = Math.round(stat_value[92]*100) + "%";
+            document.getElementById("srv_sucsR").innerHTML = stat_value[93];
+            document.getElementById("insrv_sucsTotalR").innerHTML = stat_value[94];
+            document.getElementById("srv_sucsperR").innerHTML = Math.round(stat_value[95]*100) + "%";
+            if(stat_value[92]>stat_value[95]){
+                document.getElementById("srv_sucsperL").className = "winning";
+            }else if(stat_value[92]<stat_value[95]){
+                document.getElementById("srv_sucsperR").className = "winning";
+            }
+
+            document.getElementById("set_sucsL").innerHTML = stat_value[96];
+            document.getElementById("inset_sucsTotalL").innerHTML = stat_value[97];
+            document.getElementById("set_sucsperL").innerHTML = Math.round(stat_value[98]*100) + "%";
+            document.getElementById("set_sucsR").innerHTML = stat_value[99];
+            document.getElementById("inset_sucsTotalR").innerHTML = stat_value[100];
+            document.getElementById("set_sucsperR").innerHTML = Math.round(stat_value[101]*100) + "%";
+            if(stat_value[98]>stat_value[101]){
+                document.getElementById("set_sucsperL").className = "winning";
+            }else if(stat_value[98]<stat_value[101]){
+                document.getElementById("set_sucsperR").className = "winning";
+            }
+
+            document.getElementById("set_sucsL_S").innerHTML = stat_value[102];
+            document.getElementById("inset_sucsTotalL_S").innerHTML = stat_value[103];
+            document.getElementById("set_sucsperL_S").innerHTML = Math.round(stat_value[104]*100) + "%";
+            document.getElementById("set_sucsR_S").innerHTML = stat_value[105];
+            document.getElementById("inset_sucsTotalR_S").innerHTML = stat_value[106];
+            document.getElementById("set_sucsperR_S").innerHTML = Math.round(stat_value[107]*100) + "%";
+            if(stat_value[104]>stat_value[107]){
+                document.getElementById("set_sucsperL_S").className = "winning";
+            }else if(stat_value[104]<stat_value[107]){
+                document.getElementById("set_sucsperR_S").className = "winning";
+            }
+
+        }
+
+        DataStat([71, 93, 0.76, 75, 89, 0.84, 57, 165, 0.35, 66, 181, 0.36, 25, 74, 0.34, 47, 139, 0.34, 14, 42, 0.33, 19, 41, 0.46, 18, 47, 0.38, 0, 0, 0, 36, 82, 0.44, 40, 88, 0.45, 8, 14, 0.57, 8, 15, 0.53, 28, 62, 0.45, 31, 67, 0.46, 52, 130, 0.4, 55, 137, 0.4, 12, 27, 0.44, 18, 42, 0.43, 18, 44, 0.41, 28, 66, 0.42, 7, 17, 0.41, 4, 15, 0.27, 12, 28, 0.43, 0, 0, 0, 3, 14, 0.21, 5, 14, 0.36, 11, 11, 11, 5, 5, 5, 3, 92, 0.03, 4, 89, 0.04, 45, 136, 0.33, 38, 148, 0.26, 45, 136, 0.33, 38, 148, 0.26]);
+
+        Number2Width("inpointTotalL", "pointTotalL");
+        Number2Width("inpointTotalR", "pointTotalR");
+        Number2Width("pointL", "pointL");
+        Number2Width("pointR", "pointR");
+
+        Number2Width("inatk_pointTotalL", "atk_pointTotalL");
+        Number2Width("inatk_pointTotalR", "atk_pointTotalR");
+        Number2Width("atk_pointL", "atk_pointL");
+        Number2Width("atk_pointR", "atk_pointR");
+
+        Number2Width("inatk_pointTotalL_oh", "atk_pointTotalL_oh");
+        Number2Width("inatk_pointTotalR_oh", "atk_pointTotalR_oh");
+        Number2Width("atk_pointL_oh", "atk_pointL_oh");
+        Number2Width("atk_pointR_oh", "atk_pointR_oh");
+
+        Number2Width("inatk_pointTotalL_mb", "atk_pointTotalL_mb");
+        Number2Width("inatk_pointTotalR_mb", "atk_pointTotalR_mb");
+        Number2Width("atk_pointL_mb", "atk_pointL_mb");
+        Number2Width("atk_pointR_mb", "atk_pointR_mb");
+
+        Number2Width("inatk_pointTotalL_op", "atk_pointTotalL_op");
+        Number2Width("inatk_pointTotalR_op", "atk_pointTotalR_op");
+        Number2Width("atk_pointL_op", "atk_pointL_op");
+        Number2Width("atk_pointR_op", "atk_pointR_op");
+
+        Number2Width("inrcv_sucsTotalL", "rcv_sucsTotalL");
+        Number2Width("inrcv_sucsTotalR", "rcv_sucsTotalR");
+        Number2Width("rcv_sucsL", "rcv_sucsL");
+        Number2Width("rcv_sucsR", "rcv_sucsR");
+
+        Number2Width("inrcv_sucsTotalL_L", "rcv_sucsTotalL_L");
+        Number2Width("inrcv_sucsTotalR_L", "rcv_sucsTotalR_L");
+        Number2Width("rcv_sucsL_L", "rcv_sucsL_L");
+        Number2Width("rcv_sucsR_L", "rcv_sucsR_L");
+
+        Number2Width("inrcv_sucsTotalL_OH", "rcv_sucsTotalL_OH");
+        Number2Width("inrcv_sucsTotalR_OH", "rcv_sucsTotalR_OH");
+        Number2Width("rcv_sucsL_OH", "rcv_sucsL_OH");
+        Number2Width("rcv_sucsR_OH", "rcv_sucsR_OH");
+
+        Number2Width("indig_sucsTotalL", "dig_sucsTotalL");
+        Number2Width("indig_sucsTotalR", "dig_sucsTotalR");
+        Number2Width("dig_sucsL", "dig_sucsL");
+        Number2Width("dig_sucsR", "dig_sucsR");
+
+        Number2Width("indig_sucsTotalL_L", "dig_sucsTotalL_L");
+        Number2Width("indig_sucsTotalR_L", "dig_sucsTotalR_L");
+        Number2Width("dig_sucsL_L", "dig_sucsL_L");
+        Number2Width("dig_sucsR_L", "dig_sucsR_L");
+
+        Number2Width("indig_sucsTotalL_OH", "dig_sucsTotalL_OH");
+        Number2Width("indig_sucsTotalR_OH", "dig_sucsTotalR_OH");
+        Number2Width("dig_sucsL_OH", "dig_sucsL_OH");
+        Number2Width("dig_sucsR_OH", "dig_sucsR_OH");
+
+        Number2Width("indig_sucsTotalL_OP", "dig_sucsTotalL_OP");
+        Number2Width("indig_sucsTotalR_OP", "dig_sucsTotalR_OP");
+        Number2Width("dig_sucsL_OP", "dig_sucsL_OP");
+        Number2Width("dig_sucsR_OP", "dig_sucsR_OP");
+
+        Number2Width("indig_sucsTotalL_MB", "dig_sucsTotalL_MB");
+        Number2Width("indig_sucsTotalR_MB", "dig_sucsTotalR_MB");
+        Number2Width("dig_sucsL_MB", "dig_sucsL_MB");
+        Number2Width("dig_sucsR_MB", "dig_sucsR_MB");
+
+        Number2Width("indig_sucsTotalL_S", "dig_sucsTotalL_S");
+        Number2Width("indig_sucsTotalR_S", "dig_sucsTotalR_S");
+        Number2Width("dig_sucsL_S", "dig_sucsL_S");
+        Number2Width("dig_sucsR_S", "dig_sucsR_S");
+
+        Number2Width("inblkL", "blkL");
+        Number2Width("inblkR", "blkL");
+        Number2Width("blkL", "blkL");
+        Number2Width("blkR", "blkR");
+
+        Number2Width("insrv_sucsTotalL", "srv_sucsTotalL");
+        Number2Width("insrv_sucsTotalR", "srv_sucsTotalR");
+        Number2Width("srv_sucsL", "srv_sucsL");
+        Number2Width("srv_sucsR", "srv_sucsR");
+
+        Number2Width("inset_sucsTotalL", "set_sucsTotalL");
+        Number2Width("inset_sucsTotalR", "set_sucsTotalR");
+        Number2Width("set_sucsL", "set_sucsL");
+        Number2Width("set_sucsR", "set_sucsR");
+
+        Number2Width("inset_sucsTotalL_S", "set_sucsTotalL_S");
+        Number2Width("inset_sucsTotalR_S", "set_sucsTotalR_S");
+        Number2Width("set_sucsL_S", "set_sucsL_S");
+        Number2Width("set_sucsR_S", "set_sucsR_S");
+
+    </script>
+</body>
+
+</html>
