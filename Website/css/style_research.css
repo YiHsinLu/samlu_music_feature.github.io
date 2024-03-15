@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+*:after, *:before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+        
+body{
+    background: #505050;
+    color: #a3f894;
+    margin:0px;
+    height: auto;
+    font-size:100%;
+    justify-content: center;
+    align-items: center;
+}
+.snow_wrap{
+	height: auto;
+	width: 100%;
+	background:transparent;
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: absolute;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 44px;
+    color: #a3f894;
+    text-decoration: none;
+    font-weight: 600;
+    width: 30%;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #505050;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+.navbar a {
+    font-size: 40px;
+    color: #a3f894;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: #f080ff;
+    font-size: 50px;
+}
+
+.navbar a.active{
+    color: #f080ff;
+}
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background:#505050;
+    animation: showRight 2s ease forwards;
+    animation-delay: .6s;
+    z-index: 100;
+}
+.research-box{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    margin-top: 120px;
+    padding-bottom: 100px;
+}
+.post-TKWda,
+.post-thesis{
+    height: auto;
+    width: 80%;
+    color: #f080ff;
+    padding: 20px;
+    border: 5px solid #252525;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #1b1b1b;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+}
+.post-TKWda p,
+.post-thesis p{
+    color: #a3f894;
+    font-size: 16px;
+    font-weight: bold;
+}
+.post-TKWda a,
+.post-thesis a{
+    color: #f080ff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
+}
+.post-TKWda{
+    background: url("https://tvl.ctvba.org.tw/upload/w_team/logo_3_1635492564.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-blend-mode: multiply;
+    background-color: rgba(61, 61, 61, 0.99);
+}
+.post-thesis{
+    background: url("https://ucarecdn.com/71075136-f98a-40c9-be57-f52a6c0c0614/-/crop/1190x1000/5,0/-/resize/1035x870/");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: multiply;
+    background-color: rgba(61, 61, 61, 0.8);
+}
