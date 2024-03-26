@@ -27,8 +27,8 @@ library(plotly)
 ```
 
 ```{r}
-Match78_plrStat = read.csv('Matches/players/季後賽-女 113：臺北鯨華 vs 凱撒飯店連鎖 (03月17日).csv', header = T)
-Match78_rlt = read.csv('Matches/results/季後賽-女 113：臺北鯨華 vs 凱撒飯店連鎖 (03月17日).csv', header = T, row.names = 1)
+Match78_plrStat = read.csv('Matches/players/挑戰賽-女 120：臺北鯨華 vs 極速超跑 (03月25日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/挑戰賽', header = T, row.names = 1)
 ```
 
 ```{r}
@@ -36,12 +36,12 @@ match_plrStat = Match78_plrStat
 team_color = c('#e9b4d1', '#e1f1fb')
 
 # add team and color
-#match_plrStat$team = rep(rev(rownames(Match78_rlt[1:2])), each = 14, len = 28)
-#match_plrStat$team_colors = rep(team_color, each = 14, len = 28)
+match_plrStat$team = rep(rev(rownames(Match78_rlt[1:2])), each = 14, len = 28)
+match_plrStat$team_colors = rep(team_color, each = 14, len = 28)
 
 #29
-match_plrStat$team = rev(rep(rownames(Match78_rlt[1:2]), each = 15, len = 29))
-match_plrStat$team_colors = rev(rep(rev(team_color), each = 15, len = 29))
+#match_plrStat$team = rev(rep(rownames(Match78_rlt[1:2]), each = 15, len = 29))
+#match_plrStat$team_colors = rev(rep(rev(team_color), each = 15, len = 29))
 
 match_plrStat = relocate(match_plrStat, team, .after = position)
 match_plrStat = relocate(match_plrStat, team_colors, .after = team)
