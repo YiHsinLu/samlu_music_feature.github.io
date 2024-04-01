@@ -27,8 +27,8 @@ library(plotly)
 ```
 
 ```{r}
-Match78_plrStat = read.csv('Matches/players/挑戰賽-女 120：臺北鯨華 vs 極速超跑 (03月25日).csv', header = T)
-Match78_rlt = read.csv('Matches/results/挑戰賽', header = T, row.names = 1)
+Match78_plrStat = read.csv('Matches/players/總冠軍賽-女 126：臺北鯨華 vs 極速超跑 (04月01日).csv', header = T)
+Match78_rlt = read.csv('Matches/results/總冠軍賽-女 126：臺北鯨華 vs 極速超跑 (04月01日).csv', header = T, row.names = 1)
 ```
 
 ```{r}
