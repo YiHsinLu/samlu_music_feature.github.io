@@ -409,41 +409,8 @@ body{
 
 /* popup window */
 
-#rehabilitation,
-#popup2014, 
-#popup2023,
-#popup20230809,
-#popup20230917,
-#popup20230918,
-#popup20231018,
-#popuprehab,
-#popup20231103,
-#popup20231115,
-#popup20231120,
-#popup20231122,
-#popup20231127,
-#popup20231129,
-#popup20231201,
-#popup20231204,
-#popup20231206,
-#popup20231208,
-#popup20231211,
-#popup20231215,
-#popup20231218,
-#popup20231222,
-#popup20231225,
-#popup20231229,
-#popup20240101,
-#popup20240105,
-#popup20240108,
-#popup20240115,
-#popup20240119,
-#popup20240122,
-#popup20240126,
-#popup20240129,
-#popup20240315,
-#popup20240421,
-#popup20240426{
+#popup202306,
+#popup202309{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -460,41 +427,8 @@ body{
     border-radius: 30px;
 }
 
-#rehabilitation.active,
-#popup2014.active, 
-#popup2023.active,
-#popup20230809.active,
-#popup20230917.active,
-#popup20230918.active,
-#popup20231018.active,
-#popuprehab.active,
-#popup20231103.active,
-#popup20231115.active,
-#popup20231120.active,
-#popup20231122.active,
-#popup20231127.active,
-#popup20231129.active,
-#popup20231201.active,
-#popup20231204.active,
-#popup20231206.active,
-#popup20231208.active,
-#popup20231211.active,
-#popup20231215.active,
-#popup20231218.active,
-#popup20231222.active,
-#popup20231225.active,
-#popup20231229.active,
-#popup20240101.active,
-#popup20240105.active,
-#popup20240108.active,
-#popup20240115.active,
-#popup20240119.active,
-#popup20240122.active,
-#popup20240126.active,
-#popup20240129.active,
-#popup20240315.active,
-#popup20240421.active,
-#popup20240426.active{
+#popup202306.active,
+#popup202309.active{
     visibility: visible;
     opacity: 1;
     transition: 0.5s;
@@ -550,15 +484,15 @@ body{
 
 .Present a{
     position: absolute;
-    font-size: 40px;
+    font-size: 80px;
     color: #CFCFCF;
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
 }
 .Present a:hover{
-    color: #CAA36E;
-    font-size: 50px;
+    color: #ff93fa;
+    font-size: 90px;
 }
 
 .Present-point{
@@ -566,7 +500,7 @@ body{
     top: -7px;
     border-radius: 10px;
     width: 60px;
-    height: 105px;
+    height: 80px;
     background: #1e1e1f;
     justify-content: center;
     align-items: center;
@@ -592,40 +526,64 @@ body{
     background: #CAA36E;
 }
 
-.timeline-storybox-2014-2022,
-.timeline-storybox-2023,
-.timeline-storybox-20230809,
-.timeline-storybox-20230917,
-.timeline-storybox-20230918,
-.timeline-storybox-20231018,
-.timeline-storybox-rehab,
-.timeline-storybox-20231103,
-.timeline-storybox-20231115,
-.timeline-storybox-20231120,
-.timeline-storybox-20231122,
-.timeline-storybox-20231127,
-.timeline-storybox-20231129,
-.timeline-storybox-20231201,
-.timeline-storybox-20231204,
-.timeline-storybox-20231206,
-.timeline-storybox-20231208,
-.timeline-storybox-20231211,
-.timeline-storybox-20231215,
-.timeline-storybox-20231218,
-.timeline-storybox-20231222,
-.timeline-storybox-20231225,
-.timeline-storybox-20231229,
-.timeline-storybox-20240101,
-.timeline-storybox-20240105,
-.timeline-storybox-20240108,
-.timeline-storybox-20240115,
-.timeline-storybox-20240119,
-.timeline-storybox-20240122,
-.timeline-storybox-20240126,
-.timeline-storybox-20240129,
-.timeline-storybox-20240315,
-.timeline-storybox-20240421,
-.timeline-storybox-20240426{
+
+#popup202306,
+#popupthings,
+#popupconf{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    font-size: 30px;
+    padding: 50px;
+    box-shadow: 1px 1px 10px gray, 1px 1px 10px gray;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+
+#popup202306.active,
+#popupthings.active,
+#popupconf.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+#popup202309{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%;
+    font-size: 30px;
+    padding: 50px;
+    box-shadow: 1px 1px 10px gray, 1px 1px 10px gray;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+
+#popup202309.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.timeline-storybox-202306,
+.timeline-storybox-things,
+.timeline-storybox-202102,
+.timeline-storybox-202008,
+.timeline-storybox-202005,
+.timeline-storybox-202001,
+.timeline-storybox-201909{
     position: absolute;
     width: 100%;
     height: 50px;
@@ -637,43 +595,13 @@ body{
     font-size: 60px;
 }
 
-
-
-
-.timeline-storybox-2014-2022 a,
-.timeline-storybox-2023 a,
-.timeline-storybox-20230809 a,
-.timeline-storybox-20230917 a,
-.timeline-storybox-20230918 a,
-.timeline-storybox-20231018 a,
-.timeline-storybox-rehab a,
-.timeline-storybox-20231103 a,
-.timeline-storybox-20231115 a,
-.timeline-storybox-20231120 a,
-.timeline-storybox-20231122 a,
-.timeline-storybox-20231127 a,
-.timeline-storybox-20231129 a,
-.timeline-storybox-20231201 a,
-.timeline-storybox-20231204 a,
-.timeline-storybox-20231206 a,
-.timeline-storybox-20231208 a,
-.timeline-storybox-20231211 a,
-.timeline-storybox-20231215 a,
-.timeline-storybox-20231218 a,
-.timeline-storybox-20231222 a,
-.timeline-storybox-20231225 a,
-.timeline-storybox-20231229 a,
-.timeline-storybox-20240101 a,
-.timeline-storybox-20240105 a,
-.timeline-storybox-20240108 a,
-.timeline-storybox-20240115 a,
-.timeline-storybox-20240119 a,
-.timeline-storybox-20240122 a,
-.timeline-storybox-20240126 a,
-.timeline-storybox-20240129 a,
-.timeline-storybox-20240315 a,
-.timeline-storybox-20240421 a,
-.timeline-storybox-20240426 a{
+.timeline-storybox-202306 a,
+.timeline-storybox-things a,
+.timeline-storybox-202102 a,
+.timeline-storybox-202008 a,
+.timeline-storybox-202005 a,
+.timeline-storybox-202001 a,
+.timeline-storybox-201909 a{
     position: absolute;
     font-size: 40px;    
     color: #CFCFCF;
@@ -681,142 +609,73 @@ body{
     display: inline-block;
     text-decoration: none;
 }
-.timeline-storybox-2014-2022 a:hover,
-.timeline-storybox-2023 a:hover,
-.timeline-storybox-20230809 a:hover,
-.timeline-storybox-20230917 a:hover,
-.timeline-storybox-20230918 a:hover,
-.timeline-storybox-20231018 a:hover,
-.timeline-storybox-rehab a:hover,
-.timeline-storybox-20231103 a:hover,
-.timeline-storybox-20231115 a:hover,
-.timeline-storybox-20231120 a:hover,
-.timeline-storybox-20231122 a:hover,
-.timeline-storybox-20231127 a:hover,
-.timeline-storybox-20231129 a:hover,
-.timeline-storybox-20231201 a:hover,
-.timeline-storybox-20231204 a:hover,
-.timeline-storybox-20231206 a:hover,
-.timeline-storybox-20231208 a:hover,
-.timeline-storybox-20231211 a:hover,
-.timeline-storybox-20231215 a:hover,
-.timeline-storybox-20231218 a:hover,
-.timeline-storybox-20231222 a:hover,
-.timeline-storybox-20231225 a:hover,
-.timeline-storybox-20231229 a:hover,
-.timeline-storybox-20240101 a:hover,
-.timeline-storybox-20240105 a:hover,
-.timeline-storybox-20240108 a:hover,
-.timeline-storybox-20240115 a:hover,
-.timeline-storybox-20240119 a:hover,
-.timeline-storybox-20240122 a:hover,
-.timeline-storybox-20240126 a:hover,
-.timeline-storybox-20240129 a:hover,
-.timeline-storybox-20240315 a:hover,
-.timeline-storybox-20240421 a:hover,
-.timeline-storybox-20240426 a:hover{
+
+.timeline-storybox-202306 a:hover,
+.timeline-storybox-things a:hover,
+.timeline-storybox-202102 a:hover,
+.timeline-storybox-202008 a:hover,
+.timeline-storybox-202005 a:hover,
+.timeline-storybox-202001 a:hover,
+.timeline-storybox-201909 a:hover{
     color: #CAA36E;
     font-size: 50px;
 }
 
-
-.timeline-storybox-2023{
-    bottom: 230px;
-}
-.timeline-storybox-20230809{
-    bottom: 300px;
-}
-.timeline-storybox-20230917{
-    bottom: 370px;
-}
-.timeline-storybox-20230918{
-    bottom: 430px;
-}
-.timeline-storybox-20231018{
-    bottom: 600px;
-}
-.timeline-storybox-rehab{
-    bottom: 700px;
-}
-.timeline-storybox-20231103{
-    bottom: 850px;
-}
-.timeline-storybox-20231115{
-    bottom: 1000px;
-}
-.timeline-storybox-20231120{
-    bottom: 1100px;
-}
-.timeline-storybox-20231122{
-    bottom: 1200px;
-}
-.timeline-storybox-20231127{
-    bottom: 1300px;
-}
-.timeline-storybox-20231129{
-    bottom: 1400px;
-}
-.timeline-storybox-20231201{
-    bottom: 1550px;
-}
-.timeline-storybox-20231204{
-    bottom: 1650px;
-}
-.timeline-storybox-20231206{
-    bottom: 1750px;
-}
-.timeline-storybox-20231208{
-    bottom: 1850px;
-}
-.timeline-storybox-20231211{
-    bottom: 1950px;
-}
-.timeline-storybox-20231215{
-    bottom: 2050px;
-}
-
-.timeline-storybox-20231218{
-    bottom: 2150px;
-}
-.timeline-storybox-20231222{
-    bottom: 2250px;
-}
-.timeline-storybox-20231225{
-    bottom: 2350px;
-}
-.timeline-storybox-20231229{
-    bottom: 2450px;
-}
-.timeline-storybox-20240101{
-    bottom: 2550px;
-}
-.timeline-storybox-20240105{
-    bottom: 2650px;
-}
-.timeline-storybox-20240108{
-    bottom: 2750px;
-}
-.timeline-storybox-20240115{
-    bottom: 2900px;
-}
-.timeline-storybox-20240119{
-    bottom: 3000px;
-}
-.timeline-storybox-20240122{
-    bottom: 3100px;
-}
-.timeline-storybox-20240126{
-    bottom: 3200px;
-}
-.timeline-storybox-20240129{
-    bottom: 3300px;
-}
-.timeline-storybox-20240315{
+.timeline-storybox-202306{
     bottom: 3600px;
 }
-.timeline-storybox-20240421{
+.timeline-storybox-things{
     bottom: 3800px;
 }
-.timeline-storybox-20240426{
-    bottom: 3870px;
+.timeline-storybox-202102{
+    bottom: 2700px;
+}
+.timeline-storybox-202008{
+    bottom: 2500px;
+}
+.timeline-storybox-202005{
+    bottom: 2400px;
+}
+.timeline-storybox-202001{
+    bottom: 2300px;
+}
+.timeline-storybox-201909{
+    bottom: 2100px;
+}
+
+
+.timeline-storybox-202309,
+.timeline-storybox-conf{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    color: #1e1e1f;
+    font-size: 60px;
+}
+
+.timeline-storybox-202309 a,
+.timeline-storybox-conf a{
+    position: absolute;
+    font-size: 40px;    
+    color: #CFCFCF;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.timeline-storybox-202309 a:hover,
+.timeline-storybox-conf a:hover{
+    color: #46ddf1;
+    font-size: 50px;
+}
+
+.timeline-storybox-202309{
+    bottom: 3800px;
+}
+.timeline-storybox-conf{
+    bottom: 3680px;
 }
