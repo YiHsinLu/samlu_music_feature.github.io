@@ -1,0 +1,83 @@
+---
+title: "**【CuffData377】**"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+#packages
+library(haven)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(tableone)
+library(kableExtra)
+library(tidyverse)
+library(data.table)
+library(knitr)
+library(kableExtra)
+library(naniar)
+library(curl)
+library(tableone)
+library(MatchIt)
+library(WeightIt)
+library(MASS)
+library(survey)
+library(PSweight)
+library(cobalt)
+library(broom)
+library(PSweight)
+library(ggrepel)
+library(plotly)
+library(heatmaply)
+library(ggcorrplot)
+load("Rdata/20240618_plots.RData")
+```
+
+## **1 Data** ($n=377$, $p=59$)
+  * Drop the patients who have missing value.
+  * $n=341$, $p=59$
+
+## **2 Variables**{.tabset}
+
+### **PCA**
+
+* near distance: the variables "MAYBE" are colinearity. 
+* based on the data.
+* Unless the variable "LongestfollowupmonthforOSampCSS", "timemonth_DF", and "timemonth_BF", others are collected at (0,0).
+
+Unless that three variable on the right side, we focus on the center of the plot. We still have a cluster, but we also have "Followupyear", "Followupyear_DF", and  "Followupyear_BF"
+  
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+visualpca_ggplot+
+  ggtitle("Fig 1: PC1 vs PC2 (ggplot)")
+
+visualpca_plotly%>%
+  layout(title = 'Fig 2: PC1 vs PC2 (plotly)')
+
+visualpca_plotly2d%>%
+  layout(title = 'Fig 2: PC1 vs PC2 (line)')
+
+dataVarInfo$pcaPlotly3d%>%
+  add_text(textposition = "top right")%>%
+  layout(title = 'Fig 3: PC1 vs PC2 vs PC3 (plotly)')
+```
+
+#### **Proportion of Variance**
+
+* explanation of variation
+* PC1 have 0.81 for Proportion of Variance, it means 81% of explanation for all of whole data.
+
+```{r}
+summary(pcaDf)
+```
+
+### **Correlation**
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+corMatrixggPlot
+corMatrixPlotly
+```
