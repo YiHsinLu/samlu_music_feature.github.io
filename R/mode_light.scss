@@ -1,0 +1,57 @@
+/*-- scss:defaults --*/
+
+// Base document colors
+
+$body-bg: #ffe4e1;
+$body-color: #7CA8BF;
+$link-color: #fbcac4;
+
+//navbar colors
+
+$navbar-bg: #7CA8BF;
+$navbar-fg: #ffe4e1;
+
+//code colors
+
+$code-bg: #94B7CA;
+
+/* css styles */
+.diary-box{
+    background-color:#7CA8BF;
+    color: #ffe4e1;
+    width:100%;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.top-box{
+    background-color:#ffc0cb;
+    width:100%;
+    border-radius: 10px;
+    padding: 5px;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color:rgba(255, 192, 203, 0.183)
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #7CA8BF;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    width: 40px;
+    background-color: #ffc0cb;
+}

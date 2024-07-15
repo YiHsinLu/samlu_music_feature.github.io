@@ -1,0 +1,69 @@
+---
+title: "Yi-Hsin Lu"
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+```
+
+------------------------------------------------------------------------
+
+<img src="images/yhLu_master3.jpg" class="img-fluid" width="150" style="border-radius: 10px;border: 10px solid #7CA8BF;"/> $\qquad$ I am Sam Lu, a data scientist, believe the data can talk.
+
+<br>
+
+## `r fa("diagram-project")` TECHNICAL EXPERIENCES (4)
+
+### `r fa("guitar")` Data Visualization for Jazz Musicians (Thesis)
+
+-   Adviser: Prof. Chen-Hai Andy Tsao
+-   Date: 06/2021 - 06/2023
+-   Location: National Dong-Hwa University
+-   Links: [PDF](https://yihsinlu.github.io/yhlu.io/PDF/Visualization4JazzMusicians.pdf), [Maps for Jazz Musicians](https://yihsinlu.github.io/Jazz.io/JazzMusicianMaps/JazzMusicianMaps.html)
+-   Summary
+    -   Displayed the visualization as a map.
+    -   Utilized three primary colors on multi-value variables.
+    -   Illustrate the relationship between musicians by their distance and color based on variables, such as instruments, genres, etc.
+    -   Utilized PCA (Principal Component Analysis) and t-SNE (t-distributed Stochastic Neighbor Embedding) to generate the map from the data matrix.
+    -   The map provides richer insights compared to network graphs, exemplified by the acclaimed visualization at Linked Jazz.
+
+### `r fa("volleyball")` Volleyball Matches/Players Visualization (Interest-Driven Project)
+
+-   Date: 10/2023 - Present
+-   Links: [Maps Webpage](https://yihsinlu.github.io/yhlu.io/TVL/matches_options.html)
+-   Summary
+    -   Developed a map visualization for displaying player data during volleyball matches.
+    -   Implemented histograms and tables to effectively illustrate match information between teams.
+    -   The map highlights relationships and statistics among players in different positions.
+    -   Streamlined information accessibility, saving players valuable time by eliminating the need to navigate through extensive data tables.
+
+### `r fa("file-audio")` Music Feature (Statistical Machine Learning)
+
+-   Adviser: Prof. Chen-Hai Andy Tsao
+-   Date: 09/2022 - 01/2023
+-   Location: National Dong-Hwa University
+-   Links: [PDF](https://yihsinlu.github.io/yhlu.io/PDF/StatisticalMachineLearningClassProject_FinalReport.pdf)
+-   Summary
+    -   Applied statistical machine learning techniques to filter audio genres based on their features.
+    -   Achieved a 70% accuracy using the random forest model.
+
+### `r fa("database")` S&P Global Rating Xpress Dataset (Dataset Management)
+
+-   PI: Prof. Chih-Kang Chu
+-   Date: 08/2022 - 01/2023
+-   Location: National Dong-Hwa University
+-   Summary
+    -   Utilized PostgreSQL to create a connection with the online database, facilitating data updates in local storage.
+    -   Developed a data transformation function using R, ensuring data accuracy and cleanliness.
+
+## `r fa("graduation-cap")` EDUCATION (2)
+
+### ![](images/NDHU_logo.png){width="36px"} Master, Applied Mathethatics, National Dong Hwa University.
+
+-   Thesis Title: Visualization for Jazz Musicians
+-   Adviser: Prof. Chen-Hai Andy Tsao
+-   Date: 02/2021 - 06/2023
+
+### ![](images/NDHU_logo.png){width="36px"} Bachelor, Statistcal Science, National Dong Hwa University.
+
+-   Date: 09/2014 - 09/2019

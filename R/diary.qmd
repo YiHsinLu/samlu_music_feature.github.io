@@ -1,0 +1,38 @@
+---
+title: "【Working Diary】"
+output: 
+  html_document
+---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
+library(fontawesome)
+```
+
+After the graduation of Master degree in NDHU, I was looking for the job and doing the rehabilitation at the same time. I then decided to have the interview for ph.D. but I failed.
+
+### `r fa("calendar")` **JUN 7th, 2024. Happy Friday**
+
+::: diary-box
+-   Export the rate of doctors from CMUH (China Medical University Hospital) as table and bar-plot.
+
+-   Create this webpage, but not publish to public.
+:::
+
+### `r fa("calendar")` **JUN 6th, 2024. Rainy Thursday**
+
+::: diary-box
+-   Tutorial for UTUC and BUC
+-   UTUC database introduction, including meaning of variables, options in each variable, and their medical meaning.
+-   Practice for data collection, clean, mining, and analysis by the selected topic/title. [(sourece code)](Example1.qmd)
+:::
+
+### `r fa("calendar")` **JUN 3rd, 2024. Cloudy Monday**
+
+::: diary-box
+![](images/WorkPlace.jpg)
+
+**The first day at work, full process but no work.**
+
+-   Reported for duty in Tzu-Chi Hospital.
+-   Whole day lesson of employee training.
+:::
